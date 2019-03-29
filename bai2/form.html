@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="process.php" method="POST"></form>
+        <label>Họ và tên</label>    
+        <input type="text" name="txtFullname" placeholder="Please input your name"><br>
+        
+        <label>Giới tính</label>
+        <input type="radio" name="rbGender" value="1" checked>Nam
+        <input type="radio" name="rbGender" value="0">Nữ<br>
+
+        <label>Sở thích</label>
+        <input type="checkbox" name="chkFav" value="1" checked>Javascript
+        <input type="checkbox" name="chkFav" value="3">PHP
+        <input type="checkbox" name="chkFav" value="2">Python<br>
+
+        <label>More information</label>
+        <textarea name="info" cols="50" rows="5"></textarea><br>
+
+        <label>Choose one</label>
+        <select name="city">
+            <option value="Hà Nội">TP. Hà Nội</option>
+            <option value="Đà Nẵng" selected>TP. Đà Nẵng</option>
+            <option value="Hồ Chí Minh">TP. Hồ Chí Minh</option>
+        </select><br>
+
+        <input type="submit" name="btnReg" value="Đăng ký">
+        <input type="reset" name="btnRes" value="Nhập lại">
+</body>
+</html>
