@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<form action="proccess.php" method="post">
+		<label>Họ và tên</label>
+		<input type="text" name="txtFullname"><br>
+		<label>Mật khẩu</label>
+		<input type="password" name="txtPassword"><br>
+		<label>Giới tính</label>
+		<input type="radio" name="rbGender" value="1">Nam
+		<input type="radio" name="rbGender" value="0">Nữ<br>
+		<label>Sở thích</label>
+		<input type="checkbox" name="chkFav" value="1">Đọc sách
+		<input type="checkbox" name="chkFav" value="2">Chơi game
+		<input type="checkbox" name="chkFav" value="3">Đi du lịch<br>
+		<label>HKTT</label>
+		<textarea name="hktt" cols="50" rows="5"></textarea><br>
+		<label>Tỉnh/Thành phố</label>
+		<select name="cbCity">
+			<option value="Hà Nội">TP. Hà Nội</option>
+			<option value="TP. Hồ Chí Minh">TP. Hồ Chí Minh</option>
+			<option value="TP, Đà Nẵng">TP. Đà Nẵng</option>
+		</select><br>
+		<input type="submit" name="btnReg" value="Đăng Ký">
+		<input type="reset" name="btnReg" value="Nhập Lại">
+	</form>
+</body>
+</html>
