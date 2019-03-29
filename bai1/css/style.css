@@ -1,0 +1,16 @@
+.discount-price {
+    font-weight: bold;
+    color: red;
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+.profile-image {
+    width: 400px;
+}
+
+.detail-image {
+    width: 50px;
+}
