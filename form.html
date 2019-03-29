@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="process.php" method="post">
+		<label> họ và tên</label>
+		<input type="text" name="txtFullname" placeholder="mời nhập tên">
+		 <br>
+		
+		<label>giới tính</label>
+		<input type="radio" name="rbcender" checked="true" value="1"> nam
+		<input type="radio" name="rbcender" value="0"> nữ
+		<br>
+		
+		<label>sở thích</label>
+		<input type="checkbox" name="chkGab[]" checked="true" value="1">ngắm trời mưa
+		<input type="checkbox" name="chkGab[]" value="2">thịt chó
+		<input type="checkbox" name="chkGab[]" value="3">đi du lich <br>
+
+		<label>nơi ở</label>
+		<textarea name ="hktt" cols = "50" rows="5"></textarea>
+		<label>thành phố</label>
+		<select name = "cbcity">
+			<option value="hà nội"> TP.hà nội</option>
+			<option value="hòa bình" selected="true" > hòa bình</option>
+			<option value="hưng yên">hưng yên</option>
+
+
+		</select> <br>
+		<input type="submit" name="btnReg" value="đăng kí">
+		<input type="reset" name="btnRes" value="nhập lại">
+
+
+
+
+	</form>
+
+</body>
+</html>
