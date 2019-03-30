@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Trang đăng ký</title>
+</head>
+<body style="background-color: #888585">
+	<div>
+		<h2>Tạo tài khoản thành viên</h2>
+		<div>Bạn đã là thành viên? <a href="login.html">Đăng nhập</a> tại đây</div>
+	</div>
+	<div>
+		<form action="register_proccess.php" method="get" style="background-color: white;">
+			<label>Địa chỉ Email*</label><br>
+			<input type="text" name="txtEmail" placeholder="Vui lòng nhập email của bạn"><br>
+
+			<label>Mật khẩu*</label><br>
+			<input type="password" name="txtPass" placeholder="Tối thiểu 6 ký tự bao gồm chữ thường và chữ số"><br>
+
+			<label>Ngày/Tháng/Năm sinh</label><br>
+			<select name="cbDay">
+				<option value="day">Ngày</option>
+			</select>
+			<select name="cbMonth">
+				<option value="month">Tháng</option>
+			</select>
+			<select name="cbYear">
+				<option value="year">Năm sinh</option>
+			</select><br>
+			
+			<label>Giới tính</label><br>
+			<select name="cbGender">
+				<option selected="true">Chọn</option>
+				<option value="nam">Nam</option>
+				<option value="nu">Nữ</option>
+				<option value="khac">Khác</option>
+			</select><br>
+
+			<label>Tên*</label><br>
+			<input type="text" name="lblFullname" placeholder="Họ và tên"><br>
+
+			<input type="checkbox" name="chkSaleInfo" value="1">Tôi muốn nhận thông tin khuyến mại từ của hàng<br>
+
+			<input type="submit" name="btnRegister" value="Đăng ký"><br>
+			<label>Hoặc đăng ký với</label><br>
+			<input type="button" name="btnFacebook" value="Facebook"><br>
+			<input type="button" name="btnGoogle" value="Google"><br>
+		</form>
+	</div>
+</body>
+</html>
