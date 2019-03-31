@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng Kí</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h1>Tạo tài khoản thành viên</h1>
+	<br>
+	<p>Bạn đã là thành viên?<a href="login.html" target="_self">Đăng nhập </a>tại đây</p>
+	<div>
+		<form action="register_proccess.php" method="get">
+			<div>
+				<label>Địa chỉ email*</label>
+				<br>
+				<input type="text" name="txtEmail" value="" placeholder="Vui lòng nhập email của bạn">
+			</div>
+			<div>
+				<label>Mật khẩu*</label>
+				<br>
+				<input type="text" name="txtPass" value="" placeholder="Tối thiểu 6 kí tự bao gồm chữ và số">
+			</div>
+			<div>
+				<label>Ngày/Tháng/Năm Sinh</label>
+				<br>
+				<select name="cbDay">
+					<option value="day">Ngày</option>				
+				</select>
+				<select name="cbMonth">
+					<option value="month">Tháng</option>
+				</select>
+				<select name="cbYear">
+					<option value="year">Năm Sinh</option>
+				</select>
+			</div>
+			<div>
+				<label>Giới tính</label>
+					<br>
+					<select name="cbGender" >
+						<option>Chọn</option>
+						<option value="0">Nam</option>
+						<option value="1">Nữ</option>
+					</select>
+			</div>
+			<div>
+				<label>Tên*</label>
+				<br>
+				<input type="text" name="cbFullname" value="" placeholder="Họ và tên">
+			</div>
+			<div>
+				<input type="checkbox" name="chkSaleInfo" checked="true" value="ok">Tôi muốn nhận thông tin khuyến mãi từ cửa hàng
+			</div>
+			<div>
+				<input type="submit" name="btnRegister" value="Đăng ký">
+			</div>
+			<div>
+				<label>Hoặc đăng kí với:</label>
+				<br>
+				<input type="button" name="btnFacebook" value="Facebook">
+				<br>
+				<input type="button" name="btnGoogle" value="Google">
+			</div>
+
+		</form>
+	</div>
+
+</body>
+</body>
+</html>
