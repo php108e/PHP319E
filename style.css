@@ -9,6 +9,7 @@ body{
 	background-color: #ededed;
 }
 .to{
+	margin-top: 50px;
 	display: grid;
 	grid-template-rows: repeat(12,1fr);
 	grid-template-columns: minmax(100px,auto); 
