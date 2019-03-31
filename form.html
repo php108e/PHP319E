@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<body>
+    <form action="process.php" method="POST">
+        <label>Họ và tên</label>
+        <input type="text" name="txtFullname"  placeholder=" nhập tên">
+        <br>
+        <label > giới tính</label>
+        <input type="radio" name="rbGender" value="1" checked="true">Nam
+        <input type="radio" name="rbGender" value="0">Nữ
+        <br>
+        <label >Sở thích</label>
+        <!--
+            placehoder : in mờ 
+            name của radio or checkbox chỉ đk chọn 1 tên
+            những  trường hợp mà cần click chuột vào thì nên có value , còn 1 số trường hợp nhập vào có thể không cần dùng
+            bắt buộc phải có name 
+            checked ="true"mặc định đang được chọn sẵn của radio và checkbox vd chọn sẵn là giới tính nam , or thích zico
+            còn select dùng selected ="true" cũng tương tự như checked
+            id  định danh cho mỗi đối tượng , trên server có thể lấy thông tin bằng 2 đối tượng là name và id , name có thể trùng  còn id k thể trùng
+
+        -->
+        <input type="checkbox" name="chkFav[]" value="1">Chó
+        <input type="checkbox" checked="true" name="chkFav[]" value="2">Exo
+        <input type="checkbox" name="chkFav[]" value="3"checked="true">Mino
+        <input type="checkbox" name="chkFav[]" value="4">zico
+        <br>
+        <label >HKTT</label>
+        <textarea name="hk"  cols="50" rows="5"></textarea>
+        <br>
+        <label>Tỉnh/Thành phố</label>
+        <select name="cbcity">
+            <option value="Hà Nội">Tp.Hà Nội</option>
+            <option value="Bắc Giang" selected="true">Tp.Băc Giang</option>
+           
+
+        </select>
+       
+        <br>
+        <input type="submit" name="btnreg" value="Đăng kí">
+        <input type="reset" name="btnres" value="Nhập lại">
+
+
+
+
+
+        
+
+    </form>
+    
+</body>
+</html>
