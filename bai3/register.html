@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="heading-part">
+            <h1>Tạo tài khoản thành viên</h1>
+            <p>Bạn đã là thành viên? <a href="login.html">Đăng nhập</a> tại đây</p>
+        </div>
+        <div class="body-part">
+            <form action="register_proccess.php" method="GET">
+            <label>Địa chỉ Email*</label><br>
+            <input type="text" name="txtEmail" placeholder="Vui lòng nhập email của bạn"><br>
+            <label>Mật khẩu*</label><br>
+            <input type="password" name="txtPass" placeholder="Tối thiểu 6 ký tự bao gồm chữ viết hoa"><br>
+            <label>Ngày/Tháng/Năm sinh</label><br>  
+            <select name="cbDay">
+                <option value="">Ngày</option>
+            </select>
+            <select name="cbMonth">
+                <option value="">Tháng</option>
+            </select>
+            <select name="cbYear">Năm sinh
+                <option value="">Năm sinh</option>
+            </select><br>
+            <label>Giới tính</label><br>
+            <select name="cbGender">
+                <option value="">Chọn</option>
+                <option value="nam">Nam</option>
+                <option value="nữ">Nữ</option>
+                <option value="khác">Khác</option>
+            </select><br>
+            <label>Tên*</label><br>
+            <input type="text" placeholder="Họ và tên"><br>
+            <input type="checkbox" name="chkSaleInfo" value="1" checked>Tôi muốn nhận thông tin khuyến mại từ cửa hàng<br>
+            <input type="submit" name="btnRegister" value="Đăng ký"><br>
+            <label>Hoặc đăng ký với:</label><br>
+            <input type="button" name="btnFacebook" value="Facebook"><br>
+            <input type="button" name="btnGoogle" value="Google">
+        </form>
+        </div>
+    </div>
+    <!-- Bootstrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+</body>
+</html>
