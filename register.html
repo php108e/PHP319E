@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng ký</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="to">
+		<div class="from">
+			<h2 style="text-align: center;">Tạo tài khoản thành viên</h2>
+			<div>  Bạn đã là thành viên? <a href="login.html">Đăng nhập</a> tại đây</div>
+			<form action="register_proccess.php" method="post" name="#">
+				<label>  Địa chỉ Email<span style="color: red">*</span></label><br>
+				<input type="text" name="txtEmail" placeholder="Vui lòng nhập Email của bạn"><br>
+				<label>  Mật khẩu<span style="color: red">*</span></label><br>
+				<input type="password" name="txtPass" placeholder="Tối thiểu 6 kí tự bao gồm của số và chữ cái"><br>
+				<label>  Ngày/Tháng/Năm sinh</label><br>
+				<select name="cbDay">
+					<option value="0">Ngày</option>
+					<script type="text/javascript">
+						<!--
+							var count;
+							for(count=1; count<=31; count++){
+								document.write("<option value=&#34"+count+"&#34>"+count+"</option>")
+							}
+						//-->
+					</script>
+				</select>
+				<select name="cbMonth">
+					<option value="0">Tháng</option>
+					<script type="text/javascript">
+						<!--
+							var count;
+							for(count=1; count<=12; count++){
+								document.write("<option value=&#34"+count+"&#34>"+count+"</option>")
+							}
+						//-->
+					</script>
+				</select>
+				<select name="cbYear">
+					<option value="0">Năm</option>
+					<script type="text/javascript">
+						<!--
+							var count;
+							for(count=1900; count<=2019; count++){
+								document.write("<option value=&#34"+count+"&#34>"+count+"</option>")
+							}
+						//-->
+					</script>
+				</select><br>
+				<label>  Giới tính</label><br>
+				<select name="cbGender">
+					<option value="2" selected="true">Chọn</option>
+					<option value="1">Nam</option>
+					<option value="0">Nữ</option>
+				</select><br>
+				<label>  Tên<span style="color: red">*</span></label><br>
+				<input type="text" name="txtFullname" placeholder="Họ và tên"><br>
+				<input type="checkbox" name="chkSaleInfo">Tôi muốn nhận thông tin khuyến mãi từ cửa hàng<br>
+				<div style="text-align: center;"><input style="text-align: center;" type="submit" name="btnRegister" value="Đăng ký"><br></div>
+				<div style="text-align: center;">Hoặc đăng ký với:</div>
+				<div style="text-align: center;"><input type="button" name="btnFacebook" value="Facebook"><br></div>
+				<div style="text-align: center"><input type="button" name="btnGoogle" value="Google"><br></div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
