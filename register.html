@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trang đăng kí thành viên</title>
+</head>
+<body style="background-color: #999">
+	<div>
+		<div><h2>Tạo tài khoản thành viên</h2></div>
+		<div>Bạn đã là thành viên?<a href="register.html">Đăng nhập</a>tại đây</div>
+	</div>
+	<div style="background-color: #fff ">
+		<form action="register_proccess.php" method="get">
+			<div>
+				<label for="email">Địa chỉ Email*</label><br>
+				<input type="text" name="txtEmail" id="email" width="100%" placeholder="Vui lòng nhập email của bạn"><br>
+				<label for="mk">Mật khẩu*</label><br>
+				<input type="password" name="txtPass" id="mk" placeholder="Tối thiểu 6 kí tự, bao gồm cả chữ và số" <br>
+			</div>
+
+			<div>
+				<label>Ngày/Tháng/Năm sinh</label><br>
+				<select name="cbDay">
+					<option>Ngày</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>			
+				</select>
+				<select name="cbMonth">
+					<option>Tháng</option>
+					<option value="01">01</option>
+					<option value="02">02</option>
+					<option value="03">03</option>
+					<option value="04">04</option>
+					<option value="05">05</option>
+					<option value="06">06</option>
+					<option value="07">07</option>
+					<option value="08">08</option>
+					<option value="09">09</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+				</select>
+				<select name="cbYear">
+					<option>Năm</option>
+					<option value="1998">1998</option>
+					<option value="1999">1999</option>
+					<option value="2000">2000</option>
+					<option value="2001">2001</option>
+				</select>
+			</div>
+
+			<div>
+				<label>Giới tính</label><br>
+				<select name="cbGender">
+					<option>Chọn</option>
+					<option value="0">Nam</option>
+					<option value="1">Nữ</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="name">Tên*</label><br>
+				<input type="text" name="txtFullname" id="name" placeholder="Họ và tên"><br>
+				<input type="checkbox" name="chkSaleInfo" checked>Tôi muốn nhận thông tin khuyến mãi từ của hàng<br>
+				<input type="submit" name="btnRegister" value="Đăng kí"><br>
+				<label>Hoặc đăng kí bằng</label><br>
+				<div>
+					<div><input type="button" name="btnFacebook" value="Facebook"></div>
+					<div><input type="button" name="btnGoogle" value="Google"></div>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
