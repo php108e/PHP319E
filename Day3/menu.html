@@ -3,21 +3,40 @@
 <head>
 	<title>Menu sử dụng danh sách không thứ tự</title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		/*SELECTOR CSS*/
+		li{
+			color: red;
+			text-transform: uppercase;
+			text-decoration: underline;
+		}
+		/*class level1*/
+		.level1{
+			color: blue;
+		}
+		/*Id*/
+		#block1{
+			background-color: yellow; 
+		}
+		#block2{
+			background-color: blue;
+		}
+	</style>
 </head>
 <body>
 	<ul type="square">
-		<li><a href=#>Thời trang nam</a>
-			<ul type="square">
-				<li><a href=#>Quần nam</a></li>
-				<li><a href=#>Áo nam</a></li>
-				<li><a href=#>Phụ kiện nam</a></li>
+		<li class="level1">Thời trang nam
+			<ul id="block1">
+				<li >Quần nam</li>
+				<li>Áo nam</li>
+				<li>Phụ kiện nam</li>
 			</ul>
 		</li>
-		<li><a href=#>Thời trang nữ</a>
-			<ul type="square">
-				<li><a href=#>Váy nữ</a></li>
-				<li><a href=#>Áo nữ</a></li>
-				<li><a href=#>Phụ kiện nữ</a></li>
+		<li class="level1">Thời trang nữ
+			<ul id="block2">
+				<li>Váy nữ</li>
+				<li>Áo nữ</li>
+				<li>Phụ kiện nữ</li>
 			</ul>
 		</li>
 	</ul>
