@@ -1,0 +1,32 @@
+h2 {
+    color: green;
+    text-transform: uppercase;
+}
+h1{
+    color:red;
+    text-transform: uppercase;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+div{
+    margin-bottom: 25px;
+}
+.blue-paragraph {
+    color: blue;
+    font-weight: bold;
+    font-style:italic;
+}
+
+.orange-paragraph {
+    color: orange;
+    text-decoration: underline;
+}
+
+.green-paragraph {
+    color:green;
+    font-family: Tahoma;
+    font-size: 25px;
+}
