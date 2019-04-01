@@ -1,0 +1,38 @@
+div{
+	margin-bottom: 15pt;
+}
+
+#topp a{
+	color: green;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+#tieude{
+	color: red;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 20pt;
+}
+
+.chung{
+	text-align: justify;
+	line-height: 25pt;
+}
+
+.doan1{
+	color: blue;
+	background: grey;
+	font-style: italic;
+}
+
+.doan24{
+	color: orange;
+	text-decoration: underline;
+}
+
+#doan3{
+	color: green;
+	font-family: tahoma;
+	font-weight: bold;
+}
