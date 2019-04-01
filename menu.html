@@ -2,25 +2,40 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+
+		li{
+			color: red
+		}
+		.level1{
+			color: blue;
+		}
+		#block1{
+			background:yellow;
+		}
+		#block2{
+			background: green;
+		}
+	</style>
 </head>
 <body>
 	<div>
 		<ul type="square">
-			<li><a href="#">Thời trang Nam</a> 
-				<ul type="square">
-					<li><a href="#">Quần Nam</a></li>
-					<li><a href="#">Áo Nam</a></li>
+			<li class="level1">Thời trang Nam 
+				<ul id="block1" type="square">
+					<li>Quần Nam</li>
+					<li>Áo Nam</li>
 				</ul>
 			</li>
-			<li><a href="#">Thời trang Nữ</a>
-				<ul type="square">
-					<li><a href="#">Vãy Nữ</a></li>
-					<li><a href="#">Phụ Kiện</a></li>
+			<li class="level1">Thời trang Nữ
+				<ul id="block2" type="square">
+					<li>Vãy Nữ</li>
+					<li>Phụ Kiện</li>
 				</ul>
 			</li>
 		</ul>
 	</div>
-	<table border="1" bgcolor="red">
+	<table border="1" bgcolor="red" >
 		<caption>Table</caption>
 		<th>colum 1</th>
 		<th>colum 2</th>
