@@ -3,26 +3,49 @@
 <head>
 	<title>Menu</title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		/* SELECTOR CSS*/
+		li {
+			color: red;
+			text-transform: uppercase;
+		}
+
+		/* CLASS CSS*/
+		.level1 {
+			color: blue;
+			list-style-type: none;
+		}
+
+		/* ID CSS*/
+		#block1 {
+			background: yellow;
+		}
+
+		#block2 {
+			background: pink;
+		}
+
+	</style>
 </head>
 <body>
 	<div>
-		<ol>
-			<li>Thời trang Nam
-				<ul type="square">
-					<li><a href="#">Quần Nam</a></li>
-					<li><a href="#">Áo Nam</a></li>
-					<li><a href="#">Phụ kiện</a></li>
+		<ul type="square">
+			<li class="level1">Thời trang Nam
+				<ul id="block1">
+					<li>Quần Nam</li>
+					<li>Áo Nam</li>
+					<li>Phụ kiện</li>
 				</ul>
 			</li>
 
-			<li>Thời trang Nữ
-				<ul type="square">
-					<li><a href="#">Váy nữ</a></li>
-					<li><a href="#">Áo nữ</a></li>
-					<li><a href="#">Phụ kiện</a></li>
+			<li class="level1">Thời trang Nữ
+				<ul id="block2">
+					<li>Váy nữ</li>
+					<li>Áo nữ</li>
+					<li>Phụ kiện</li>
 				</ul>
 			</li>
-		</ol>
+		</ul>
 
 	</div>
 

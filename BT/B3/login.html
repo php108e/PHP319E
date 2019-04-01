@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Đăng nhập</title>
+</head>
+<body style="background-color: #888585">
+	<div>
+		<h2>Chào mừng bạn đến với ABC-Corp. Đăng nhập ngay!</h2>
+		<div>Thành viên mới? <a href="register.html">Đăng ký</a> tại đây</div>
+	</div>
+	<div>
+		<form action="login_proccess.php" method="post" style="background-color: white;">
+			<label>Địa chỉ Email*</label><br>
+			<input type="text" name="txtEmail" placeholder="Vui lòng nhập email của bạn"><br>
+
+			<label>Mật khẩu*</label><br>
+			<input type="password" name="txtPass" placeholder="Tối thiểu 6 ký tự bao gồm chữ thường và chữ số"><br>
+
+			<label><a href="#">Quên mật khẩu?</a></label><br>
+
+			<input type="submit" name="btnLogin" value="Đăng nhập"><br>
+			<label>Hoặc đăng nhập bằng:</label><br>
+			<input type="button" name="btnFacebook" value="Facebook"><br>
+			<input type="button" name="btnGoogle" value="Google"><br>
+		</form>
+	</div>
+</body>
+</html>
