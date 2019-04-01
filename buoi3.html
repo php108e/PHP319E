@@ -3,19 +3,35 @@
 <head>
 	<title>danh sach khong co thu tu</title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		/* selector*/
+		li{
+			color:red;
+			text-transform: uppercase;
+		}
+		.menu1{
+			color: blue;
+		}
+		#block1{
+			background: yellow;
+		}
+		#block2{
+			background: pink;
+		}
+	</style>
 </head>
 <body>
 	<ul type="disc">
-		<li> <a href="#"> thời trang nam </a>
-			<ul type="square">
-			<li><a href="#"> Quần nam </a></li>
-			<li> <a href="#"> Áo nam </a></li>
+		<li class="menu1">  thời trang nam 
+			<ul type="square" id = "block1">
+			<li> Quần nam </li>
+			<li>  Áo nam </li>
 			</ul>
 		</li>
-		<li> <a href="#"> thời trang nữ </a>
-			<ul type="square">
-			<li> <a href="#"> váy nữ </a></li>
-			<li> <a href="#"> phụ kiện</a></li>
+		<li class="menu1" >  thời trang nữ 
+			<ul type="square" id="block2">
+			<li>  váy nữ</li>
+			<li>  phụ kiện</li>
 			</ul>
 
 		</li>
