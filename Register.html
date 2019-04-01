@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>Tạo tài khoản thành viên</h1>
+	<br>
+	<div>
+		<div>Bạn đã là thành viên? <a href="login.html" target="_blank"> Đăng nhập</a> tại đây</div>
+	<form action="register_process.php" method="get">
+		<label>Địa chỉ email*</label><br>
+		<input type="text" name="txtEmail" value="" placeholder="Vui lòng nhập email của bạn"><br>
+		<label>Mật khẩu*</label><br>
+		<input type="text" name="txtPass" value="" placeholder="tối thiểu 6 kí tự bao gồm"><br>
+		<label> Ngày/ Tháng/ Năm sinh</label><br>
+		<select name="cbDay">
+			<option value="ngay"> Ngày </option>
+		</select>
+		<select name="cbMonth">
+			<option value="thang"> Tháng </option>
+		</select>
+		<select name="cbYear">
+			<option value="namSinh"> Năm sinh</option>
+		</select><br>
+		<label> Giới tính </label><br>
+		<select name="cbGender">
+			<option value="chonGioiTinh"> Chọn </option>
+		</select><br>
+		<label> Tên* </label><br>
+		<input type="text" name="txtFullName" value="" placeholder="Họ và tên"><br>
+		<label> Tôi muốn nhận thông báo từ nhà hàng</label>
+		<input type="checkbox" name="chkSaleInfor" checked="true" value="1"><br> 
+		<input type="submit" name="btnRegister" value="Đăng kí"><br>
+		<label>Hoặc đăng kí với</label><br>
+		<input type="button" name="btnFacebook" value="Facebook"><br>
+		<input type="button" name="btnGoogle" value="Google"><br>
+	</form>
+</div>
+</body>
+</html>
