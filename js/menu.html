@@ -3,19 +3,37 @@
 <head>
 	<title>THỜI TRANG</title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		/*selector css */
+		li{
+			color: red;
+		}
+		/*Class css*/
+		.level1{
+			color: blue;
+			text-transform: uppercase;
+		}
+		#block1{
+			background: yellow;
+		}
+		#block2{
+			background: pink;
+		}
+	</style>
+	
 </head>
 <body>
-	<ol type="A">
-		<li>Thời trang nam</li>
-			<ol type="1">
+	<ul type="square">
+		<li class="level1">Thời trang nam</li>
+			<ul id="block1">
 				<li><a href="#">Quần Nam</a></li>
 				<li><a href="#">Áo Nam</a></li>
-			</ol>
-		<li>Thời trang nữ</li>		
-			<ol type="1">
+			</ul>
+		<li class="level1">Thời trang nữ</li>		
+			<ul id="block2">
 				<li><a href="#">Váy nữ</a></li>
 				<li><a href="#">Phụ kiện</a></li>
-			</ol>
-	</ol>
+			</ul>
+	</ul>
 </body>
 </html>

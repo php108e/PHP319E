@@ -3,12 +3,18 @@
 <head>
 	<title>Form-HTML</title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		label{
+			color:blue;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
 	<form action="process.php" method="get">
-		<label>Họ và tên</label>
+		<label style="color:red;font-weight:bold;">Họ và tên</label>
 		<input type="text" name="txtfullname" placeholder="Nhập tên"><br>
-		<lable>Giới tính</lable>
+		<label>Giới tính</label>
 		<input type="radio" name="rbGender" checked="true" value="1">Nam
 		<input type="radio" name="rbGender" value="0">Nữ
 		<label>Sở thích</label>
