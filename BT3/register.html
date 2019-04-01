@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài Thực hành số 3</title>
+	<meta charset="utf-8">
+</head>
+<body bgcolor="8C8C8C">
+		<div><h2>Tạo tài khoản thành viên</h2></div>
+		<div>Bạn đã là thành viên ? <a href="login.html" target="_self"> Đăng nhập </a> tại đây</div>
+			<div style="background-color: white">
+				<form action="register_process.php" method="get">
+			<div><label>Địa chỉ Email*</label></div>
+			<div><input type="text" name="txtEmail" placeholder="Vui lòng nhập Email của bạn"></div>
+			<div><label>Mật khẩu*</label></div>
+			<div><input type="text" name="txtPass" placeholder="Tối thiểu 6 kí tự bao gồm kí tự đặc biệt"></div>
+			<div><label>Ngày/Tháng/Năm sinh</label></div>
+			<div>
+				<select name="cbDay">
+					<option value="ngày 1" selected="true">01</option>
+					<option value="ngày 2">02</option>
+					<option value="ngày 3">03</option>
+					<option value="ngày 4">04</option>
+					<option value="ngày 5">05</option>
+					<option value="ngày 6">06</option>
+					<option value="ngày 7">07</option>
+					<option value="ngày 8">08</option>
+					<option value="ngày 9">09</option>
+					<option value="ngày 10">10</option>
+					<option value="ngày 11">11</option>					
+					<option value="ngày 12">12</option>
+					<option value="ngày 13">13</option>
+					<option value="ngày 14">14</option>
+					<option value="ngày 15">15</option>
+					<option value="ngày 16">16</option>					
+					<option value="ngày 17">17</option>
+					<option value="ngày 18">18</option>
+					<option value="ngày 19">19</option>
+					<option value="ngày 20">20</option>
+					<option value="ngày 21">21</option>					
+					<option value="ngày 22">22</option>
+					<option value="ngày 23">23</option>
+					<option value="ngày 24">24</option>
+					<option value="ngày 25">25</option>
+					<option value="ngày 26">26</option>
+					<option value="ngày 27">27</option>
+					<option value="ngày 28">28</option>
+					<option value="ngày 29">29</option>
+					<option value="ngày 30">30</option>
+					<option value="ngày 31">31</option>
+				</select>
+				<select name="cbMonth">
+					<option value="tháng 1" selected="true">01</option>
+					<option value="tháng 2">02</option>
+					<option value="tháng 3">03</option>
+					<option value="tháng 4">04</option>
+					<option value="tháng 5">05</option>
+					<option value="tháng 6">06</option>
+					<option value="tháng 7">07</option>
+					<option value="tháng 8">08</option>
+					<option value="tháng 9">09</option>
+					<option value="tháng 10">10</option>
+					<option value="tháng 11">11</option>				
+					<option value="tháng 12">12</option>
+				</select>
+				<select name="cbYear">
+					<option value="năm 1980" selected="true">1980</option>
+					<option value="năm 1981">1981</option>
+					<option value="năm 1982">1982</option>
+					<option value="năm 1983">1983</option>
+					<option value="năm 1984">1984</option>
+					<option value="năm 1985">1985</option>
+					<option value="năm 1986">1986</option>
+					<option value="năm 1987">1987</option>
+					<option value="năm 1988">1988</option>
+					<option value="năm 1989">1989</option>
+					<option value="năm 1990">1990</option>				
+					<option value="năm 1991">1991</option>
+					<option value="năm 1992">1992</option>
+					<option value="năm 1993">1993</option>
+					<option value="năm 1994">1994</option>
+					<option value="năm 1995">1995</option>
+					<option value="năm 1996">1996</option>
+					<option value="năm 1997">1997</option>
+					<option value="năm 1998">1998</option>
+					<option value="năm 1999">1999</option>
+					<option value="năm 2000">2000</option>				
+				</select>
+			</div>
+			<div><label>Giới tính</label></div>
+			<div>
+				<select name="cbGender">
+					<option value="1" selected="true">Nam</option>
+					<option value="0">Nữ</option>
+				</select>
+			</div>
+			<div><label>Tên*</label></div>
+				<div><input type="text" name="txtFullname" placeholder="Họ và tên"></div>
+				<div><input type="checkbox" checked="true" name="chkSaleInfo" value="1"></div>
+			<div><label>Tôi muốn nhận thông tin khuyến mãi từ cửa hàng</label></div>
+			<div><input type="submit" name="btnRegister" value="Đăng ký">
+			</div>
+			<div><label>Hoặc đăng kí với</label></div>
+			<div><input type="button" name="btnFacebook" value="Facebook">
+			</div>
+			<div><input type="button" name="btnGoogle" value="Google"></div>
+		</form>
+	</div>
+</body>
+</html>
