@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Internal style-->
+
+    <style type="text/css">
+        label{
+            color: blue;
+        }
+    </style>
+    <link rel="stylesheet" href="css/main.css">
+
     <title>Form</title>
 </head>
 <body>
     <form action="process.php" method="POST">
-        <label>Họ và tên</label>
+        <label style="color: red; font-weight: bold">Họ và tên</label> <!--inline-->
         <input type="text" name="txtFullname"  placeholder=" nhập tên">
         <br>
         <label > giới tính</label>
