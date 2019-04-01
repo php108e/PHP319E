@@ -4,31 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Trang đăng nhập</title>
 </head>
-<body style="background-color: gray;">
-<h1>Chào mừng bạn đến với ABC-Corp. Đăng nhập ngay! </h1>
-<div style="background-color: white">
-    <div>Thành viên mới? <a href="register.html">Đăng ký</a> tại đây</div>
-    <form action="login_proccess.php" method="post">
-        <label>Địa chỉ email*</label>
-        <br>
-        <input type="text" name="txtEmail" placeholder="Vui lòng nhập email của bạn">
-        <br>
-        <label>Mật khẩu*</label>
-        <br>
-        <input type="hidden" name="txtPass" placeholder="Vui lòng nhập mật khẩu của bạn">
-        <br>
-        <a href="login.html">Quên mật khẩu?</a>
-        <br>
-        <input type="submit" value="Đăng nhập " name="btnLogin">
-        <br>
-        Hoặc đăng nhập bằng
-        <br>
-        <input type="button" name="btnFacebook" value="Facebook">
-        <br>
-        <input type="button" name="btnGoogle" value="Google">
-    </form>
-</div>
+<body style="background-color:#999">
+    <div>
+        <div><h2>Chào mừng bạn đến với ABC-Corp. Đăng nhập ngay!</h2></div>
+        <div>Thành viên mới? <a href="register.html">Đăng ký</a> tại đây</div>
+    </div>
+
+    <div style="background-color: #fff">
+        <form action="login_proccess.php" method="POST">
+            <div>
+                <label>Địa chỉ Email*</label><br>
+                <input type="text" name="txtEmail" placeholder="Vui lòng nhập email của bạn" width="100%"><br>
+                <label>Mật khẩu*</label><br>
+                <input type="password" name="txtPass" placeholder="Vui lòng nhập mật khẩu của bạn"><br>
+                <div><a href="forgot.html">Quên mật khẩu?</a></div>
+            </div>
+
+            <div>
+                <input type="submit" name="btnLogin" value="Đăng nhập"><br>
+                <label>Hoặc đăng nhập bằng:</label><br>
+                <div>
+                    <div><input type="button" name="btnFacebook" value="Facebook"></div>
+                    <div><input type="button" name="btnGoogle" value="Google"></div>
+                </div>      
+            </div>
+        </form>
+    </div>
 </body>
 </html>
