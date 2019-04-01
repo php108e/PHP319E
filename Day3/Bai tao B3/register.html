@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tạo tài khoản</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h2>Tạo tài khoản thành viên</h2>
+	<div>Bạn đã là thành viên?<a href="login.html" target="_self">Đăng nhập</a> tại đây</div>
+	<div>
+		<form action="processregister.php" method="post" >
+			<div>
+				<label>Địa chỉ Email*</label><br>
+				<input type="text" name="txtEmail" placeholder="Vui lòng nhập email của bạn" size="25%">
+			</div>
+			<div>
+				<label>Mật khẩu*</label><br>
+				<input type="password" name="txtPassword" placeholder="Tối thiểu 6 kí tự bao gồm chữ và số" size="25%">
+			</div>
+			<div>
+				<label>Ngày/Tháng/Năm sinh</label><br>
+				<select name="cbDate">
+					<option value="defaultDate">Ngày</option>
+					<script type="text/javascript">
+						var count
+						for(count=1; count<=31;count++){
+							document.write("<option value=&#34" + count + "&#34>"+count+"</option>")
+						}
+					</script>
+				</select>
+				<select name="cbMonth">
+					<option value="defaultMonth">Tháng</option>
+					<script type="text/javascript">
+						var count
+						for(count=1; count<=12;count++){
+							document.write("<option value=&#34" + count + "&#34>"+count+"</option>")
+						}
+					</script>
+				</select>
+				<select name="cdYear">
+					<option value="defaultYear">Năm</option>
+					<script type="text/javascript">
+						var count
+						for(count=2020; count>=1900;count--){
+							document.write("<option value=&#34" + count + "&#34>"+count+"</option>")
+						}
+					</script>
+				</select>
+			</div>
+			<div>
+				<label>Giới tính</label><br>
+				<select name="cbGender">
+					<option value="defaultChoose">Chọn</option>
+					<option value="male">Nam</option>
+					<option value="female">Nữ</option>
+				</select>
+			</div>
+			<div>
+				<label>Tên*</label><br>
+				<input type="text" name="txtFullname" placeholder="Họ và tên"><br>
+				<input type="checkbox" name="chkSaleInfo" value="1"> Tôi muốn nhận thông tin khuyến mãi từ cửa hàng<br>
+			</div>
+			<div>
+				<input type="submit" name="btnReg" value="Đăng ký"><br>
+				<label>Hoặc đăng ký với:</label><br>
+				<input type="button" name="btnFacebook" value="Facebook"><br>
+				<input type="button" name="btnGoogle" value="Google">
+			</div>
+			<div></div>
+		</form>
+	</div>
+</body>
+</html>
