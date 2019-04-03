@@ -6,16 +6,18 @@ div{
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 35pt;
+	border-width: 7px;
+	border-color: green;
+	border-style: solid;
 }
 #block2{
 	background-color: green;
 	color: white;
 }
-.block3{
 
-}
 .block{
-	line-height: 25px
+	line-height: 25px;
+	text-indent: 30px;	
 }
 #blockSP1{
 	color: red;
