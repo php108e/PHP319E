@@ -1,18 +1,22 @@
 .boder{
+
 	border-style: solid;
 	border-width: 1px;
-	border-color: black;
-	padding-left: 7px;
-	padding-top: 5px;
+	border-color: grey;
+	padding: 10px 10px 10px 10px;
 }
-#header{
-	width: 90%;
-	height: 30px;
+.header{
+	width: 100%;
 	background-color: blue;
 }
-#content1{
-	width: 90%;
+.content{
+	width: 100%;
 	background-color: white;
+}
+.footer{
+	width: 100%;
+	text-align: right;
+
 }
 .blockTitle{
 	color: white;
@@ -21,8 +25,12 @@
 	padding-left: 4px;
 	padding-top: 5px;
 }	
-.blockSP1{
+.blockSP{
 	color: blue;
 	font-size: 15pt;
 	font-weight: bold; 
+}
+.dropImage{
+  float: left; /*Thuộc tính float xác định có hay không một thành phần được trôi nổi: giá trị left, right, none*/
+  padding: 8px 10px 0 0; /*padding: top left bottom right*/
 }
