@@ -1,0 +1,47 @@
+
+#block1
+{
+
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	font-size: 25px;
+	background-color: white;
+	border: 5px solid green;
+	text-transform: uppercase;
+	
+}
+#block2
+{
+	background-color: green;
+	color: white;
+	text-indent: 40px;
+	line-height: 25px;
+}
+#a
+{
+	color: red;
+	text-decoration: none;
+	font-weight: bold;
+}
+#block3
+{
+	text-indent: 40px;
+}
+#a3
+{
+	color: red;
+	text-decoration: none;
+	font-weight: bold;
+}
+#a4
+{
+	background-color: orange;
+	color: black;
+}
+#a5
+{
+	color: blue;
+	text-decoration: none;
+
+}
