@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 960px;
+	height: auto;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.category-title {
+	background: blue;
+	padding: 5px;
+}
+
+.category-title a {
+	color: white;
+	font-weight: bold;
+}
+
+.article {
+	border: 1px solid gray;
+	border-top: none;
+}
+
+.article-title h3 {
+	color: blue;
+	padding: 5px;
+}
+
+.article-content {
+	padding: 15px 0px 30px 45px;
+}
+
+.footer-article	 {
+	padding: 5px;
+	border: 1px solid gray;
+	border-top: none;
+	overflow: auto;
+}
+
+.footer-article a {
+	float: right;
+	text-decoration: underline;
+}
+
+.article-content-1 {
+	margin: 5px 15px;
+}
+

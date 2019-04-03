@@ -1,0 +1,44 @@
+div {
+	margin-bottom: 25px;
+}
+
+.indent {
+		text-indent: 30px;
+}
+
+#title h1 {
+	text-transform: uppercase;
+	color: red;
+	border: 5px solid green;
+	text-align: center;
+}
+
+#paragraph1 {
+	background: green;
+	line-height: 25px;
+	color: white;
+}
+
+#paragraph1 span {
+	color: red;
+}
+
+#paragraph1::first-letter {
+	font-size: 36px;
+	font-weight: bold;
+}
+
+.wordswift {
+	color: red;
+	font-size: 18px; 
+	font-weight: bold;
+}
+
+.mark{
+	background: orange;
+	text-decoration: underline;
+}
+
+.bluewords {
+	color: blue;
+}
