@@ -1,0 +1,39 @@
+div{
+	margin-bottom: 20px;
+}
+#block1{
+	color: red;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 35pt;
+}
+#block2{
+	background-color: green;
+	color: white;
+}
+.block3{
+
+}
+.block{
+	line-height: 25px
+}
+#blockSP1{
+	color: red;
+	font-weight: bold;
+
+}
+#blockSP1_1{
+	font-size: 25pt;
+	font-weight: bold;
+}
+#blockSP2{
+	color: red;
+	font-weight: bold;
+}
+#blockSP2_1{
+	background-color: orange;
+	text-decoration: underline;
+}
+#blockSP3{
+	color: blue;
+}
