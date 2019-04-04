@@ -3,18 +3,35 @@
 <head>
 	<title>Menu thời trang nam</title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		/*selector css*/
+		li{
+			color: red;
+		}
+		/*Class Css*/
+		.level1{
+			color: blue;
+		}
+		/*ID css*/
+		#block1{
+			background: yellow;
+		}
+		#block2{
+			background: pink;
+		}
+	</style>
 </head>
 <body>
 	<ul type="Square">
-		<li><a href="#">Thời trang nam</a>
-			<ul type="Square">
-				<li><a href="#">Quần Nam</a></li>
-				<li><a href="#">Áo Nam</a></li>
+		<li class="level1">Thời trang nam
+			<ul id="block1" type="Square">
+				<li>Quần Nam</li>
+				<li>Áo Nam</li>
 			</ul></li>
-			<li><a href="#">Thời trang nam</a>
-			<ul type="Square">
-				<li><a href="#">Quần Nam</a></li>
-				<li><a href="#">Áo Nam</a></li>
+		<li class="level1">Thời trang nam
+			<ul id="block2" type="Square">
+				<li>Quần Nam</li>
+				<li>Áo Nam</li>
 			</ul></li>
 	</ul>
 </body>

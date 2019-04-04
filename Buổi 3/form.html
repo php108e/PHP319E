@@ -3,11 +3,20 @@
 <head>
 	<title>Form - HTML</title>
 	<meta charset="utf-8">
+	<!--Internal Style-->
+	<style type="text/css">
+		label{
+			color: blue;
+		}
+	</style>
+		<!--External Style-->
+		<link rel="stylesheet" type="text/css" href="../css/main.css">
+		<!--ưu tiên cái nào gần hơn-->
 </head>
 <body>
 	<form action="proccess.php" method="post">
-		<label>Họ Và Tên</label>
-		<input type="text" name="textFullnam" value="" placeholder="Mời quý ngài nhaapjh tến"><br>
+		<label style="color: red; font-weight: bold;">Họ Và Tên</label>
+		<input type="text" name="textFullnam" value="" placeholder="Mời quý ngài nhập tến"><br>
 
 		<label>Giới tính</label>
 		<input type="radio" name="RBGender" checked="True" value="1">Nam
