@@ -1,0 +1,39 @@
+div{
+	margin-bottom: 15pt;
+}
+
+#tieude{
+	text-transform: uppercase;
+	border-color: green;
+	border-width: 4pt;
+	border-style: solid;
+	font-size: 20pt;
+	text-align: center;
+}
+
+.chung1{
+	font-weight: bold;
+	color: red;
+}
+
+#doan1{
+	text-indent: 30pt;
+	background: green;
+	line-height: 25pt;
+	text-align: justify;
+	color: white;
+}
+
+.chung{
+	text-indent: 30pt;
+	line-height: 15pt;
+}
+
+.chung2{
+	background: orange;
+	text-decoration: underline;
+}
+
+.chung3{
+	color:blue;
+}
