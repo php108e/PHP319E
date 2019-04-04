@@ -1,0 +1,30 @@
+#title {
+    border-style: solid;
+    border-width: 5px;
+    border-color: green;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20pt;
+    color: red;
+}
+
+#p1::first-letter {
+    font-size: 200%;
+    color: red;
+}
+
+#p1 {
+    background-color: green;
+    text-indent: 2em;
+    color: white;
+}
+
+#p2 {
+
+}
+
+.swift {
+    font-weight: bold;
+    color: red;
+}
