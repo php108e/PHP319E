@@ -1,0 +1,34 @@
+img {
+    width: 10%;
+    float: left;
+}
+
+.title {
+    background-color: blue;
+    color: white;
+}
+
+.title h3 {
+    margin: 0 0 0 10px;
+}
+
+.content {
+    border: 0.1px solid black;
+    padding-left: 10px;
+}
+
+.content li {
+    margin: 0 0 0 20px;
+}
+
+.sub-title {
+    color: blue;
+    margin: 5px 0 5px 5px;
+}
+
+.back-to-top {
+    text-align: right;
+    border: 0.1px solid black;
+    height: 20px;
+    padding: 10px;
+}

@@ -1,0 +1,37 @@
+body {
+    text-align: justify;
+    line-height: 25px;
+    margin: 100px 300px;
+}
+
+.nav-bar {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: green;
+    border-right: 1px black;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+}
+
+.first-paragraph {
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+    background-color: grey;
+}
+
+.description {
+    color: orange;
+    text-decoration: underline;
+}
+
+.second-paragraph {
+    color: green;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: tahoma;
+}

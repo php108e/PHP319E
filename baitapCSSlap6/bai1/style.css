@@ -1,0 +1,43 @@
+.heading {
+    text-transform: uppercase;
+    color: red;
+    border: 0.3rem solid green;
+    text-align: center;
+}
+
+.heading h1 {
+    margin: 0;
+}
+
+.first-paragraph {
+    background-color: green;
+    color: white;
+    text-indent: 30px;
+    line-height: 200%;
+}
+
+.first-paragraph::first-letter {
+    font-size: 300%;
+}
+
+.name {
+    color: red;
+    font-weight: bold;
+
+}
+
+.paragraph {
+    text-indent: 30px;
+
+}
+
+.highlight {
+    background-color: orange;
+    text-decoration: underline;
+}
+
+#first-word {
+    color: red;
+    font-weight: bolder;
+    font-size: 1.1rem;
+}
