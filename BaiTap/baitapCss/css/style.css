@@ -20,11 +20,21 @@
     color: white;
 }
 
-#p2 {
+p{
+    text-indent: 2em;
 
 }
 
 .swift {
     font-weight: bold;
     color: red;
+}
+
+.song {
+    background-color: #ffa300;
+    text-decoration: underline;
+}
+
+.show {
+    color: blue;
 }
