@@ -1,0 +1,61 @@
+
+body{
+	margin:  0;
+	padding: 0;
+ 	color: white;
+ 	font-size: 20px;
+}
+ .block{
+ 	width: 80%;
+ 	margin: auto;
+ }
+ .block1{
+ 	height: : 100px;
+ 	background-color: red;
+ 	border-style: solid 2px;
+
+ }
+ .block2{
+
+ 	height: 40px;
+ 	background-color: green;
+
+ }
+ .block2 ul{
+ 		list-style: none
+ 		padding: 0px;
+
+ }
+ .block2 ul li{
+ 	display: inline-block;
+ 	line-height: 40px;
+ 	margin: 0px 10px
+ }
+ .block2 ul li ul{
+ 	display: none;
+ }
+ .block3{
+ 	float: left;
+ 	width: 70%;
+ }
+ .blocka{
+ 	background-color: blue;
+ 	height: 200px;
+ }
+ .blockb{
+ 	background-color: black;
+ 	height: 200px;
+ }
+ .block4{
+ 	width: 30%;
+ 	background-color: gray;
+ 	float: left;
+ 	height: 400px;
+
+ }
+ .block5{
+ 	clear: both;
+ 	background-color: yellow;
+
+ }
+ 

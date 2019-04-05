@@ -1,0 +1,31 @@
+b{
+	color: red;
+	font-size: 20px;
+}
+u{
+	background: yellow;
+	
+}
+div{
+	margin-bottom: 20px;
+}
+#chude {
+	border-style: solid;
+	border-color: green;
+	text-transform: uppercase;
+	color: red;
+	text-align: center;
+	font-size: 30px;
+
+
+}
+#doan1{
+	background: green;
+
+}
+.block{
+	text-indent: 50px;
+	padding: 8px;
+	text-align: justify;
+	line-height: 25px;
+}
