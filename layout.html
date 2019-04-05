@@ -3,20 +3,38 @@
 <head>
 	<title></title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		/* SELECTOR CSS*/
+		li{
+			color: red;
+		}
+		/* CLASS CSS*/
+		.level1{
+			color: blue;
+		}
+		#block1{
+			background: yellow;
+		}
+		#block2
+			{
+				background: pink;
+			}
+		}
+	</style>
 </head>
 <body>
 
 	<ul type="SQUARE">
-		<li>
-			<a href="#">Thời Trang Nam</a>
-			<ul type="SQUARE">
-				<li><a href="a">Quần Nam</a></li>
+		<li class="level1">
+			Thời Trang Nam
+			<ul id="block1">
+				<li >Quần Nam</li>
 				<li>Áo Nam</li>
 			</ul>
-		<li>
+		<li class="level1">
 			Thời Trang Nữ
 		</li>
-			<ul type="SQUARE">
+			<ul id="block2">
 				<li>Quần Nữ</li>
 				<li>Áo Nữ</li>
 	</ul>
