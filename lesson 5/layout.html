@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout</title>
+	<style type="text/css">
+		body{
+			margin:0;
+			padding: 0;
+			font-size: 20px;
+			color: white;
+		}
+		.container{
+			width: 80%;
+			margin: 0 auto;
+		}
+		.header{
+			background-color: #333;
+			height: 200px;
+		}
+		/*navigation*/
+		.nav{
+			background-color: #666;
+			height:40px;
+		}
+		.nav ul{
+			list-style-type: none;
+			text-align: center;
+		}
+		.nav ul li{
+			display: inline-block;
+			width: 150px;
+			height: 40px;
+			line-height: 50px;
+			position: relative;
+			margin: 0px 10px;
+		}
+		.nav ul li a{
+			color: white;
+			text-decoration: none;
+			display: block;
+		}
+		.nav ul li a:hover{
+			background-color: black;
+			color: white;
+		}
+		.nav ul li > .sub-nav{
+			display: none;
+			position: absolute;
+			color: black;
+		}
+
+		.nav ul li:hover > .sub-nav{
+			display: block;
+		}
+		/*content*/
+		.content{
+			float: left;
+			width: 70%;
+		}
+		.section{
+			background-color: #444;
+			height: 200px;
+		}
+		.article{
+			background-color: #555;
+			height: 200px
+		}
+		.aside{
+			height: 400px;
+			background-color: #777;
+		}
+		.footer{
+			clear: both;
+			background-color: #888;
+			height: 200px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">Header</div>
+		<div class="nav">
+			<ul>
+				<li>
+					<a href="">Trời trang</a>
+					<ul class="sub-nav">
+						<li><a href="">Thời trang nam</a></li>
+						<li><a href="">Thời trang nữ</a></li>
+					</ul>
+				</li>
+				<li><a href="">Đồ điện tử</a></li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="section">Section</div>
+			<div class="article">Article</div>
+		</div>
+		<div class="aside">aside</div>
+		<div class="footer">footer</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+Vị trí trong css(positioning): normal, abssolute, ralative, sticky
+
+visibility(nội dung bên trong phần tử bị ẩn đi hay hiện ra):hidden, visible
+
+z-index:
+
+display: none, block, inline(cho các thuộc tính trên cùng một dòng)
+
+Pseudo class:
+	active:
+	hover:
+	link:
+	visited:
+Thuộc tính table:
+	table-layout
+	border-collapse
+
+clear:
