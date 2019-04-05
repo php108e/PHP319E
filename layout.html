@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bố cục</title>
+    <title>Menu</title>
+    <style>
+        /* selector css*/
+      li{
+          text-transform: uppercase;
+          color: brown;
+          text-decoration: underline;
+          text-decoration-color: blueviolet;
+      }
+      .level1{
+          color:blue;
+      }
+      #block1{
+          background: yellow;
+      }
+      #block2{
+          background-color:pink;
+      }
+    </style>
 </head>
 <body>
-    
+    <!--
+        
+    -->
+    <ol type="square">
+        <li  class="level1">Thời trang nam
+            <ul id="block1" type="square">
+                <li>mũ Nam </li>
+                <li >Quần Nam</li>
+                <li>Áo Nam </li>
+            </ul>
+        </li>
+        <li class="level1">Thời trang nữ
+            <ul id="block2" type="square">
+                    <li>Áo nữ </li>
+                    <li >Váy nữ </li>
+                    <li>Phụ kiện </li>
+               
+            </ul>
+        </li>
+    </ol>
 </body>
 </html>

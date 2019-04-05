@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
+    <!-- internal style-->
+    <style type="text/css">
+    body{
+        background: rosybrown;
+    }
+    label{
+        color: blue;
+    }
+
+    </style>
+    <!--
+        href là link của file css
+    -->
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
-    <form action="process.php" method="POST">
-        <label>Họ và tên</label>
+    <form action="process.php" method="POST" >
+        <!--
+            inline style
+        -->
+        <label style="color:red">Họ và tên</label>
         <input type="text" name="txtFullname"  placeholder=" nhập tên">
         <br>
         <label > giới tính</label>

@@ -1,0 +1,41 @@
+ul{
+    display: block;
+
+}
+ul li{
+    display: inline;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: green;
+
+}
+h1{
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+}
+#text1{
+    font-style: italic;
+    font-weight: 700;
+  
+    background-color: pink;
+
+}
+#text1 p{
+    color:blue;
+}
+.text2{
+    text-decoration: underline;
+
+}
+.text2 p{
+    color: orange
+}
+#text3{
+    font-size: 30px;
+}
