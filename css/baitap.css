@@ -1,0 +1,42 @@
+div{
+    margin-bottom: 20px;
+}
+#block1 a {
+  
+    text-decoration: none;
+    text-transform: uppercase;
+    color: green;
+    font-weight: bold;
+    
+}
+#block1 a:hover{
+    color: aqua;
+}
+
+h1{
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+}
+#block3{
+    font-style: italic;
+    font-weight: bold;
+    color:blue;
+  
+    background-color:gray;
+
+}
+.block{
+    text-align: justify;
+    line-height: 25px;
+
+}
+.block4{
+    text-decoration: underline;
+    color: orange;
+}
+#block5{
+    font-family: tahoma;
+    color: green;
+    
+}
