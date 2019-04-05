@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Layout</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			color: white;
+			font-size: 20px;
+		}
+
+		#container{
+			width: 80%;
+			margin: 0px auto;
+		}
+
+		#header{
+			height: 110px;
+			background: red;
+		}
+
+		#nav{
+			height: 40px;
+			background: orange;
+		}
+
+		#content{
+		}
+
+		#section{
+			float: left;
+			width: 70%;
+			height: 200px;
+			background: yellow;
+		}
+
+		#article{
+			float: left;
+			width: 70%;
+			height: 200px;
+			background: green;
+		}
+
+		#aside{
+			position: relative;
+			top: -200px;
+			float: left;
+			width: 30%;
+			height: 400px;
+			background: blue;
+		}
+
+		#footer{
+			position: relative;
+			top: -200px;
+			clear: both;
+			height: 110px;
+			background: pink;
+		}
+
+		#nav ul li{
+			display: inline-block;
+		}
+		#nav ul li ul{
+			display: none;
+		}
+
+		#nav ul li:hover #nav ul li ul{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header">Header {height: 110px;}</div>
+
+		<div id="nav">
+			<ul>
+				<li><a href="#">Thời trang nam</a>
+					<ul>
+						<li><a href="#">Quần dài</a></li>
+						<li>Quần đùi</li>
+					</ul>
+				</li>
+				<li>Thời trang nữ
+					<ul>
+						<li>Quần áo</li>
+						<li>Váy</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div id="section">Section {height: 200px;}</div>
+			<div id="article">Article {height: 200px;}</div>
+			<div id="aside">Aside {height: 400px;}</div>
+		</div>
+
+		<div id="footer">Footer {height: 110px;}</div>
+	</div>
+</body>
+</html>
