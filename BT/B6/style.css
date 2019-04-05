@@ -3,53 +3,88 @@
 	padding: 0;
 }
 
-body{
-	width: 960px;
-	height: auto;
-	margin: 0 auto;
-}
-
-a {
+a{
 	text-decoration: none;
 }
 
-.category-title {
-	background: blue;
-	padding: 5px;
+.left{
+	float: left;
 }
 
-.category-title a {
+.right{
+	float: right;
+}
+
+.clear{
+	clear: both;
+}
+
+.border{
+	border: 1px solid gray;
+	border-top: none;
+}
+
+#layout{
+	width: 960px;
+	margin: auto;
+}
+
+.category{
+	width: 100%;
+}
+
+.title{
+	width: 100%;
+	background: blue;
+}
+.title h3{
+	width: 100%;
+	padding: 5px;
+}
+.title h3 a{
 	color: white;
 	font-weight: bold;
 }
 
-.article {
-	border: 1px solid gray;
-	border-top: none;
+.article{
+	width: 100%;
+}
+.article-title{
+	width: 100%;
+}
+.article-title h3{
+	padding-top: 5px;
+	padding-left: 15px;
+	font-weight: bold;
 }
 
-.article-title h3 {
-	color: blue;
-	padding: 5px;
+.article-content{
+	width: 100%;
+}
+.article-content ul{
+	padding: 20px 0px 20px 40px;
+	line-height: 20px;
 }
 
-.article-content {
-	padding: 15px 0px 30px 45px;
+.footer-catergory{
+	width: 100%;
+	height: 26px;
 }
-
-.footer-article	 {
-	padding: 5px;
-	border: 1px solid gray;
-	border-top: none;
-	overflow: auto;
+.footer-catergory div{
+	padding-top: 5px;
+	padding-right: 10px;
 }
-
-.footer-article a {
-	float: right;
+.footer-catergory div a{
 	text-decoration: underline;
 }
 
-.article-content-1 {
-	margin: 5px 15px;
+.article-content ol{
+	padding: 20px 0px 20px 40px;
+	line-height: 20px;
 }
-
+.article-content img{
+	margin: 10px 10px 0px 10px;
+}
+.article-content p{
+	margin: 10px;
+}
