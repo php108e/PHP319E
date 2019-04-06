@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap css</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size: 10px;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            height: 700px;
+            background: green;
+        }
+
+        .header {
+            background: orangered;
+            margin: 0 auto;
+            padding: 0;
+            height: 10%;
+        }
+
+        /*NAVIGATION*/
+        .nav {
+            background: pink;
+            margin: 0 auto;
+            height: 10%;
+
+        }
+
+        .nav ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .nav ul li {
+            display: inline-block;
+            line-height: 40px;
+            margin: 0 10px;
+        }
+
+
+        .nav ul li ul {
+            display: none;
+        }
+
+        .nav ul li :hover .menu2 {
+            display: block;
+        }
+
+
+        /*CONTENT*/
+        .content {
+            background: yellow;
+            height: 70%;
+        }
+
+        .section {
+            height: 50%;
+            width: 70%;
+            background: purple;
+            float: left;
+        }
+
+        .article {
+            height: 50%;
+            width: 70%;
+            background: grey;
+            float: left;
+        }
+
+        .aside {
+            background: silver;
+            float: right;
+            width: 30%;
+            height: 100%;
+
+        }
+
+        .footer {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <img src="images/itplus.png" alt="itplus logo">
+    </div>
+    <div class="nav">
+        Nav {height: 40px;}
+        <ul>
+            <li><a href="#">Thời trang</a>
+                <ul class="menu2">
+                    <li >
+                        <a href="#">Thời trang nam</a></li>
+                    <li >
+                        <a href="#">Thời trang nữ</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li><a href="#">Đồ điện tử</a>
+                <ul>
+                    <li>
+                        <a href="#">Thời trang nam</a></li>
+                    <li>
+                        <a href="#">Thời trang nữ</a>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Đồ gia dụng</a></li>
+
+        </ul>
+    </div>
+    <div class="content">
+        <div class="aside">Aside</div>
+        <div class="section">Section</div>
+        <div class="article">Article</div>
+
+    </div>
+    <div class="footer">Footer</div>
+</div>
+
+
+</body>
+</html>
