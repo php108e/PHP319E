@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bố cục trang web</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			color: black;
+			font-size: 20px;
+		}
+		#container{
+			width: 80%;
+			margin: auto;
+		}
+
+		#header{
+			height: 120px;
+			background-color: green;
+		}
+
+/*--Navigation--*/
+		a{
+			text-decoration: none;
+			margin: 0px 10px;
+		}
+		#nav{
+			height: 40px;
+			background-color: red;
+			line-height: 40px;
+
+		}
+		#nav ul{
+			list-style: none;
+			padding-left: 0px;
+		}
+		#nav ul li{
+			display: inline-block;;
+			text-align: left;
+			position: relative;
+		}
+		/*#nav ul li .menu2{
+			width: 150px;
+			height: 40px;
+		}*/
+		#nav ul li a{
+			color: white;
+			display: block;
+		}
+		#nav ul li a:hover{
+			background-color: orange;
+			color:  black;
+			width: 150px;
+			height: 40px;
+		}
+		#nav ul li:hover .menu2{
+			position: absolute;
+			display: block;
+		}
+
+		#nav ul li ul{
+			display: none;
+		}
+		
+
+		#content{
+			float: left;
+			width: 70%;
+		}
+		#section{
+			height: 200px;
+			background-color: blue;
+		}
+
+		#article{
+			height: 200px;
+			background-color: orange;
+		}
+
+		#aside{
+			float: left;
+			height: 400px;
+			width: 30%;
+			background-color: black;
+		}
+
+		#footer{
+			clear: both;  
+			height: 200px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="header"> Header</div>
+
+		<div id="nav"> 
+			<ul>
+				<li>
+					<a href="#">Thời trang</a>
+					<ul class="menu2">
+						<li><a href="#">Thời trang nam</a></li>
+						<li><a href="#">Thời trang nữ</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#"> Đồ điện tử </a>
+					<ul class="menu2">
+						<li><a href="#">Tivi Sony</a></li>
+						<li><a href="#">Tủ lạnh Toshiba</a></li>
+					</ul>
+				</li>
+
+				<li><a href="#"> Đồ gia dụng </a>
+					<ul class="menu2">
+						<li><a href="#">Máy bơm</a></li>
+						<li><a href="#">Bếp ga</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div id="content">
+			<div id="section"> Section</div>
+			<div id="article"> Article</div>
+		</div>
+
+		<div id="aside">Aside</div>
+
+		<div id="footer">Footer</div>
+	</div>
+</body>
+</html>
