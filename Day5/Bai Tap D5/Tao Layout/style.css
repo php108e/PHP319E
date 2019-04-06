@@ -32,16 +32,17 @@ a{
 	padding-left: 0px;
 }
 
+
 #nav ul li ul li{
 	width: 120px;
 	height: 40px;
-	padding-left: 0px;
+
 }
 
 #nav ul li{
 	display: inline-block;
 	position: relative;
-	padding-left: 10px;
+	padding-left: 20px;
 }
 
 #nav ul li a{
@@ -52,30 +53,36 @@ a{
 	display: none;
 }
 
-#nav ul li:hover a{
-	background-color: white;
-	color: black;
-
+#nav ul li ul{
+	position: absolute;
+	top: 40px;
+	left: 0%;
+	width: 100%;
 }
 
-#nav ul li:hover .sub_menu{
+#nav ul li:hover > ul{
 	display: block;
-	position: absolute;	
-}
-#nav ul li ul a:hover{
-	background-color: blue;
-	color:  white;
+	color: white;
 }
 
-#nav ul li ul li{
-	
+#nav ul li ul{
+
 }
+
+#nav ul li ul li a:hover {
+	color: white;
+	background-color: blue;
+}
+
 /*--CONTENT--*/
 #content{
 	float: left;
 	width: 70%;
 }
 /*--ARTICEL--*/
+
+
+
 #articel{	
 	width: 30%;
 	background-color: black;

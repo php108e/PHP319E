@@ -1,0 +1,109 @@
+/*--MENU DỌC--*/
+.nav{
+	width: 200px;
+}
+
+.nav ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.nav ul li ul{
+	display: none;
+}
+
+.nav ul li:hover > ul{
+	display: block;
+}
+
+.nav ul li{
+	position: relative;
+	border: 1px solid red;
+}
+
+.nav ul li ul{
+	position: absolute;
+	top: 8px;
+	left: 100%;
+	width:100%;
+}
+
+.nav a{
+	text-decoration: none;
+	display: block;
+	padding: 5px 10px;
+}
+/*--MENU NGANG--*/
+
+.nav1{
+	height: 40px;
+	line-height: 40px;
+	background-color: #C0E0E6;
+	color: blue;
+}
+
+.nav1 ul{
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.nav1 li{
+	width: 140px;
+}
+
+.nav1 ul li ul{
+	display: none;
+}
+
+.nav1 ul li{
+	display: inline-block;
+	padding-left: 90px;
+
+}
+
+.nav1 a{
+	text-decoration: none;
+	display: block;
+	/*padding: 5px 5px 10px ; top left right bottom*/
+}
+
+.nav1 ul li{
+	position: relative;
+}
+
+.nav1 ul li ul{
+	position: absolute;
+	top: 40px;
+	left: 0%;
+	width: 100%;
+}
+
+.nav1 ul li ul li ul{
+	position: absolute;
+	top: 0px;
+	left: 100%;
+	width: 100%;
+}
+
+.nav1 ul li:hover > ul{
+	display: block;
+	background-color: #C0E0E6;
+	color: blue;
+}
+
+
+.nav1 ul li ul li:hover >a{
+	color: red;
+}
+
+.nav1 ul li ul li ul li:hover{
+	background-color: blue;
+	color: white;
+}
+
+.nav1 ul li ul li ul li:hover > a{
+	color: white;
+}
+
