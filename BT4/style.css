@@ -1,0 +1,32 @@
+div{
+	margin-bottom: 15px;
+}
+#block1 {
+	color: red;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 30px;
+}
+#block2{
+	text-indent: 15pt;
+	line-height: 27px;
+	margin-top: 15px;
+	background: #298A08;
+	color: #E6E6E6;
+}
+#block3 a{
+	background: orange;
+	color: black;
+}
+#block4 a{
+	text-decoration: none;
+}
+#c {
+	color: red;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 35pt;	
+	border-width: 7px;
+	border-color: green;
+	border-style: solid;
+}

@@ -1,0 +1,31 @@
+.header{
+	width: 99,99%;
+	background-color: blue;
+}
+.boder{
+	border-style: solid;
+	border-width: 1px;
+	border-color: grey;
+	padding: 10px 10px 10px 10px;
+}
+.blockTitle{
+	color: white;
+	font-size: 15pt;
+	font-weight: bold;
+	padding-left: 4px;
+	padding-top: 5px;
+}
+.blockSp{
+	color: blue;
+	font-size: 15pt;
+	font-weight: bold;
+}
+.footer{
+	width: 99,99%;
+	text-align: right;
+}
+.dropImage{
+	
+	float: left;
+	padding: 8px 10px 0 0;
+}

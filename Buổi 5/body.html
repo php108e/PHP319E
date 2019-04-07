@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin:0;
+			padding:0;
+			color: black;
+			font-size: 20pt;
+		}
+		.container{
+			width:80%;
+			margin:auto;
+		}
+		.header{
+			height: 110px;
+			background: yellow;
+		}
+		/*--NAVIGATION--*/
+		.nav{
+			height: 40px;
+			background: red;
+		}
+		.nav a{
+			color: while;
+		}
+		.nav ul{
+			list-style: none;
+			padding-left: 0px;
+		}
+		.nav ul li {
+			display: inline-block;
+			line-height: 40px;
+			margin:0px 10px;
+
+		}
+		
+		.nav ul li ul{
+			display: none;
+		}
+		.nav hl li: hover .menu2{
+			display: 
+		}
+		/*--CONTENT--*/
+		.content{
+			width: 70%;
+			background-color: green;
+			float: left;
+		}
+		.section{
+			height: 200px;
+			background-color: violet;
+		}
+		.article{
+			height: 200px;
+			background-color: green;
+		}
+		.aside{
+			height: 400px;
+			width: 30%;
+			float: left;
+			background: pink;
+		}
+		.footer{
+			height: 200px;
+			clear: both;
+			background: orange;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div class="header">Header {height:110px}
+		</div>
+
+		<div class="nav">Nav {height: 40px}
+			<ul>
+				<li><a href="">Thời trang</a>
+					<ul>
+						<li ><a href="">Thời trang nam</a>
+							<ul class="menu2">
+								<li><a href="#">Giầy nam</a></li>
+								<li><a href="#">Mũ nam</a></li>
+								<li><a href="#">Tất nam</a></li>
+							</ul>
+						</li>
+
+						<li><a href="">Thời trang nữ</a>
+							<ul class="menu2">
+								<li><a href="#">Giầy nữ</a></li>
+								<li><a href="#">Mũ nữ</a></li>
+								<li><a href="#">Tất nữ</a></li>
+							</ul>
+						</li>
+
+						<li><a href="">Thời trang bé</a>
+							<ul>
+								<li><a href="#">Giầy bé</a></li>
+								<li><a href="#">Áo bé</a></li>
+								<li><a href="#">Tất bé</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="section">Section</div>
+			<div class="article">Article</div>
+		</div>
+		<div class="aside">Aside</div>
+		<div class="footer">Footer</div>
+	</div>
+
+</body>
+</html>
