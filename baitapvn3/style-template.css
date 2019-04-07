@@ -1,0 +1,41 @@
+.nav {
+    width: 200px;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav ul li {
+    position: relative;
+    border: 1px solid red;
+}
+
+.nav ul li ul {
+    display: none;
+   
+}
+
+.nav ul li ul li{
+     position: absolute;
+     top: 0px;
+     left: 100%;
+     width: 100%;
+}
+
+.nav ul li:hover > ul {
+    display: block;
+}
+
+.nav a {
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+}
+
+.nav a:hover {
+    background-color: blue;
+    color: white;
+}

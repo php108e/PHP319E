@@ -1,0 +1,67 @@
+.container {
+    margin: auto;
+    width: 1000px;
+}
+
+.nav {
+    background-color: aqua;
+    height: 50px;
+    
+}
+
+.header {
+    background-color: red;
+    width: 1000px;
+    height: 200px;
+}
+
+.content {
+    width: 700px;
+    height: 400px;
+    float: left;
+}
+
+.section {
+    background-color: yellow;
+    height: 200px;
+}
+
+.article {
+    background-color: blue;
+    height: 200px;
+}
+
+.aside {
+    background-color: green;
+    float: left;
+    width: 300px;
+    height: 400px;
+}
+
+.footer {
+    clear: both;
+    background-color: grey;
+    height: 150px;
+}
+
+.nav ul {
+    margin: 0;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.nav ul li {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 20px;
+    line-height: 50px;
+}
+
+.nav ul li ul {
+    display: none;
+}
+
+.nav ul li:hover .menu {
+    display: block;
+}

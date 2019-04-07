@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+}
+
+.container {
+    margin: 0 10% 0;
+}
+
+.heading {
+    text-align: center;
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 12%;
+    float: left;
+}
+
+.heading h2 {
+    padding: 20px 12% 0;
+}
+
+.heading h3 {
+    margin-top: 0px;
+}
+
+.nav {
+    background-color: blue;
+    height: 40px;
+}
+
+.nav a {
+    float: left;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0 0 20px;
+}
+
+.content {
+    float: left;
+    width: 70%;
+    height: 650px;
+
+}
+
+.section {
+    margin: 10px 10px 10px 0;
+}
+
+.section img {
+    width: 100%;
+}
+
+.aside {
+    width: 30%;
+    float: left;
+    text-align: center;
+}
+
+.aside h3 {
+    margin: 40px 10px 10px 0;
+}
+
+.aside a {
+    display: block;
+    text-decoration: none;
+}
+
+.footer {
+    height: 60px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    clear: both;
+}
+
+.footer p {
+    font-weight: bold;
+    padding: 20px;
+}

@@ -3,6 +3,10 @@ img {
     float: left;
 }
 
+.container {
+    margin: auto 300px;
+}
+
 .title {
     background-color: blue;
     color: white;

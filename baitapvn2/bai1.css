@@ -1,0 +1,25 @@
+.container {
+    border: 2px solid blue;
+    width: 400px;
+    height: 400px;
+    margin: 100px auto;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+/* TRUNG TAM
+    left: 150px;
+    top: 150px; */
+
+/* GOC PHAI DUOI
+    left: 300px;
+    top: 300px; */
+
+
+/* NGOAI CONTAINER */
+    left: 150px;
+    top: -100px
+} 
