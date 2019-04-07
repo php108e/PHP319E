@@ -31,11 +31,12 @@ body {
 
 /*NAVIGATION*/
 .nav {
-    background: pink;
+    background: blue;
     margin: 0 auto;
     height: 10%;
     font-size: 15px;
-    padding: 0;
+    padding-top: 6px;
+    color: white;
 
 }
 
@@ -58,27 +59,31 @@ body {
 /*CONTENT*/
 .content {
     width: 70%;
+    height: 700px;
     float: left;
 }
 
 /*---------SECTION-----------*/
 .section {
-    height: 200px;
-    /*width: 60%;*/
     background: blue;
 
 }
 
-.section a img {
+.section img {
     width: 100%;
 }
 
 
 /*--------ARTICLE-----------*/
 .article {
-    height: 200px;
-    /*width: 60%;*/
-    background: gold;
+    background: white;
+    color: black;
+    /*height: 50%;*/
+    font-size: 20px;
+}
+
+.article a {
+    text-decoration: none;
     color: black;
 }
 
@@ -94,9 +99,6 @@ body {
     text-align: center;
 }
 
-.aside ul span {
-    font-weight: bold;
-}
 
 .aside ul li {
     list-style-type: none;
@@ -105,4 +107,19 @@ body {
 
 .aside ul li a {
     text-decoration: none;
+}
+
+
+/*------------FOOTER--------------*/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    clear: both;
+    background: black;
+    color: white;
+    font-size: 18px;
+    text-align: center;
 }
