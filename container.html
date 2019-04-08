@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Container</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			font-size: 26px;
+			color: red;
+		}
+		.container{
+			margin: auto;
+			width: 80%;
+		}
+		.header{
+			background-color: red;
+			height: 100px;
+		}
+		/* -- NAVIGATION --*/
+		.nav{
+			background-color: blue;
+			height: 75px;
+		}
+		.nav ul{
+			list-style: none;
+		}
+		.nav ul li{
+			display: inline-block;
+			line-height: 75px;
+			margin: 0px 10px;
+		}
+		.nav ul li ul{
+			display: none;
+		}
+		.nav ul li:hover .menu2{
+			display: block;
+		}
+		
+		/* --CONTENT --*/
+		.content{
+			width: 70%;
+			float: left;
+		}
+		.section{
+			background-color: pink;
+			height: 200px;
+		}
+		.article{
+			background-color: white;
+			height: 200px;
+		}
+		.aside{
+			background-color: grey;
+			height: 400px;
+			float: left;
+			width: 30%
+		}
+		.footer{
+			clear: both;
+			height: 110px;
+			background-color: yellow
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">Đỏ</div>
+
+		<div class="nav">Xanh
+			<ul>
+				<li><a href="#">Thời trang</a>
+					<ul class="menu2">
+						<li><a href="#">Thời trang nam</a></li>
+						<li><a href="#">Thời trang nữ</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Đồ điện tử</a>
+					<ul class="menu2">
+						<li><a href="#">Máy tính</a></li>
+						<li><a href="#">Điện thoại</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Đồ gia dụng</a>
+					<ul class="menu2">
+						<li><a href="#">Quạt máy</a></li>
+						<li><a href="#">Điều hòa</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="content">
+			<div class="section">Hồng</div>
+			<div class="article">Trắng</div>
+		</div>
+
+		<div class="aside">Bạc</div>
+
+		<div class="footer">Vàng</div>
+	</div>
+</body>
+</html>

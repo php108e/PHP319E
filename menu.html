@@ -3,23 +3,50 @@
 <head>
 	<title>Sử dụng danh sách không có thứ tự ---> Tạo Menu</title>
 	<meta charset="utf-8">
+	<style type="text/css">
+		/*SELECTOR CSS*/
+		li{
+			color: white;
+		}
+		/* CLASS CSS*/
+		.level1{
+			color: blue;
+			text-transform: uppercase;
+		}
+		#block1{
+			background: grey;
+		}
+		#block2{
+			background: grey
+		}
+		/*#nav ul li{
+			display: inline-block;
+		}*/
+		#nav ul li ul{
+			display: none;
+		}
+		#nav ul li:hover #nav ul li ul{
+			display: block;
+		}
+	</style>
 </head>
 <body>
+	<div id="nav">
 	<ul type="square">
-	 	<li><a href="#"> Thời trang nam
-	 		<ul>
-	 			<li><a href="#">Quần Nam</li>
-	 			<li><a href="#">Áo Nam</li>
-	 			<li><a href="#">Phụ kiện</li>
+	 	<li class="level1"> <a href="#"> Thời trang nam </a>
+	 		<ul id="block1">
+	 			<li><a href="#">Quần Nam</a></li>
+	 			<li><a href="#">Áo Nam</a></li>
+	 			<li><a href="#">Phụ kiện</a></li>
 	 		</ul>                                                
 	 	</li>
-	 	<li><a href="#">Thời trang nữ	 
-	 		 <ul>
-	 			<li><a href="#">Váy Nữ</li>
-	 			<li><a href="#">Phụ kiện</li>
+	 	<li class="level1"> <a href="#"> Thời trang nữ </a>
+	 		 <ul id="block2">
+	 			<li><a href="#">Váy Nữ</a></li>
+	 			<li><a href="#">Phụ kiện</a></li>
 	 		</ul>	
 	 	</li>
 	</ul>
-
+	</div>
 </body>
 </html>

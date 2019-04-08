@@ -3,10 +3,18 @@
 <head>
 	<title>Form-HTML</title>
 	<meta charset="utf-8">
+	<!--Internal style-->
+	<style type="text/css">
+		label{
+			color: blue;
+		}
+	</style>
+	<!--External style-->
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 	<form action="process.php" method="post">
-		<label>Họ và tên</label>
+		<label style="color: red; font-weight: bold;">Họ và tên</label>
 		<input type="text" name="txtFullname" placeholder="Mời nhập tên"><br>
 
 		<label>Giới tính</label>
