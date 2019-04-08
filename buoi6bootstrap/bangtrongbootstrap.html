@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- integrity
+        chứng minh file là file gốc
+     -->
+    
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        div{
+          
+            margin-bottom: 5px;
+        }
+        #header{
+            height: 100px;
+        }
+        /* menu, header , footer nen de chieu cao co dinh */
+        #menu{
+            border: 1px solid green;
+            height:45px ;
+        }
+        .nav ul{
+			list-style-type: none;	
+			padding: 0;
+			margin: 0;
+			text-align:center;
+			background-color: #e3e3e3;
+		}
+		
+		.nav ul li ul{
+			display:none;
+			position:absolute;
+		}
+		
+		.nav ul li:hover > ul{
+			display:block;
+            z-index: 1;
+		}
+		
+		.nav ul li{
+			position:relative;
+			width: 200px;
+			display: inline-block;	
+		}
+		
+		.nav a{
+			display:block;
+			text-decoration:none;
+			padding: 10px 10px	
+		}
+		
+		.nav a:hover{
+			background-color:blue;
+			color: white;
+		}
+
+		.nav ul ul ul{
+			top: 0px;
+			left: 100%;
+		}
+		
+		
+        /* phẩy mang ý nghĩa là và */
+        #content-left-slideshow {
+            height: 300px;
+            border: 1px solid blue;
+        }
+        #content-left-body{
+            /* k can them height , nó sẽ tự co dãn theo dộ dài của nội dung */
+            border: 1px solid blue;
+        }
+        
+        
+        #content-right{
+            border: 1px solid rebeccapurple;
+        }
+        #footer{
+            background: black;
+            color: aliceblue;
+            text-align: center;
+        }
+       
+    </style>
+     <title>Document</title>
+</head>
+<body>
+    <!-- container, container-fluid  ,table thư viện định sẵn cua bootstrap 
+        container 80% chia dều hai bên
+        container-fluid full man hinh
+        -khi dung bootstrap phai dong nhat ve kieu vd  sm, md, 
+        -mặc định  bên trong row luôn có padding là 10px;
+        -class table  giup style bang
+        - class table-bordered giup style vien
+        -class table -hover  giup style khi hover qua
+
+     -->
+    <div class="container">
+        <!-- header -->
+        <div id="header" class="row">
+            <div class="col-sm-3">Logo</div>
+            <div class="col-sm-9">Slogan</div>
+        </div>
+        <!-- end header -->
+        <!-- menu -->
+        <div id="menu" class="row nav">
+            
+			<ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li>
+                    <a href="#">Sản phẩm Nam</a>
+                    <ul>
+                        <li><a href="#">Quần Nam</a></li>
+                        <li>
+                            <a href="#">Áo Nam</a>
+                            <ul>
+                                <li><a href="#">Áo Việt Nam</a></li>
+                                <li><a href="#">Áo Trung Quốc</a></li>
+                                <li><a href="#">Áo Mỹ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Ví Nam</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Sản phẩm Nữ</a>
+                    <ul>
+                        <li><a href="#">Áo Nữ</a></li>
+                        <li><a href="#">Quần Nữ</a></li>
+                        <li><a href="#">Ví Nữ</a></li>
+                    </ul>
+                </li>
+        
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+		
+
+        </div>
+        <!-- end menu -->
+        <!-- content -->
+        <div id="content" class="row ">
+            
+                    <div id="content-left" class="col-sm-8">
+                            <div id="content-left-slideshow" class="row"> slider
+            
+                            </div>
+                            <div id="content-left-body" class="row"> 
+                                <h3>Danh sách sinh viên</h3>
+                                
+                                <table class="table table-bordered table-hover ">
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Họ tên</th>
+                                        <th>Tuoi</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Tran Tiểu Cúc</td>
+                                        <td>20</td>
+                                    </tr>
+                                    <tr>
+                                            <td>1</td>
+                                            <td>Tran Tiểu Long</td>
+                                            <td>13</td>
+                                    </tr>
+                                    <tr>
+                                                <td>1</td>
+                                                <td>Tran Tiểu Yến</td>
+                                                <td>24</td>
+                                    </tr>
+                                </table>
+            
+                            </div>
+            
+                    </div>
+                        <div id="content-right" class="col-sm-4">
+                            <h3>Bài viết mới </h3>
+                    </div>
+           
+        </div>
+        <!-- end content -->
+        <div id="footer" class="row">
+            <div class="col-sm-12">
+                @copy by Tran Tieu Cuc
+
+            </div>
+
+
+        </div>
+
+    </div>
+    
+    
+</body>
+</html>
