@@ -19,21 +19,35 @@
 		#block2{
 			background: pink;
 		}
+		.nav ul li{
+			display: inline-block;
+		}
+		.nav ul li ul{
+			display: none;
+		}
+		.nav ul li:hover #nav ul li ul{
+			display: block;
+		}
 	</style>
 	
 </head>
 <body>
+	<div class ="nav">
 	<ul type="square">
-		<li class="level1">Thời trang nam</li>
+		<li class="level1"><a href="#"> Thời trang nam</a>
 			<ul id="block1">
 				<li><a href="#">Quần Nam</a></li>
 				<li><a href="#">Áo Nam</a></li>
+				<li><a href="#">Phụ kiện</a></li>
 			</ul>
-		<li class="level1">Thời trang nữ</li>		
+		</li>
+		<li class="level1"><a href="#"> Thời trang nữ</a>
 			<ul id="block2">
 				<li><a href="#">Váy nữ</a></li>
 				<li><a href="#">Phụ kiện</a></li>
 			</ul>
+		</li>
 	</ul>
+	</div>
 </body>
 </html>
