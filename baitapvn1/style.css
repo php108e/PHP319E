@@ -40,7 +40,7 @@ body {
 .content {
     float: left;
     width: 70%;
-    height: 650px;
+    height: 900px;
 
 }
 
@@ -73,6 +73,8 @@ body {
     text-align: center;
     color: white;
     clear: both;
+    position: relative;
+    bottom: 0;
 }
 
 .footer p {
