@@ -9,7 +9,7 @@ body
 .Container
 {
 	margin: auto;
-	width: 100%;
+	width: 80%;
 
 }
 .Header
@@ -45,7 +45,7 @@ body
 {
 
 	float: left;
-	padding: 0px 35px;
+	padding: 0px 10px;
 }
 .Nav ul li:hover
 {
@@ -55,13 +55,15 @@ body
 .Content
 {
 	float: left;
-	width: 52%;
+	width: 500px;
 	clear: both;
 }
 .Aside
 {
 	float: left;
-	width: 48%;
+	width: 500px;
+  padding-left: 30px;
+
 	
 }
 .Section
