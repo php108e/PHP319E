@@ -1,0 +1,46 @@
+
+#logo{
+	float: left;
+}
+.header{
+	width: 100%;
+	height: 100px;
+	color: blue;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+.nav{
+	height: 40px;
+ 	background-color: blue;
+ 	page-break-after: 10px;
+ 	margin-bottom: 10px;
+ 	padding-left: 10px;
+ 	padding-top: 5px;
+ 	}
+.nav a{
+	color: white;
+	padding: 10px;
+}
+#section{
+	width: 30%;
+ 	float: left;
+ 	text-align: center;
+}
+#section ul {
+	list-style-type: none;
+}
+#section ul li a{
+
+}
+.main{
+	float: left;
+ 	width: 70%;
+ 	padding-bottom: 10px;
+}
+.footer{
+	color: white;
+	background-color: black;
+	text-align: center;
+	clear: both;
+}
