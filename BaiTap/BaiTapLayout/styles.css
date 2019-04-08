@@ -36,7 +36,8 @@ body {
     margin: 0 auto;
     height: 10%;
     font-size: 15px;
-    padding-top: 6px;
+    padding-top: 10px;
+    padding-left: 2%;
     color: white;
 
 }
@@ -114,7 +115,6 @@ body {
 /*------------FOOTER--------------*/
 
 .footer {
-    position: relative;
     bottom: 0;
     height: 60px;
     width: 100%;
