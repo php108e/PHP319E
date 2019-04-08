@@ -8,7 +8,8 @@ body {
 .container {
     width: 70%;
     margin: 0 auto;
-    height: 660px;
+    /*height: 660px;*/
+
 }
 
 /*HEADER*/
@@ -59,7 +60,7 @@ body {
 /*CONTENT*/
 .content {
     width: 70%;
-    height: 700px;
+    /*height: 700px;*/
     float: left;
 }
 
@@ -113,13 +114,21 @@ body {
 /*------------FOOTER--------------*/
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
-    height: 30px;
+    height: 60px;
     width: 100%;
     clear: both;
     background: black;
     color: white;
     font-size: 18px;
     text-align: center;
+}
+
+.footer span {
+    position: relative;
+    left: 7px;
+    top: 16px;
+    transition: none 0s ease 0s;
+    cursor: move;
 }
