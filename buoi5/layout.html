@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-size: 20px;
+
+        }
+        .container{
+            width: 80%;
+            margin: auto;
+        }
+        .header{
+            height: 110px;
+            background: blue;
+
+
+        }
+        /* --navigation*/
+        .nav{
+            background: red;
+            height: 40px;
+           
+           
+
+        }
+        .nav ul{
+            list-style: none;
+            padding-left: 0px;
+        }
+        .nav ul li{
+            display: inline-block;
+            line-height: 40px;
+            margin: 10px;
+        }
+        .nav ul li ul{
+            display: none; 
+        }
+        /* sau khi hover*/ 
+        /* */
+        .nav ul li:hover .menu2{
+            display: block;
+        }
+        
+        /* content*/
+        .content{
+            float: left;
+            
+            width: 70%;
+            
+        }
+        .section{
+            
+            height: 200px;
+            background: green;
+
+        }
+        .article{
+            height: 200px;
+            background: gray;
+        }
+        .aside{
+            float:left;
+           height: 400px;
+            width: 30%;
+            background: pink;
+        }
+        .footer{
+            clear: both;
+            background: rebeccapurple;
+            height: 40px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header"> Header</div>
+        <div class="nav">
+            <ul >
+                <li> <a href="#">Thoi trang</a> 
+                    <ul class="menu2">
+                        <li> <a href="#">Thoi trang nam</a> </li>
+                        <li><a href="#">thoi trang nu</a></li>
+                    </ul>
+                </li>
+
+               <li><a href="#">Đồ điện tử</a>
+                    <ul class="menu2">
+                            <li> <a href="#">nồi cơm điện</a></li>
+                            <li><a href="#"> tủ lạnh</a></li>
+
+                    </ul>
+                    
+
+                </li>
+               <li></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="section">Section </div>
+            <div class="article"> ariticle</div>
+        </div>
+        <div class="aside">Aside</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/*Bước 1: Để độ rộng cho class .nav và xóa bỏ margin, padding và các dấu chấm ở
+đầu từng dòng li mặc định của thẻ ul:*/
+.nav{
+    width: 1200px;
+}
+.nav ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    background-color: gainsboro;
+}
+.nav ul li {
+    padding: 5px;
+    width: 200px;
+    display: inline-block;
+}
+/* b2.Ẩn đi các phần tử ul con nằm trong các phần tử ul li đầu tiên*/
+.nav ul li ul{
+display: none;
+}
+/* Bước 3: Hiển thị thẻ ul con khi hover vào các thẻ li:*/
+.nav ul li:hover ul{
+    display: block;
+}
+/* Bước 4: Chỉnh lại vị trí của các thẻ ul theo thẻ li cha của chúng:
+• Thêm border để cho menu có thể dễ nhìn hơn.
+• Vì vị trí của các thẻ ul con phụ thuộc vào vị trí của thẻ li cha, nên ta gán thuộc
+tính position của li là relative, còn ul là absolute.
+• Sau khi gán giá trị cho 2 thuộc tính position của các thẻ ul và li, ta định vị lại vị
+trí của các thẻ ul con là ở trên sát mép trên của thẻ li và nằm ra ngoài bên phải.
+Do vậy, ta set top: 0px và left: 100%.
+• Ngoài ra ta còn set độ dài cho các thẻ ul là 100% = 200px trong trường hợp này.*/
+.nav ul li {
+    position: relative;
+    border: 1px solid gainsboro;
+}
+.nav ul li ul{
+    position: absolute;
+    top: 28px;
+    
+    width: 100%;
+}
+.nav .b2 .dk{
+    position: relative;
+    
+}
+.nav .b2 .dk ul {
+
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    width :100%;
+    display: none;
+
+}
+.nav .b2 .dk:hover ul{
+    display: block;
+}
+
+/* Bước 5: Chỉnh sửa lại style cho các thẻ a:
+• Bỏ gạch chân cho các thẻ a bằng thuộc tính text-decoration: none.
+• Vì thẻ a là thẻ inline, và nó chỉ chiếm độ rộng đúng bằng khoảng vùng text mà
+nó chiếm. Do đó khi ta di chuột ra ngoài ô text nhưng vẫn nằm trong thẻ li thì nó
+không bắt được link của thẻ a. Để giải quyết được vấn đề này thì ta dùng thuộcPhạm Ngọc Thọ (Lecturer) – Email: thopn.hvcsnd@gmail.com | Mobile: 0989.910.898
+tính display: block cho thẻ a. Thuộc tính này sẽ làm cho độ rộng của thẻ a lên
+thành 100% độ rộng của thẻ cha ( trong trường hợp này là thẻ li).*/
+.nav a{
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+}
+/* Bước 6: Chỉnh màu cho menu item khi hover vào chúng */
+.nav a:hover{
+    background: blue;
+    color: white;
+}
+
