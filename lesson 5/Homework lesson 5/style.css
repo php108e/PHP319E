@@ -1,0 +1,92 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+.container .header #logo{
+	float: left;
+	padding-left: 20px;
+}
+
+.container .header{
+	padding-bottom: 50px;
+}
+#slogan{
+	padding-top: 20px;
+	text-align: center;
+	font-weight: bold;
+	color: blue;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+ #menu ul{
+ 	clear: both;
+ 	background-color: blue;
+ 	text-align: left;
+ 	list-style-type: none;
+ 	border-bottom: 20px solid white;
+
+ }
+ #menu ul li{
+ 	color: white;
+ 	display: inline-table;
+ 	line-height: 40px;
+ 	height: 40px;
+ 	padding-right: 10px;
+ 	position: relative;
+ }
+ #menu ul li a{
+ 	color: white;
+ 	text-decoration: none;
+ 	display: block;
+ }
+ #menu ul li a:hover{
+ 	background-color: #555;
+ 	color: white;
+ }
+
+ #menu ul li .sub-menu{
+ 	display: none;
+ 	position: absolute;
+ 	width: 150px;
+ 	clear: both;
+ }
+ #menu ul li:hover .sub-menu{
+ 	display: block;
+ }
+
+ #content{
+	width: 70%;
+	float: left;
+	padding-bottom: 20px;
+ }
+
+ #sidebar{
+ 	width: 30%;
+ 	float:right;
+ 	/*padding: 1em;*/
+ }
+
+ #sidebar ul{
+ 	text-align: center;
+ 	list-style-type: none;
+ }
+#infor{
+	clear: both;
+	width: 70%
+}
+ #footer{
+ 	border-top: 10px solid white;
+ 	clear: both;
+ 	color: white;
+ 	height: 30px;
+ 	background-color: #222;
+ 	padding: 1em;
+ 	text-align: center;
+ 	padding-bottom: 0px;
+	border-bottom: 10px solid white; 
+ }
