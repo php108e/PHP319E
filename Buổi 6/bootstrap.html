@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Document</title>
+	<style>
+		div{
+			margin-bottom: 5px;
+		}
+		#header{
+			border: 1px red solid;
+			height: 100px;
+		}
+		#menu{
+			border: 1px green solid;
+			height: 35px;
+		}
+		#content-left{
+			border: 1px pink solid;
+		}
+		#content-left-slideshow,
+		#content-left-body{
+			border: 1px blue solid;
+			height: 300px;
+		}
+		#content-right{
+			border: 1px black solid;
+		}
+		#footer{
+			background-color: #000;
+			color: white;
+			text-align: center;
+			height: 250px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div id="header" class="row">
+			<div class="col-sm-3">Logo</div>
+			<div class="col-sm-9">Slogan</div>
+		</div><!--End #header-->
+
+		<div id="menu" class="row nav">
+			<ul>
+				<li>
+					<a href="#" style="color: white">Trang chủ</a>
+						<ul class="sub-menu">
+							<li><a href=""></a></li>
+							<li><a href="#" >Giới thiệu</a></li>
+							<li><a href="#" >Giới thiệu</a></li>
+							<li><a href="#" >Giới thiệu</a></li>
+						</ul>
+				</li>	
+				<li><a href="#" style="color: white">Giới thiệu</a></li>
+				<li><a href="#" style="color: white">Sản phẩm</a></li>
+				<li><a href="#" style="color: white">Tin tức</a></li>
+				<li><a href="#" style="color: white">Tuyển dụng</a></li>
+				<li><a href="#" style="color: white">Đặt hàng sản phẩm</a></li>
+				<li><a href="#" style="color: white">Đăng ký thực tập</a></li>
+				<li><a href="#" style="color: white">Liên hệ</a></li>
+			</ul>
+		</div>
+		      <!--End #menu -->
+
+		<div id="content" class="row">
+			<div id="content-left" class="col-sm-8">
+				<div id="content-left-slideshow" class="row" >Slider</div>
+				<div id="content-left-body" class="row">Tuyển lập trình viên PHP</div>		
+			</div>
+			<div id="content-right" class="col-sm-4">
+				<h3>Bài viết mới</h3>
+			</div>
+		</div>
+			  <!--End #content-->
+		<div id="footer" class="row">
+			<div class="col-sm-12">Bản quyền thuộc về ITPsoft-ITPlus Academy</div>
+		</div>
+	</div>
+</body>
+
+</html>
