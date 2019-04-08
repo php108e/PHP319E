@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BTVN 1.2</title>
+	<link rel="stylesheet" type="text/css" href="./main2.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div class="Comtainer">
+
+	<div class="Header">
+		<div class="Logo"><img src="./logo.jpg" width="190"></div>
+	</div>
+	
+	<div class="Tieude">Viện đào tạo công nghệ thông tin IT PLUS</div>
+
+	<div class="Nav" style="margin-bottom: 10px">
+		<ul type="none">
+			<li>Trang chủ</li>
+			<li>Giới thiệu</li>
+			<li>Sản phẩm</li>
+			<li>Tin tức</li>
+			<li>Tuyển dụng</li>
+			<li>Đặt hàng sản phẩm</li>
+			<li>Đăng kí tuyển dụng</li>
+			<li>Liên hệ</li>
+		</ul>
+	</div>
+
+	<div class="Content" style="margin-bottom: 10px">
+		<div class="Section">
+			<div class="slideshow-container" style="margin: left;">
+				<div class="mySlides fade">
+  					<div class="numbertext">1 / 3</div>
+  					<img src="./laptrinh.jpg" style="width:100%">
+  					<div class="text">Caption Text</div>
+				</div>
+
+				<div class="mySlides fade">
+  					<div class="numbertext">2 / 3</div>
+  					<img src="./laptrinh2.jpg" style="width:100%">
+  					<div class="text">Caption Two</div>
+				</div>
+
+				<div class="mySlides fade">
+  					<div class="numbertext">3 / 3</div>
+  					<img src="./laptrinh3.jpg" style="width:100%">
+  					<div class="text">Caption Three</div>
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+  			showSlides(slideIndex += n);
+			}
+
+		function currentSlide(n) {
+  			showSlides(slideIndex = n);
+			}
+
+		function showSlides(n) {
+  		var i;
+  		var slides = document.getElementsByClassName("mySlides");
+  		var dots = document.getElementsByClassName("dot");
+  		if (n > slides.length) {slideIndex = 1}    
+  		if (n < 1) {slideIndex = slides.length}
+  		for (i = 0; i < slides.length; i++) {
+      	slides[i].style.display = "none";  
+  		}
+  		for (i = 0; i < dots.length; i++) {
+      	dots[i].className = dots[i].className.replace(" active", "");
+  			}
+  		slides[slideIndex-1].style.display = "block";  
+  		dots[slideIndex-1].className += " active";
+		}
+			</script>
+		</div>
+	</div>
+	
+	<div class="Aside" style="margin-bottom: 10px;">
+		
+		<div><img src="./cn1.jpg" width="190" align="left" class="img">Nghề lập trình đòi hỏi sự sáng tạo cũng như các kỹ năng đánh giá, phân tích yêu cầu của dự án, đưa ra các giải pháp thiết kế hoặc cách tiếp cận công nghệ mới khi gặp những framework thiết kế chưa kỹ hoặc công nghệ thay đổi.Suy nghĩ một cách logic Logic là điều quan trọng nhất trong lập trình. Bạn phải có đủ nhạy bén, linh hoạt và khả năng phán xét cao để giải quyết một vấn đề triệt để bằng phương pháp logic. Vì thế, nếu không có khả năng suy luận logic thì chắc chắn một điều nghề lập trình không thích hợp với bạn. Bạn sẽ cảm thấy nhàm chán và nhức đầu khi theo đuổi các đoạn code của chương trình, các vấn đề về debug (gỡ rối), về lỗi, về dấu chấm, dấu phẩy</div>
+		<hr>
+
+		<div><img src="./cn2.png" width="190" align="left" class="img">Đa số, công việc lập trình đều làm việc theo nhóm. Khả năng để bạn thích ứng, và chia sẻ những ý kiến của bạn tại công ty chiếm vị trí rất quan trọng. Bạn phải biết cách phối hợp công việc với cộng sự, khả năng thuyết trình, giao tiếp, ứng xử của bạn sẽ được sử dụng tối đa trong môi trường làm việc này.Làm việc một mình trong thời gian dàiThời hạn của dự án luôn làm bạn đau đầu. Có đôi lúc, bạn phải ngồi làm việc một mình, do đó, bạn cần phải có tính độc lập cao hơn, biết tổ chức và sắp xếp thời gian để hoàn thành dự án đúng lúc. </div>
+		<hr>
+	</div>
+
+	<div class="Content2" style="margin-bottom: 10px">
+		<h2>Nghề lập trình viên PHP</h2>
+		<div>Lập trình viên (người lập trình hay thảo chương viên điện toán) là người viết ra các chương trình máy tính. "Thảo chương viên điện toán" là một từ cũ, được dùng trước năm 1975, và đang trở nên ít phổ thông hơn. Theo thuật ngữ máy tính, lập trình viên có thể là một chuyên gia trong một lĩnh vực của chương trình máy tính hoặc là một người không chuyên, viết mã cho các loại phần mềm. Người đã thực hiện và đưa ra cách tiếp cận chính thức để lập trình được gọi là người phân tích phần mềm.Những người thành thạo các kỹ năng lập trình máy tính có thể trở nên nổi tiếng, tuy nhiên sự đánh giá này lại bị giới hạn bởi những phạm vi trong lĩnh vực công nghệ phần mềm. Nhiều trong số những lập trình viên danh tiếng lại được dán mác là tin tặc. Những lập trình viên thường gắn với hình ảnh những chuyên gia tin học "cá biệt", họ chống lại cái gọi là "những bộ com lê" (thường gắn liền với những bộ đồng phục trong các doanh nghiệp, theo cả nghĩa đen lẫn nghĩa bóng - chỉ dành cho giới quyền uy), sự điều khiền, tuân theo luật lệ. Có nhiều người trẻ tuổi vẫn có khả năng lập trình tốt, họ được xem là các hạt giống cho ngành lập trình trong tương lai. Trong lịch sử, Nữ bá tước Ada Lovelace được xem như là lập trình viên đầu tiên trên thế giới.</div>
+	</div>
+
+	<div class="Footer">
+		Bản quyền thuộc về IT plus
+	</div>
+	
+</div>
+
+</body>
+</html>

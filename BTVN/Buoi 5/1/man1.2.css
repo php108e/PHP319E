@@ -1,0 +1,21 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+.Container
+{
+	margin: auto;
+	width: 80%;
+	background-color: black;
+}
+.Logo
+{
+	float: left;
+	background-color: blue;
+}
+.Tieude
+{
+	background-color: red;
+}

@@ -1,0 +1,52 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-size: 20px;
+}
+
+.Container
+{
+	margin: auto;
+	width: 80%;
+}
+.Header
+{
+	background-color: red;
+	height: 110px;
+}
+.Nav
+{
+	background-color: green;
+	height: 40px;
+}
+.Content
+{
+	float: left;
+	width: 70%
+}
+.Section
+{
+	height: 200px;
+	background-color: blue;
+
+}
+.Artical
+{
+	background-color: black;
+	height: 200px;
+}
+.Aside
+{
+	background-color: gray;
+	height: 400px;
+	float: left;
+	width: 30%
+}
+.Footer
+{
+	background-color: yellow;
+	clear: both;
+	height: 110px;
+}
