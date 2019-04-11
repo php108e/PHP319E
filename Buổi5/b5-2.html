@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>B5 layout</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body{
+			margin: 0;
+			padding: 0;
+			color: white;
+			font-size: 20px;
+		}
+		.container{
+			width: 80%;
+			margin: auto;
+		}
+		.header{
+			height: 110px;
+			background-color: red;
+		}
+		/*--Navigation--*/
+		.nav{
+			height: 40px;
+			background-color: green; 
+		}
+		.nav ul{
+			list-style: none;
+
+		}
+		.nav ul li{
+			display: inline-block;
+			line-height: 40px;
+			margin: 0px 10px;
+		}
+		.nav ul li ul{
+			display: none;
+		}
+		.nav ul li:hover .menu2{
+			display: block;
+		}
+
+		.content{
+			float: left;
+			width: 70%;
+		}
+		.section{
+			background-color: blue;
+			height: 200px;
+		}
+		.artice{
+			background-color: black;
+			height: 200px;
+		}
+		.aside{
+			float: left;
+			width: 30%;
+			background-color: grey;
+			height: 400px;
+		}
+		.footer{
+			clear: both;
+			height: 110px;
+			background-color: orange;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">Header {height:100px}</div>
+		<div class="nav">
+			<ul>
+				<li><a href="#">Thời trang Nam</a>
+					<ul>
+						<li><a href="#">Quần Nam</a></li>
+						<li><a href="#">Áo Nam</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Thời trang nữ</a></li>
+					<ul>
+						<li><a href="#">Váy nữ</a></li>
+						<li><a href="#">Phụ Kiện</a></li>
+					</ul>						
+				</li>
+			</ul>
+				
+		</div>
+
+		<div class="content">
+			<div class="section">Section {height:200px}</div>
+			<div class="artice">Artice {height:200px}</div>
+		</div>
+		<div class="aside">Aside {height:400px}</div>
+		<div class="footer">Footer {height: 110px}</div>
+	</div>
+
+</body>
+</html>

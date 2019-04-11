@@ -1,0 +1,18 @@
+div{
+	text-indent: 40px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+h1{
+	border-style: solid;
+	border-width:5px;
+	border-color: green;
+	text-align: center;
+	text-transform: uppercase;
+	color: red;
+}
+.p1{
+	line-height: 25px;
+	background: green;
+	color: white;
+}
