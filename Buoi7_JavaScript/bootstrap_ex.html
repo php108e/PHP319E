@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example</title>
+    <style>
+        div {
+            margin-bottom: 5px;
+        }
+
+        #header {
+            height: 150px;
+            border: 1px solid red;
+        }
+
+        /*MENU*/
+        #menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            background-color: #e3e3e3;
+        }
+
+        #menu ul li ul {
+            display: none;
+            position: absolute;
+        }
+
+        #menu ul li:hover > ul {
+            display: block;
+        }
+
+        #menu ul li {
+            position: relative;
+            width: 200px;
+            display: inline-block;
+        }
+
+        #menu a {
+            display: block;
+            text-decoration: none;
+            padding: 10px 10px
+        }
+
+        #menu a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        #menu ul ul ul {
+            top: 0px;
+            left: 100%;
+        }
+
+        /*MENU*/
+
+        #content-left {
+            border: 1px solid purple;
+        }
+
+        #content-left-slideshow, {
+            height: 300px;
+            border: 1px solid blue;
+        }
+
+        #content-left-body {
+            border: 1px solid blue;
+
+        }
+
+        #content-right {
+            border: 1px solid black;
+        }
+
+        #footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+    </style>
+    <script>
+        alert("Hello World");
+        document.write("Hello world!")
+    </script>
+</head>
+<body>
+<div class="container">
+    <div id="header" class="row">
+        <div class="col-sm-3">Logo</div>
+        <div class="col-sm-9">Slogan</div>
+    </div>
+    <!--END HEADER-->
+    <div id="menu" class="row nav">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li>
+                <a href="#">Sản phẩm Nam</a>
+                <ul>
+                    <li><a href="#">Quần Nam</a></li>
+                    <li>
+                        <a href="#">Áo Nam</a>
+                        <ul>
+                            <li><a href="#">Áo Việt Nam</a></li>
+                            <li><a href="#">Áo Trung Quốc</a></li>
+                            <li><a href="#">Áo Mỹ</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ví Nam</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Sản phẩm Nữ</a>
+                <ul>
+                    <li><a href="#">Áo Nữ</a></li>
+                    <li><a href="#">Quần Nữ</a></li>
+                    <li><a href="#">Ví Nữ</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+    <!--END MENU-->
+    <div id="content" class="row">
+        <div id="content-left" class="col-sm-8">
+            <div id="content-left-slideshow" class="row">
+                <!--<img src="images/wordpress.png" alt="">-->
+            </div>
+            <div id="content-left-body" class="row">
+                <h3>Danh sách sinh viên lớp PHP0319</h3>
+                <table class="table table-bordered table-hover">
+                    <tr>
+                        <th>TT</th>
+                        <th>Họ tên</th>
+                        <th>Tuổi</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>30</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="content-right" class="col-sm-4">
+            <h3>Bài viết mới</h3>
+        </div>
+    </div>
+    <!--END CONTENT-->
+    <div id="footer" class="row">
+        <div class="col-sm-12">©Bản quyền thuộc về ITsoft-ITPlus Academy</div>
+    </div>
+</div>
+
+<input type="button" value="Click Me!" onclick="alert(`Aaaa`);">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
