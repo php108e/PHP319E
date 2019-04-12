@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style type="text/css">
+		div{
+			margin-bottom: 5px;
+		}
+		#header{
+			border: 1px red solid;
+
+			height: 150px;
+		}
+
+		#menu{
+			border: 1px green solid;
+			height: 40px;
+		}
+		.nav ul{
+			list-style-type: none;	
+			padding: 0;
+			margin: 0;
+			text-align:center;
+			background-color: #e3e3e3;
+		}
+		
+		.nav ul li ul{
+			display:none;
+			position:absolute;
+		}
+		
+		.nav ul li:hover > ul{
+			display:block;
+			z-index: 1; 
+		}
+		
+		.nav ul li{
+			position:relative;
+			width: 200px;
+			display: inline-block;	
+		}
+		
+		.nav a{
+			display:block;
+			text-decoration:none;
+			padding: 10px 10px	
+		}
+		
+		.nav a:hover{
+			background-color:blue;
+			color: white;
+		}
+
+		.nav ul ul ul{
+			top: 0px;
+			left: 100%;
+		}
+
+		#content-left{
+			border: 1px solid red;
+		}
+
+		#content-left-slideshow{
+			
+			
+
+		}
+
+		#content-left-body{
+
+			border: 1px blue solid;
+		}
+		
+		#content-right{
+			border: 1px solid black;
+		}
+
+		#footer{
+			background-color: black;
+			color: #ffff;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="header" class="row">
+			<div class="col-sm-3"><img src="itpsoft.png" class="img-responsive" height="auto" width="200px"></div>
+			<div class="col-sm-9">
+				<h3>Trung tâm phần mềm iptsoft - itplus academy</h3>
+				<h4>Viện công nghệ thông tin - đại học quốc gia hà nội</h4>
+			</div>
+		</div> <!--End #header-->
+
+		<div id="menu" class="row">
+			
+			<div class="nav">
+			    <ul>
+					<li><a href="#">Trang chủ</a></li>
+					<li><a href="#">Giới thiệu</a></li>
+					<li><a href="#">Sản phẩm</a></li>
+					<li><a href="#">Tin tức</a></li>
+					<li>
+						<a href="#">Tuyển dụng</a>
+						<ul>
+							<li><a href="#">Khóa học ngắn hạn</a></li>
+							<li><a href="#">Khóa học dài hạn</a></li>
+							<li>
+								<a href="#">Sinh viên thực tập</a>
+								<ul>
+									<li><a href="#">Web PHP</a></li>
+									<li><a href="#">C/C++</a></li>
+									<li><a href="#">.Net</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Đặt hàng sản phầm</a></li>
+					<li><a href="#">Đăng ký thực tập</a></li>
+					<li><a href="#">Liên hệ</a></li>
+				</ul>
+			</div>
+
+		</div> <!--End #menu-->
+
+		<div id="content" class="row">
+
+			<div id="content-left" class="col-sm-8">
+				<div id="content-left-slideshow" class="row">
+					<img src="wordpress.png" class="img-responsive" height="500px" width="700px">
+				</div>
+
+				<div id="content-left-body" class="row">
+					<h5>Tuyển dụng lập trình viên</h5>
+				</div>
+			</div>
+
+			<div id="content-right" class="col-sm-4">
+				<h3>Bài viết mới</h3>
+			</div>
+		</div><!--End #content-->
+
+		<div id="footer" class="row">
+			<div class="col-sm-12">
+				@Copy right by Tu Dien
+			</div>
+		</div><!--End #footer-->
+	</div>
+
+	
+
+</body>
+</html>

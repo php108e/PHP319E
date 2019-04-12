@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style type="text/css">
+		div{
+			margin-bottom: 5px;
+		}
+		#header{
+			border: 1px red solid;
+
+			height: 150px;
+		}
+
+		#menu{
+			border: 1px green solid;
+			height: 40px;
+		}
+		.nav ul{
+			list-style-type: none;	
+			padding: 0;
+			margin: 0;
+			text-align:center;
+			background-color: #e3e3e3;
+		}
+		
+		.nav ul li ul{
+			display:none;
+			position:absolute;
+		}
+		
+		.nav ul li:hover > ul{
+			display:block;
+			z-index: 1; 
+		}
+		
+		.nav ul li{
+			position:relative;
+			width: 200px;
+			display: inline-block;	
+		}
+		
+		.nav a{
+			display:block;
+			text-decoration:none;
+			padding: 10px 10px	
+		}
+		
+		.nav a:hover{
+			background-color:blue;
+			color: white;
+		}
+
+		.nav ul ul ul{
+			top: 0px;
+			left: 100%;
+		}
+
+		#content-left{
+			border: 1px solid red;
+		}
+
+		#content-left-slideshow{
+			
+			
+
+		}
+
+		#content-left-body{
+
+			border: 1px blue solid;
+		}
+		
+		#content-right{
+			border: 1px solid black;
+		}
+
+		#footer{
+			background-color: black;
+			color: #ffff;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="header" class="row">
+			<div class="col-sm-3"><img src="itpsoft.png" class="img-responsive" height="auto" width="200px"></div>
+			<div class="col-sm-9">
+				<h4>TRUNG TÂM PHẦM MỀM ITPSOFT - ITPLUS ACADEMY</h4>
+				<h3></h3>
+			</div>
+		</div> <!--End #header-->
+
+		<div id="menu" class="row">
+			
+			<div class="nav">
+			    <ul>
+			        <li><a href="#">Trang chủ</a></li>
+			        <li><a href="#">Giới thiệu</a></li>
+			        <li>
+			            <a href="#">Sản phẩm Nam</a>
+			            <ul>
+			                <li><a href="#">Quần Nam</a></li>
+							<li>
+								<a href="#">Áo Nam</a>
+								<ul>
+									<li><a href="#">Áo Việt Nam</a></li>
+									<li><a href="#">Áo Trung Quốc</a></li>
+									<li><a href="#">Áo Mỹ</a></li>
+								</ul>
+							</li>
+			                <li><a href="#">Ví Nam</a></li>
+			            </ul>
+			        </li>
+			        <li>
+			            <a href="#">Sản phẩm Nữ</a>
+			            <ul>
+			                <li><a href="#">Áo Nữ</a></li>
+			                <li><a href="#">Quần Nữ</a></li>
+			                <li><a href="#">Ví Nữ</a></li>
+			            </ul>
+			        </li>
+
+			        <li><a href="#">Liên hệ</a></li>
+			    </ul>
+			</div>
+
+		</div> <!--End #menu-->
+
+		<div id="content" class="row">
+
+			<div id="content-left" class="col-sm-8">
+				<div id="content-left-slideshow" class="row">
+					<img src="itpsoft.png" width="600px"
+					height="500px">
+				</div>
+
+				<div id="content-left-body" class="row">
+					<h3>Danh sách sinh viên lớp PHP0319</h3>
+					<table class="table table-bordered table-hover">
+						<tr>
+							<th>TT</th>
+							<th>Họ tên</th>
+							<th>Tuổi</th>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Nguyễn Văn A</td>
+							<td>19</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Nguyễn Văn A</td>
+							<td>19</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Nguyễn Văn A</td>
+							<td>19</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>Nguyễn Văn A</td>
+							<td>19</td>
+						</tr>
+					</table>	
+
+				</div>
+			</div>
+
+			<div id="content-right" class="col-sm-4">
+				<h3>Bài viết mới</h3>
+			</div>
+		</div><!--End #content-->
+
+		<div id="footer" class="row">
+			<div class="col-sm-12">
+				@Copy right by Tu Dien
+			</div>
+		</div><!--End #footer-->
+	</div>
+
+	
+
+</body>
+</html>
