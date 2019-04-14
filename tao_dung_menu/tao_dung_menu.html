@@ -4,31 +4,25 @@
 	<title>TAO_DUNG_MENU</title>
 	<meta charset="utf-8">
 	<style type="text/css">
-		.nav ul li ul{
-			display: none;
-		}
-		.nav  ul li:hover{
-			display: block;
-		}
-		.nav ul li{
-			position: relative;
-			border: 1px solid red;
-		}
-		.nav ul li ul{
-			position: absolute;
-			top: 0px;
-			left: 100%;
-			width: 100%;
+		.nav ul{
+			list-style-type: none;
 		}
 		.nav a{
 			text-decoration: none;
+		}
+		.nav ul li{
+			position: relative;
+			width: 200px;
+			display: inline-block;
+		}
+		.nav ul li ul{
+			display: none;
+			position: absolute;
+		}
+		.nav ul li:hover >ul{
 			display: block;
-			padding: 5px 10px;
 		}
-		.nav a:hover{
-			background-color: blue;
-			color: white;
-		}
+	
 	</style>
 </head>
 <body>
