@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script language="javascript">
+    <!-- <script language="javascript">
         alert("Hello");
         document.write("Hi");
-    </script>
+    </script> -->
 </head>
 <body>
     <!-- <div>
@@ -25,10 +25,10 @@
     // }
 
 
-    var x = parseInt(prompt("Please input so x: "));
-    var x = parseInt(prompt("Please input so y: "));
-    var z = x + y;
-    alert('Ket qua la: ' + z);
+    // var x = parseInt(prompt("Please input so x: "));
+    // var y = parseInt(prompt("Please input so y: "));
+    // var z = x + y;
+    // alert('Ket qua la: ' + z);
 
 
     // var mobile = prompt("Moi ban nhap so dien thoai");
@@ -38,7 +38,29 @@
     // else {
     //     alert(0);
     // }
+        var x = parseInt(prompt("Please input x = "));
+        var y = parseInt(prompt("Please input y = "));
+        var typeOperator = (prompt("Please choose type of operator (add, substract, multiply, divide)"));
+        var cong = x + y;
+        var tru = x - y;
+        var nhan = x * y;
+        var chia = x / y;
 
+        if (typeOperator == "add") {
+            alert("Result = " + cong);
+        }
+        else if (typeOperator == "substract") {
+            alert("Result = " + tru);
+        }
+        else if (typeOperator == "multiply") {
+            alert("Result = " + nhan);
+        }
+        else if (typeOperator == "divide") {
+            alert("Result = " + chia);
+        }
+        else {
+            alert('Nhap sai')
+        }
     </script>
 </body>
 </html>
