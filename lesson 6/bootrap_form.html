@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta  http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body{
+			font-family: Arial;
+		}
+		div{
+			margin-bottom: 5px;
+		}
+
+		#menu{
+			background-color: #5f5fe3;
+			height: 40px;
+			padding-left: 10px;
+		}
+		#menu ul{
+		 	clear: both;
+ 			text-align: left;
+ 			list-style-type: none;
+ 			border-bottom: 20px solid white;
+		 }
+		 #menu ul li{
+		 	color: white;
+		 	display: inline-table;
+		 	line-height: 40px;
+		 	height: 40px;
+		 	padding-right: 10px;
+		 	position: relative;
+		 }
+		 #menu ul li a{
+		 	color: white;
+		 	text-decoration: none;
+		 	display: block;
+		 }
+		 #menu ul li a:hover{
+		 	/*background-color: white;
+		 	color: black;*/
+		 	opacity: 0.5;
+  			filter: alpha(opacity=50);
+		 }
+
+		 #menu ul li .sub-menu{
+		 	display: none;
+		 	position: absolute;
+		 	width: 150px;
+		 }
+		 #menu ul li:hover .sub-menu{
+		 	display: block;
+		 	background-color: #5f5fe3;
+		 	text-align: center;
+		 	z-index: 10;
+		 }
+		#header{
+			padding-top: 10px;
+			height: 100px;
+			text-transform: uppercase;
+		}
+		#header .col-sm-9{
+			color: blue;
+			text-align: center;
+		}
+		#content{
+			border-top: 10px solid white;
+		}
+
+		#content-left{	
+		}
+		#content-right{
+			text-align: center;
+			border: 5px solid white;
+			height: 300px;
+		}
+
+		#content-right ul li{
+			list-style-type: none;
+			color: blue;
+		}
+		#footer{
+			clear: both;
+    		text-align: center;
+    		color: #999;
+    		background: #212121;
+    		line-height: 60px;		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+         <div id="header" class="row">
+         	<div class="col-sm-3"><img width="200px" height="auto" src="image/itpsoft.png"></div>
+         	<div class="col-sm-9">
+         		<div><h5>Trung tâm phần mềm itpsoft - itplus academy</h5></div><br>
+				<div>Viện công nghệ thông tin - Đại học quốc gia Hà Nội</div>
+         	</div>
+         </div> <!--End #header-->
+         <div id="menu" class="row menu">
+         	<ul>
+			<li><a href="">Trang chủ</a></li>
+			<li>
+				<a href="">Giới thiệu</a>
+				<ul class="sub-menu">
+					<li><a href="">Lịch sử hình thành</a></li>
+					<li><a href="">Chương trình đào tạo</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">Sản phẩm</a>
+				<ul class="sub-menu">
+					<li><a href="">Đồ họa 2D</a></li>
+					<li><a href="">Đồ họa 3D</a></li>
+					<li><a href="">Website doanh nghiệp</a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="">Tin tức</a>
+				<ul class="sub-menu">
+					<li><a href="">ICT News</a></li>
+					<li><a href="">Người thành công</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">Tuyển Dụng</a>
+				<ul class="sub-menu">
+					<li><a href="">Lập trình Androice</a></li>
+					<li><a href="">Lập trình nhúng</a></li>
+					<li><a href="">Lập trình PHP</a></li>
+					<li><a href="">Thiết kế đồ họa</a></li>
+				</ul>
+			</li>
+			<li><a href="">Đặt hàng</a></li>
+			<li><a href="">Đăng ký thực tập</a></li>
+			<li><a href="">Liên hệ</a></li>
+		</ul>
+         </div><!--end menu-->
+         <div id="content" class="row">
+         	<div id="content-left" class="col-sm-9 row">
+         		<img src="image/slider1-1.jpg" width="100%" height="350">
+         	</div>
+         	<div id="content-right" class="col-sm-3">
+         		<ul><h5>Bài viết mới</h5>
+         			<li><a href="">Bài viết 1</a></li>
+         			<li><a href="">Bài viết 2</a></li>
+         			<li><a href="">Bài viết 3</a></li>
+         			<li><a href="">Bài viết 4</a></li>
+         		</ul>
+         	</div>
+        </div><!-- End #content -->
+        <div id="footer" class="row">
+         	<div class="col-sm-12">&copy; Bản quyền thuộc về ITPsoft - ITPlus Academy</div>
+         </div>
+<!-- 	<div class="container-fluid">Nội dung 2</div>
+ --></div>
+</body>
+</html>													

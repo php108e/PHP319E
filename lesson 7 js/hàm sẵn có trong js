@@ -1,0 +1,10 @@
+alert() hiển thị hợp thoại với một chuỗi thông tin
+confirm() hiển thị hộp thoại với nít ok và cancel
+parceInt() chuyển một giá trị chuỗi sang một giá trị số nguyên
+eval() định giá trị một biểu thuức và trả về kết quả
+isNaN() kiểm tra xem có phải là một số không
+prompt() hiển thị hộp thoại cho phép nhập giá trị
+
+Toán tử chỉnh:
+	Toán tử điều kiện: (condition) ? trueVal : falseVal
+	Toán tử typeof

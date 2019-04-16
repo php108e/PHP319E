@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta  http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			margin-bottom: 5px;
+		}
+		#menu{
+			border:1px solid #333;
+			height: 40px;
+
+		}
+		#menu ul{
+		 	clear: both;
+ 			background-color: #444;
+ 			text-align: left;
+ 			list-style-type: none;
+ 			border-bottom: 20px solid white;
+		 }
+		 #menu ul li{
+		 	color: white;
+		 	display: inline-table;
+		 	line-height: 40px;
+		 	height: 40px;
+		 	padding-right: 10px;
+		 	position: relative;
+		 }
+		 #menu ul li a{
+		 	color: white;
+		 	text-decoration: none;
+		 	display: block;
+		 }
+		 #menu ul li a:hover{
+		 	background-color: #555;
+		 	color: white;
+		 }
+
+		 #menu ul li .sub-menu{
+		 	display: none;
+		 	position: absolute;
+		 	width: 150px;
+		 }
+		 #menu ul li:hover .sub-menu{
+		 	display: block;
+		 }
+		#header{
+			height: 100px;
+			border:1px solid #444;
+
+		}
+		#content{
+			border:1px solid black;
+		}
+		#content-left{
+			/*border:1px solid red;*/
+		}
+		#content-left-slideshow{
+			height: 300px;
+			border:1px solid blue;
+		}
+
+		#content-left-body{
+			border:1px solid blue;	
+		}
+		#content-right{
+			height: 600px;
+			border:1px solid #666;
+		}
+		#footer{
+			text-align: center;
+			background: black;
+			color: white;
+			height: 100px;
+			border-bottom: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+         <div id="header" class="row">
+         	<div class="col-sm-3">logo</div>
+         	<div class="col-sm-9">slogan</div>
+         </div> <!--End #header-->
+         <div id="menu" class="row menu">
+         	<ul>
+			<li><a href="">Trang chủ</a></li>
+			<li>
+				<a href="">Giới thiệu</a>
+				<ul class="sub-menu">
+					<li><a href="">Lịch sử hình thành</a></li>
+					<li><a href="">Chương trình đào tạo</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">Sản phẩm</a>
+				<ul class="sub-menu">
+					<li><a href="">Đồ họa 2D</a></li>
+					<li><a href="">Đồ họa 3D</a></li>
+					<li><a href="">Website doanh nghiệp</a></li>
+				</ul>	
+			</li>
+			<li>
+				<a href="">Tin tức</a>
+				<ul class="sub-menu">
+					<li><a href="">ICT News</a></li>
+					<li><a href="">Người thành công</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">Tuyển Dụng</a>
+				<ul class="sub-menu">
+					<li><a href="">Lập trình Androice</a></li>
+					<li><a href="">Lập trình nhúng</a></li>
+					<li><a href="">Lập trình PHP</a></li>
+					<li><a href="">Thiết kế đồ họa</a></li>
+				</ul>
+			</li>
+			<li><a href="">Đặt hàng</a></li>
+			<li><a href="">Đăng ký thực tập</a></li>
+			<li><a href="">Liên hệ</a></li>
+		</ul>
+         </div><!--end menu-->
+         <div id="content" class="row">
+
+         	<div id="content-left" class="col-sm-8">
+         		<div id="content-left-slideshow" class="row">Slide</div>
+         		<div id="content-left-body" class="row">
+         			<h3>Danh sách sinh viên</h3>
+         			<table class="table table-bordered table-hover table-reponsive">
+         				<tr>
+         					<th>TT</th>
+         					<th>Họ tên</th>
+         					<th>Giới tính</th>
+         				</tr>
+         				<tr>
+         					<td>1</td>
+         					<td>Nguyễn Văn A</td>
+         					<td>Nam</td>
+         				</tr>
+         				<tr>
+         					<td>1</td>
+         					<td>Nguyễn Văn A</td>
+         					<td>Nam</td>
+         				</tr>
+         				<tr>
+         					<td>1</td>
+         					<td>Nguyễn Văn A</td>
+         					<td>Nam</td>
+         				</tr>
+         				<tr>
+         					<td>1</td>
+         					<td>Nguyễn Văn A</td>
+         					<td>Nam</td>
+         				</tr>
+         				<tr>
+         					<td>1</td>
+         					<td>Nguyễn Văn A</td>
+         					<td>Nam</td>
+         				</tr>
+         				<tr>
+         					<td>1</td>
+         					<td>Nguyễn Văn A</td>
+         					<td>Nam</td>
+         				</tr>
+         			</table>
+         		</div>
+         	</div>
+         	<div id="content-right" class="col-sm-4">
+         		<h3>Bài viết mới</h3>
+
+         	</div>
+         </div><!-- End #content -->
+         <div id="footer" class="row">
+         	<div class="col-sm-12">&copy; Bản quyền thuộc về ITPsoft - ITPlus Academy</div>
+         </div>
+<!-- 	<div class="container-fluid">Nội dung 2</div>
+ --></div>
+</body>
+</html>													
