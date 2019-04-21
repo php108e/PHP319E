@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài Tập Lab7</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function validate(){
+			var status = true;
+			var name = document.getElementById("txtName").value;
+			var user = document.getElementById("txtUser").value;
+			var pass = document.getElementById("txtPass").value;
+			var repass = document.getElementById("txtRepass").value;
+			var email = document.getElementById("txtEmail").value;
+			var phone = document.getElementById("txtPhone").value;
+			var address = document.getElementById("txtAddress").value;
+			if (name == ""){
+				document.getElementById("msgName").innerHTML = "Vui lòng nhập tên ";
+				status = false;
+			} else {
+				document.getElementById("msgName").style.display ="none";
+				status = true;
+			}
+			if (user == ""){
+				document.getElementById("msgUser").innerHTML = "Vui lòng nhập tài khoản ";
+				status = false;
+			} else {
+				document.getElementById("msgUser").style.display ="none";
+				status = true;
+			}
+			if (pass == ""){
+				document.getElementById("msgPass").innerHTML = "Vui lòng nhập mật khẩu ";
+				status = false;
+			} else {
+				document.getElementById("msgPass").style.display ="none";
+				status = true;
+			}
+			if (repass == ""){
+				document.getElementById("msgRepass").innerHTML = "Vui lòng nhập lại mật khẩu ";
+				status = false;
+			} else {
+				document.getElementById("msgRepass").style.display ="none";
+				status = true;
+			}
+			if (email == ""){
+				document.getElementById("msgEmail").innerHTML = "Vui lòng nhập Email ";
+				status = false;
+			} else {
+				document.getElementById("msgEmail").style.display ="none";
+				status = true;
+			}
+			if (phone == ""){
+				document.getElementById("msgPhone").innerHTML = "Vui lòng nhập số điện thoại ";
+				status = false;
+			} else {
+				document.getElementById("msgPhone").style.display ="none";
+				status = true;
+			}
+			if (address == "" ){
+				document.getElementById("msgAddress").innerHTML "Vui lòng nhập địa chỉ";
+				status = false;
+			}else {
+				document.getElementById("msgAddress").style.display="none";
+				status = true;
+			}
+			if (status = false){
+				return false;
+			} else {
+				return true ;
+			}	
+		}
+	</script>
+</head>
+<body>
+	<h1>Đăng Kí Thành Viên</h1>
+	<form action="process.php" method="post" onsubmit="return validate();">
+		<div>	
+			<label>Họ tên</label>
+			<input type="text" name="txtName" id="txtName">
+			<span id="msgName"></span>
+		</div>
+		<div>
+			<label>Tên tài khoản </label>
+			<input type="text" name="txtUser" id="txtUser">
+			<span id="msgUser"></span>
+		</div>
+		<div>
+			<label>Mật khẩu</label>
+			<input type="text" name="txtPass" id="txtPass">
+			<span id="msgPass"></span>
+		</div>
+		<div>
+			<label>Nhập lại mật khẩu</label>
+			<input type="text" name="txtRepass" id="txtRepass">
+			<span id="msgRepass"></span>
+		</div>
+		<div>	
+			<label>Email</label>
+			<input type="text" name="txtEmail" id="txtEmail">
+			<span id="msgEmail"></span>
+		</div>
+		<div>	
+			<label>Số điện thoại </label>
+			<input type="text" name="txtPhone" id="txtPhone">
+			<span id="msgPhone"></span>
+		</div>
+		<div>	
+			<label>Địa chỉ</label>
+			<input type="text" name="txtAddress" id="txtAddress">
+			<span id="msgAddress"></span>
+		</div>	
+		<div>
+			<input type="submit" name="rbSubimt" value="Đăng kí">
+		</div>
+	</form>
+</body>
+</html>
