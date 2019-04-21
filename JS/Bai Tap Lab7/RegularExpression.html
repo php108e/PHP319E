@@ -14,6 +14,13 @@
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+	<style type="text/css">
+		.note{
+			color: red;
+			font-size: 12px;
+			font-style: italic;
+		}
+	</style>
 	<script type="text/javascript">
 		function validate() {
 
@@ -37,7 +44,7 @@
 
 			var phoneRegex = /^([0-9]{10,11})$/;
 
-			
+
 			if (fullname == "" || user == "" || password == "" || enterpw == "" || email == "" || phone == ""){
 
 				if (fullname == "") {
@@ -69,22 +76,75 @@
 					document.getElementById("msgPhone").innerHTML = "Please input phone!";
 					document.getElementById("txtPhone").style.borderColor = "red";
 				}
-
 				status = false;
-			}
-			else{
-				
-				status = true
-			}
+			}	
 
+			if (fullname != "" || user != "" || password != "" || enterpw != "" || email != "" || phone != ""){
 
-			
+				if (fullname != "") {
+					document.getElementById("msgFullName").innerHTML = "";
+					document.getElementById("txtFullName").style.borderColor = "#ced4da";
+				}
 
-			
+				if (user != "") {
+					document.getElementById("msgUserName").innerHTML = "";
+					document.getElementById("txtUserName").style.borderColor = "#ced4da";
+				}
+
+				if (password != "") {
+					if (passRegex.test(password) == false) {
+						document.getElementById("txtPassword").style.borderColor = "red";
+						document.getElementById("msgPassword").innerHTML = "Your password have to contain: lowercase character, uppercase character,number, special character, minimun of 8 character";
+						status = false;
+					}
+					else {
+						document.getElementById("msgPassword").innerHTML = "";
+						document.getElementById("txtPassword").style.borderColor = "#ced4da";
+					}
+				}
+
+				if (enterpw != "") {
+					if (password != enterpw) {
+						document.getElementById("txtEnterPassword").style.borderColor = "red";
+						document.getElementById("msgEnterPassword").innerHTML ="Password incorrect!"
+						status = false;
+					}
+					else{
+						document.getElementById("msgEnterPassword").innerHTML = "";
+						document.getElementById("txtEnterPassword").style.borderColor = "#ced4da";
+					}
+				}
+
+				if (email != "") {
+					if (emailRegex.test(email) == false) {
+						document.getElementById("txtEmail").style.borderColor = "red";
+						document.getElementById("msgEmail").innerHTML = "Email invalid!";
+						status = false;
+					} 
+					else {
+						document.getElementById("msgEmail").innerHTML = "";
+						document.getElementById("txtEmail").style.borderColor = "#ced4da";
+					}
+				}
+
+				if (phone != "") {
+					if (phoneRegex.test(phone) == false) {
+						document.getElementById("txtPhone").style.borderColor = "red";
+						document.getElementById("msgPhone").innerHTML = "Phone invalid";
+						status = false;
+					} 
+					else {
+						document.getElementById("msgPhone").innerHTML = "";
+						document.getElementById("txtPhone").style.borderColor = "#ced4da";	
+					}
+				}	
+			}	
 			if (status) {
+			
 				return true;
 			}
-			else return false;
+			else 
+				return false;
 		}
 	
 	</script>
@@ -92,7 +152,7 @@
 <body>
 	<div class="container">
 		<div class="row justify-content-sm-center">
-			<div class="col-sm-8 col-sm-setoff-2">
+			<div class="col-sm-9 col-sm-setoff-1.5">
 				<form action="proccess.php" method="post" onsubmit =" return validate();">
 					<h2>Registered members</h2>
 
@@ -101,7 +161,7 @@
 							<td><label>Full name*</label></td>
 							<td>
 								<input type="text" name="txtFullName" id="txtFullName" class="form-control">
-								<span id="msgFullName"></span>
+								<span class="note" id="msgFullName"></span>
 							</td>
 						</tr>
 
@@ -109,7 +169,7 @@
 							<td><label>Username*</label></td>
 							<td>
 								<input type="text" name="txtUserName" id="txtUserName"class="form-control">
-								<span id="msgUserName"></span>
+								<span class="note" id="msgUserName"></span>
 							</td>
 						</tr>
 
@@ -117,7 +177,7 @@
 							<td><label>Password*</label></td>
 							<td>
 								<input type="password" name="txtPassword" id="txtPassword"class="form-control">
-								<span id="msgPassword"></span>
+								<span class="note" id="msgPassword"></span>
 							</td>
 						</tr>
 
@@ -125,7 +185,7 @@
 							<td><label>Re-enter password*</label></td>
 							<td>
 								<input type="password" name="txtEnterPassword" id="txtEnterPassword"class="form-control">
-								<span id="msgEnterPassword"></span>
+								<span class="note" id="msgEnterPassword"></span>
 							</td>
 						</tr>
 
@@ -134,7 +194,7 @@
 							<td>
 								
 								<input type="text" name="txtEmail" id="txtEmail"class="form-control">
-								<span id="msgEmail"></span>
+								<span class="note" id="msgEmail"></span>
 							</td>
 						</tr>
 
@@ -142,7 +202,7 @@
 							<td><label>Phone*</label></td>
 							<td>
 								<input type="text" name="txtPhone" id="txtPhone"class="form-control">
-								<span id="msgPhone"></span>
+								<span class="note" id="msgPhone"></span>
 							</td>
 						</tr>
 
@@ -150,7 +210,7 @@
 							<td><label>Address</label></td>
 							<td>
 								<textarea id="textAddress" cols="50" rows="4" class="form-control"></textarea>
-								<span id="msgAddress"></span>
+								<span class="note" id="msgAddress"></span>
 							</td>
 						</tr>
 						<tr>
