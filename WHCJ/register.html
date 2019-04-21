@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng kí thông tin tài khoản</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		function validate(){
+			var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			var re2 = /^([a-zA-Z0-9])+([a-zA-Z0-9])+$/
+			var status = true;
+			//Lấy dữ liệu của các đối tượng trong form
+			var Name = document.getElementById("txtName").value;
+			var Account = document.getElementById("txtAccount").value;
+			var Pass = document.getElementById("txtPass").value;
+			var Email = document.getElementById("txtEmail").value;
+			var SDT = document.getElementById("txtSDT").value;
+			var Address = document.getElementById("txtAddress").value;
+			
+			if (Name=="") {
+			//	alert("Tên đăng nhập không được để trống.")
+				document.getElementById("msgName").innerHTML="Họ tên không được để trống";
+				document.getElementById("txtName").style.borderColor="red";
+				status = false;
+			}else{
+				//document.getElementById("msgName").innerHTML="";
+				document.getElementById("msgName").style.display="none";
+				
+				status = true;
+			}
+
+			if (Account=="") {
+			//	alert("Tên đăng nhập không được để trống.")
+				document.getElementById("msgAccount").innerHTML="Tên tài khoản không được để trống";
+				document.getElementById("txtAccount").style.borderColor="red";
+				status = false;
+			}else{
+				if (re2.test(Account)==false) {
+					document.getElementById("msgAccount").innerHTML="Tên tài khoản không đúng định dạng";
+					document.getElementById("txtAccount").style.borderColor="red";
+					status = false;
+				}else{
+					document.getElementById("msgAccount").style.display="none";
+					status = true;
+				}
+			}
+
+			if (Pass=="") {
+				document.getElementById("msgPass").innerHTML="Mật khẩu không được để trống";
+				document.getElementById("txtPass").style.borderColor="red";
+				status = false;
+			}else{
+				document.getElementById("msgPass").style.display="none";
+				status = true;
+			}
+			
+			if (Email=="") {
+				document.getElementById("msgEmail").innerHTML="Email không được để trống";
+				document.getElementById("txtEmail").style.borderColor="red";
+				status = false;
+			}else{
+				if (re.test(Email)==false) {
+					document.getElementById("msgEmail").innerHTML="Email không đúng định dạng";
+					document.getElementById("txtEmail").style.borderColor="red";
+					status = false;
+				}else{
+					document.getElementById("msgEmail").style.display="none";
+					status = true;
+				}
+			}
+
+			//Tạo biểu mẫu tiến hành kiểm tra định dạng SDT
+			var moPattern = /^([0-9]{10,11})/;
+			if (SDT=="") {
+				document.getElementById("msgSDT").innerHTML="Số điện thoại không được để trống";
+				document.getElementById("txtSDT").style.borderColor="red";
+				status = false;
+			}else{
+				//Kiểm tra định dạng số điện thoại
+				if (moPattern.test(SDT) == false) {
+					document.getElementById("msgSDT").innerHTML="Số điện thoại không đúng định dạng";
+					document.getElementById("txtSDT").style.borderColor="red";
+					status = false;
+				}else{
+				document.getElementById("msgSDT").style.display="none";
+				status = true;
+				}
+			}
+
+			if (Address=="") {
+			//	alert("Tên đăng nhập không được để trống.")
+				document.getElementById("msgAddress").innerHTML="Tên tài khoản không được để trống";
+				document.getElementById("txtAddress").style.borderColor="red";
+				status = false;
+			}else{
+				//document.getElementById("msgName").innerHTML="";
+				document.getElementById("msgAddress").style.display="none";
+				
+				status = true;
+			}
+
+
+			if (status == true) {
+				return true;
+			}else{
+				return false;
+			}
+			
+			
+		}
+	</script>
+</head>
+<body>
+	<form action="process.php" method="post" onsubmit="return validate();">
+		<h2>Đăng kí thành viên</h2>
+			<table>
+				<tr>
+					<td>Họ và tên *</td>
+					<td>
+						<input type="text" name="txtName" id="txtName">
+						<span id="msgName"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Tên tài khoản *</td>
+					<td>
+						<input type="text" name="txtAccount" id="txtAccount">
+						<span id="msgAccount"></span>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>Mật khẩu *</td>
+					<td>
+						<input type="text" name="txtPass" id="txtPass">
+						<span id="msgPass"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Nhập lại mật khẩu</td>
+					<td>
+						<input type="text" name="txtRePass" id="txtRePass">
+						<span id="msgRePass"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Email *</td>
+					<td>
+						<input type="text" name="txtEmail" id="txtEmail">
+						<span id="msgEmail"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>SDT *</td>
+					<td>
+						<input type="text" name="txtSDT" id="txtSDT">
+						<span id="msgSDT"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td>Địa chỉ *</td>
+					<td>
+						<input type="text" name="txtAddress" id="txtAddress">
+						<span id="msgAddress"></span>
+					</td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" name="btnReg" value="Đăng kí">
+					</td>
+				</tr>
+			</table>
+	</form>
+</body>
+</html>
