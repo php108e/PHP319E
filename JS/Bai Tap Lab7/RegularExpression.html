@@ -16,6 +16,7 @@
 
 	<script type="text/javascript">
 		function validate() {
+
 			var status = true;
 
 			var fullname = document.getElementById("txtFullName").value;
@@ -30,56 +31,54 @@
 
 			var phone = document.getElementById("txtPhone").value;
 
-			// if (fullname == ""){
-			// 	document.getElementById("msgFullName").innerHTML = "Please input fullname!";
-			// 	document.getElementById("txtFullName").style.borderColor = "red";
-			// 	return false;
-			// }
-			// else{
-			// 	document.getElementById("msgFullName").innerHTML = "";
-			// 	document.getElementById("txtFullName").style.display = "none";
-			// 	return true;
-			// }	
+			var passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[ -/:-@#$%^&*\[-`{-~]).{8,64}$/;
 
+			var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9_])+\.)+([a-zA-Z0-9_]{2,4})+$/;
 
-			if (fullname == " " || user == " " || password == " " || enterpw == " " || email == " " || phone == " ") {
+			var phoneRegex = /^([0-9]{10,11})$/;
 
-				if (fullname == " ") {
+			
+			if (fullname == "" || user == "" || password == "" || enterpw == "" || email == "" || phone == ""){
+
+				if (fullname == "") {
 					document.getElementById("msgFullName").innerHTML = "Please input fullname!";
 					document.getElementById("txtFullName").style.borderColor = "red";
 				}
 
-				if (user == " ") {
+				if (user == "") {
 					document.getElementById("msgUserName").innerHTML = "Please input username!";
 					document.getElementById("txtUserName").style.borderColor = "red";
 				}
 
-				if (password == " ") {
+				if (password == "") {
 					document.getElementById("msgPassword").innerHTML = "Please input password!";
 					document.getElementById("txtPassword").style.borderColor = "red";
 				}
 
-				if (enterpw == " ") {
-					document.getElementById("msgEnterPassword").innerHTML = "Please input re-enter password!";
+				if (enterpw == "") {
+					document.getElementById("msgEnterPassword").innerHTML = "Please input Re-enter password!";
 					document.getElementById("txtEnterPassword").style.borderColor = "red";
 				}
 
-				if (email == " ") {
+				if (email == "") {
 					document.getElementById("msgEmail").innerHTML = "Please input email!";
 					document.getElementById("txtEmail").style.borderColor = "red";
 				}
 
-				if (phone == " ") {
-					document.getElementById("msgPhone").innerHTML = "Please input phone number!";
+				if (phone == "") {
+					document.getElementById("msgPhone").innerHTML = "Please input phone!";
 					document.getElementById("txtPhone").style.borderColor = "red";
 				}
 
 				status = false;
 			}
 			else{
-
-				status = true;
+				
+				status = true
 			}
+
+
+			
 
 			
 			if (status) {
@@ -87,16 +86,15 @@
 			}
 			else return false;
 		}
-
-
+	
 	</script>
 </head>
 <body>
 	<div class="container">
 		<div class="row justify-content-sm-center">
 			<div class="col-sm-8 col-sm-setoff-2">
-				<form action="proccess.php" method="post" onclick=" return validate();">
-					<h2>Đăng ký thành viên</h2>
+				<form action="proccess.php" method="post" onsubmit =" return validate();">
+					<h2>Registered members</h2>
 
 					<table border="0px" class="table table-borderless"  >
 						<tr>
@@ -158,7 +156,7 @@
 						<tr>
 							<td></td>
 							<td>
-								<input type="submit" name="btnSubmit" id="btnSubmit" value="Registration" class="form-control btn btn-success">
+								<input type="submit" name="btnSubmit" id="btnSubmit" value="Registration" class="form-control btn btn-success ">
 							</td>
 						</tr>
 					</table>
