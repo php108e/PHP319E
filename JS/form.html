@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Form Sign In</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script type="text/javascript">
+		function validate() {
+			var status = true;
+			var status2= true;
+			// lấy dữ liệu của các đối tượng trên form
+			var user = document.getElementById("txtUser").value;
+			var pass = document.getElementById("txtPass").value;
+			var email = document.getElementById("txtEmail").value;
+			var phone = document.getElementById("txtPhone").value;
+			if (user == "") {
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgUser").innerHTML = "please input username!"; // thuộc tính innerHTML: chuyền nội dụng vào cặp thẻ HTML
+				document.getElementById("txtUser").style.borderColor = "red";
+				status = false;
+				status2 = false;
+			}
+			else{
+
+				document.getElementById("msgUser").innerHTML = "";
+				document.getElementById("msgUser").style.display="none";
+				status = true;
+			}
+			var pattern_pass = /^(?=^)&/;
+			if (pass == "") {
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgPass").innerHTML = "please input password!"; // thuộc tính innerHTML: chuyền nội dụng vào cặp thẻ HTML
+				document.getElementById("txtPass").style.borderColor = "red";
+				status = false;
+				status2 = false;
+			}
+			else{
+
+				document.getElementById("msgPass").innerHTML = "";
+				document.getElementById("msgPass").style.display="none";
+				status = true;
+			}
+			var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9_])+\.)+([a-zA-Z0-9_]{2,4})+$/;
+			if (email == "") {
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgEmail").innerHTML = "please input email!"; // thuộc tính innerHTML: chuyền nội dụng vào cặp thẻ HTML
+				document.getElementById("txtEmail").style.borderColor = "red";
+				status = false;
+				status2 = false;
+			}
+			else{
+
+				document.getElementById("msgEmail").innerHTML = "";
+				document.getElementById("msgEmail").style.display="none";
+				status = true;
+			}
+
+			//Tảo biểu mẫu kiểm tra định dạnh số điện thoại
+			var moPattern = /^([0-9]{10})$/;
+			if (phone == "") {
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgPhone").innerHTML = "please input phone!"; // thuộc tính innerHTML: chuyền nội dụng vào cặp thẻ HTML
+				document.getElementById("txtPhone").style.borderColor = "red";
+				status = false;
+				status2 = false;
+			}
+			else{
+				// kiểm tra định dạng SĐT
+				if (moPattern.test(phone)==false) {
+					document.getElementById("msgPhone").innerHTML = "Phone invalid!"; // thuộc tính innerHTML: chuyền nội dụng vào cặp thẻ HTML
+					document.getElementById("txtPhone").style.borderColor = "red";
+					status = false;
+					status2 = false;
+				}
+				else{
+
+					document.getElementById("msgPhone").innerHTML = "";
+					document.getElementById("msgPhone").style.display="none";
+					status = true;
+				}
+			}
+			
+			if (status2 == false) {
+				
+					if (status) {
+					return true;
+				}
+				else
+					return false;
+				return false;
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<form action="proccess.php" method="post" onsubmit="return validate();">
+					<h3>Đăng ký thông tin tài khoản</h3>
+					<table border="2px">
+						<tr>
+							<td>Username *:</td>
+							<td>
+								<input type="text" name="txtName" id="txtUser">
+								<span id="msgUser"></span>
+							 </td>
+						</tr>
+						<tr>
+							<td>Password *:</td>
+							<td>
+								<input type="password" name="txtPassword" id="txtPass">
+								<span id="msgPass"></span>
+							</td>
+							
+						</tr>
+						<tr>
+							<td>Email *:</td>
+							<td><input type="text" name="txtEmail" id="txtEmail">
+								<span id="msgEmail"></span>
+							</td>
+						</tr>
+						<tr>
+							<td>Phone:</td>
+							<td><input type="txt" name="txtPhone" id="txtPhone">
+								<span id="msgPhone"></span>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><input type="submit" name="btnSubmit" value="Đăng ký">
+
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>

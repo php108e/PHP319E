@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Regular expression</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<script type="text/javascript">
+		function validate() {
+			var status = true;
+
+			var fullname = document.getElementById("txtFullName").value;
+
+			var user = document.getElementById("txtUserName").value;
+
+			var password = document.getElementById("txtPassword").value;
+
+			var enterpw = document.getElementById("txtEnterPassword").value;
+
+			var email = document.getElementById("txtEmail").value;
+
+			var phone = document.getElementById("txtPhone").value;
+
+			// if (fullname == ""){
+			// 	document.getElementById("msgFullName").innerHTML = "Please input fullname!";
+			// 	document.getElementById("txtFullName").style.borderColor = "red";
+			// 	return false;
+			// }
+			// else{
+			// 	document.getElementById("msgFullName").innerHTML = "";
+			// 	document.getElementById("txtFullName").style.display = "none";
+			// 	return true;
+			// }	
+
+
+			if (fullname == " " || user == " " || password == " " || enterpw == " " || email == " " || phone == " ") {
+
+				if (fullname == " ") {
+					document.getElementById("msgFullName").innerHTML = "Please input fullname!";
+					document.getElementById("txtFullName").style.borderColor = "red";
+				}
+
+				if (user == " ") {
+					document.getElementById("msgUserName").innerHTML = "Please input username!";
+					document.getElementById("txtUserName").style.borderColor = "red";
+				}
+
+				if (password == " ") {
+					document.getElementById("msgPassword").innerHTML = "Please input password!";
+					document.getElementById("txtPassword").style.borderColor = "red";
+				}
+
+				if (enterpw == " ") {
+					document.getElementById("msgEnterPassword").innerHTML = "Please input re-enter password!";
+					document.getElementById("txtEnterPassword").style.borderColor = "red";
+				}
+
+				if (email == " ") {
+					document.getElementById("msgEmail").innerHTML = "Please input email!";
+					document.getElementById("txtEmail").style.borderColor = "red";
+				}
+
+				if (phone == " ") {
+					document.getElementById("msgPhone").innerHTML = "Please input phone number!";
+					document.getElementById("txtPhone").style.borderColor = "red";
+				}
+
+				status = false;
+			}
+			else{
+
+				status = true;
+			}
+
+			
+			if (status) {
+				return true;
+			}
+			else return false;
+		}
+
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-sm-center">
+			<div class="col-sm-8 col-sm-setoff-2">
+				<form action="proccess.php" method="post" onclick=" return validate();">
+					<h2>Đăng ký thành viên</h2>
+
+					<table border="0px" class="table table-borderless"  >
+						<tr>
+							<td><label>Full name*</label></td>
+							<td>
+								<input type="text" name="txtFullName" id="txtFullName" class="form-control">
+								<span id="msgFullName"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td><label>Username*</label></td>
+							<td>
+								<input type="text" name="txtUserName" id="txtUserName"class="form-control">
+								<span id="msgUserName"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td><label>Password*</label></td>
+							<td>
+								<input type="password" name="txtPassword" id="txtPassword"class="form-control">
+								<span id="msgPassword"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td><label>Re-enter password*</label></td>
+							<td>
+								<input type="password" name="txtEnterPassword" id="txtEnterPassword"class="form-control">
+								<span id="msgEnterPassword"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td><label>Email*</label></td>
+							<td>
+								
+								<input type="text" name="txtEmail" id="txtEmail"class="form-control">
+								<span id="msgEmail"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td><label>Phone*</label></td>
+							<td>
+								<input type="text" name="txtPhone" id="txtPhone"class="form-control">
+								<span id="msgPhone"></span>
+							</td>
+						</tr>
+
+						<tr>
+							<td><label>Address</label></td>
+							<td>
+								<textarea id="textAddress" cols="50" rows="4" class="form-control"></textarea>
+								<span id="msgAddress"></span>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="submit" name="btnSubmit" id="btnSubmit" value="Registration" class="form-control btn btn-success">
+							</td>
+						</tr>
+					</table>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
