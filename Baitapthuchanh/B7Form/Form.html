@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Đăng kí</title>
+<link rel="stylesheet" type="text/css" href="">
+<script type="text/javascript">
+	function validate(){
+		 var user = document.getElementById("txtUser").value;
+		 var username = document.getElementById("txtUsername").value;
+		 var pass = document.getElementById("txtPass").value;
+		 var repass = document.getElementById("rePass").value;
+		 var email = document.getElementById("txtEmail").value;
+		 var phone = document.getElementById("txtPhone").value;
+
+		 if(user==""){
+				//alert("Ten dang nhap khong duoc de trong");
+				document.getElementById("msgUsername").innerHTML="TVui lòng điền họ Tên";
+				document.getElementById("msgUsername").style.bordercolor = "red";
+				status = false;
+			}else{
+				document.getElementById("msgUser").innerHTML="";
+				status = true;
+			}
+
+
+
+
+
+
+			if (status==true){
+				return true;
+			}else{
+				return false;
+			}
+
+	}
+
+
+
+</script>
+</head>
+<body>
+	<h1>Đăng kí thành viên</h1>
+
+	<form class="myForm" method="post" action="dangki.php" onsubmit="return validate();">
+		<tr>
+			<td>Họ Tên *
+					<input type="text" name="txtUsername" id="txtUsername">
+					<span id="msgUsername"></span>
+			</td> 
+		</tr>
+		<p>
+			<label>Tên đăng nhập*
+				<input type="text" name="txtUser" id="txtUser">
+				<span id="msgUser"></span>
+			</label>
+		</p>
+		<p>
+			<label>Mật  khẩu *
+				<input type="text" name="txtPass" id="txtPass">
+				<span id="msgPass"></span>
+			</label>
+		</p>
+		<p>
+			<label>Nhập lại mật khẩu
+				<input type="text" name="rePass" id="rePass">
+				<span id="msgrePass"></span>
+			</label>
+		</p>
+		<p>
+			<label>Email *
+				<input type="email" name="txtEmail" id="txtEmail">
+				<span id="msgEmail"></span>
+			</label>
+		</p>
+		<p>
+			<label>Số điện thoại *
+				<input type="text" name="txtPhone" id="txtPhone">
+				<span id="msgPhone"></span>
+			</label>
+		</p>
+		<p>
+		<label>Địa Chỉ 
+			<textarea name="txtDiachi" maxlength="500"></textarea>
+		</label>
+		</p>
+
+		<p><button>Đăng kí</button></p>
+
+	</form>
+
+</body>
+</html>

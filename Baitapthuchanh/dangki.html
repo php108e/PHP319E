@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng kí</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function validate() {
+			// Lay du lieu cua cac doi tuong trong Form
+			var user = document.getElementById("txtUser").value;
+			var pass = document.getElementById("txtPass").value;
+			var email = document.getElementById("txtEmail").value;
+			var phone = document.getElementById("txtPhone").value;
+			
+			if(user==""){
+				//alert("Ten dang nhap khong duoc de trong");
+				document.getElementById("msgUser").innerHTML="Tên đăng nhập không được để trống";
+				document.getElementById("msgUser").style.bordercolor = "red";
+				status = false;
+			}else{
+				document.getElementById("msgUser").innerHTML="";
+				status = true;
+			}
+			
+
+		if(pass==""){
+				document.getElementById("msgPass").innerHTML="Mật khẩu không được để trống";
+				document.getElementById("msgPass").style.bordercolor = "red";
+				status = false;
+			}else{
+				document.getElementById("msgPass").innerHTML="";
+				document.getElementById("msgPass").style.display="none";
+				status = true;
+			}
+		if(email==""){
+				document.getElementById("msgEmail").innerHTML="Email không được để trống";
+				document.getElementById("msgEmail").style.bordercolor = "red";
+				status = false;
+			}else{
+				document.getElementById("msgEmail").innerHTML="";
+				document.getElementById("msgEmail").style.display="none";
+				status = true;
+			}
+			//Tao bieu mau kiem tra dinh dang SDT
+			var moPattern=/^([0-9]{10})/;
+		if(phone==""){
+				
+				document.getElementById("msgPhone").innerHTML="Số điện thoại không được để trống";
+				document.getElementById("msgPhone").style.bordercolor = "red";
+				status = false;
+			}else{
+				//Kiem tra dinh dang SDT
+				if(moPattern.test(phone)==false){
+				document.getElementById("msgPhone").innerHTML="Phone invalid";
+				document.getElementById("msgPhone").style.bordercolor = "red";
+				status = false;
+
+				}else{
+				document.getElementById("msgPhone").innerHTML="";
+				document.getElementById("msgPhone").style.display="none";
+				status = true;
+				}
+			}
+
+		if (status==true){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+<h1>Tạo tài khoản thành viên</h1>
+	<br>
+	<div>
+		<form action="register_proccess.php" method="post" onsubmit="return validate();">
+			<div>
+				<label>Tên đăng nhập</label>
+				<input type="text" name="txtUser" id="txtUser">
+				<span id="msgUser"></span>
+			</div>
+			<div>
+				<label>Mật khẩu</label>
+				<input type="text" name="txtPass" id="txtPass">
+				<span id="msgPass"></span>
+			</div>
+			<div>
+				<label>Email</label>
+				<input type="text" name="txtEmail" id="txtEmail">
+				<span id="msgEmail"></span>
+			</div>
+			<div>
+				<label>Số điện thoại</label>
+				<input type="text" name="txtPhone" id="txtPhone">
+				<span id="msgPhone"></span>
+			</div>
+			<div>
+				<input type="submit" name="btnRegister" value="Đăng ký">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
