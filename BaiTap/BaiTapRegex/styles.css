@@ -5,8 +5,11 @@
 }
 
 .container {
-    width: 500px;
-    margin: 0 auto;
+    position: fixed;
+    left: 30%;
+    right: 50%;
+    width: 80%;
+
 }
 .container form {
     display: table;
@@ -16,9 +19,20 @@
 }
 .container label {
     display: table-cell;
+    position: relative;
 }
 .container input {
     display: table-cell;
+    position: relative;
+    left: 100px;
+    width: 100%;
+
+}
+.container textarea {
+    display: table-cell;
+    position: relative;
+    left: 100px;
+    with: 100%;
 }
 
 

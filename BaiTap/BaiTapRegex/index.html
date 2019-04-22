@@ -2,46 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="script" href="scripts.js">
+    <script type="text/javascript" src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Regular Expression</title>
 </head>
 <body>
 <div id="header">
-<h2>Đăng ký thành viên</h2>
+    <h2>Đăng ký thành viên</h2>
 </div>
 <div class="container">
     <form action="">
         <p>
-        <label for="nameTxt">Họ và tên*</label>
-        <input name="nameTxt" type="text" required>
+            <label for="nameTxt">Họ và tên*</label>
+            <input id="nameTxt" name="nameTxt" type="text" required>
         </p>
+        <br>
         <p>
-        <label for="account">Tên tài khoản *</label>
-        <input type="text" name="account" required>
+            <label for="account">Tên tài khoản *</label>
+            <input type="text" id="account" name="account" required>
         </p>
+        <br>
         <p>
-        <label for="pwd">Mật khẩu *</label>
-        <input type="password" name="pwd" required>
+            <label for="pwd">Mật khẩu *</label>
+            <input type="password" id="pwd" name="pwd" required>
         </p>
+        <br>
         <p>
-        <label for="repwd">Nhập lại mật khẩu</label>
-        <input type="password" name="repwd" required>
+            <label for="repwd">Nhập lại mật khẩu*</label>
+            <input type="password" name="repwd" id="repwd" required>
         </p>
+        <br>
         <p>
-        <label for="email">Email *</label>
-        <input type="text" required>
+            <label for="email">Email *</label>
+            <input type="text" id="email" required>
         </p>
+        <br>
         <p>
-        <label for="phone">SĐT</label>
-        <input type="number" required>
+            <label for="phone">SĐT</label>
+            <input type="number" id="phone" required>
         </p>
+        <br>
         <p>
-        <label for="add">Địa chỉ</label>
-            <textarea name="add" id="" cols="30" rows="5"></textarea>
+            <label for="add">Địa chỉ</label>
+            <textarea name="add" id="add" cols="30" rows="5"></textarea>
         </p>
+        <br>
+        <br>
         <input type="submit" value="Đăng ký">
+    </form>
 </div>
-</form>
+
 </body>
 </html>
