@@ -1,116 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bài Tập Lab7</title>
+	<title>Bài tập Lab 7</title>
 	<meta charset="utf-8">
 	<script type="text/javascript">
-		function validate(){
-			var status = true;
+		function validate(){	
+			
+			var status =true;
 			var name = document.getElementById("txtName").value;
 			var user = document.getElementById("txtUser").value;
 			var pass = document.getElementById("txtPass").value;
 			var repass = document.getElementById("txtRepass").value;
 			var email = document.getElementById("txtEmail").value;
 			var phone = document.getElementById("txtPhone").value;
-			var address = document.getElementById("txtAddress").value;
-			if (name == ""){
-				document.getElementById("msgName").innerHTML = "Vui lòng nhập tên ";
-				status = false;
-			} else {
-				document.getElementById("msgName").style.display ="none";
-				status = true;
+			var add = document.getElementById("txtAddress").value;
+			if (name== "") {
+				document.getElementById("msgName").innerHTML ="Họ tên không được để trống" 	 ;
+				status = false;	
+			}else{
+				document.getElementById("msgName").style.display="none";
 			}
-			if (user == ""){
-				document.getElementById("msgUser").innerHTML = "Vui lòng nhập tài khoản ";
-				status = false;
-			} else {
-				document.getElementById("msgUser").style.display ="none";
-				status = true;
+			if (user== "") {
+			 	document.getElementById("msgUser").innerHTML ="Tên tài khoản không được để trống" 	 ;
+				status = false;	
 			}
-			if (pass == ""){
-				document.getElementById("msgPass").innerHTML = "Vui lòng nhập mật khẩu ";
-				status = false;
-			} else {
-				document.getElementById("msgPass").style.display ="none";
-				status = true;
+			if (pass== "") {
+			 	document.getElementById("msgPass").innerHTML ="Mật khẩu không được để trống" 	 ;
+			 	status = false;	
+			 }
+			 if (repass== "") {
+			 	document.getElementById("msgRepass").innerHTML ="Vui lòng nhập lại mật khẩu" 	 ;
+			 	status = false;	
+			 }
+			 if (email== "") {
+			 	document.getElementById("msgEmail").innerHTML ="Email không được để trống" 	 ;
+			 	status = false;	
+			}else{
+
 			}
-			if (repass == ""){
-				document.getElementById("msgRepass").innerHTML = "Vui lòng nhập lại mật khẩu ";
-				status = false;
-			} else {
-				document.getElementById("msgRepass").style.display ="none";
-				status = true;
-			}
-			if (email == ""){
-				document.getElementById("msgEmail").innerHTML = "Vui lòng nhập Email ";
-				status = false;
-			} else {
-				document.getElementById("msgEmail").style.display ="none";
-				status = true;
-			}
-			if (phone == ""){
-				document.getElementById("msgPhone").innerHTML = "Vui lòng nhập số điện thoại ";
-				status = false;
-			} else {
-				document.getElementById("msgPhone").style.display ="none";
-				status = true;
-			}
-			if (address == "" ){
-				document.getElementById("msgAddress").innerHTML "Vui lòng nhập địa chỉ";
-				status = false;
-			}else {
-				document.getElementById("msgAddress").style.display="none";
-				status = true;
-			}
-			if (status = false){
+			 if (phone== "") {
+			 	document.getElementById("msgPhone").innerHTML ="Số điện thoại không được để trống" ;
+			 	status = false;	
+			 }
+			 if (add== "") {
+			 	document.getElementById("msgAddress").innerHTML ="Vui lòng điền địa chỉ" 	 ;
+			 	status = false;	
+			 }
+			if (status == false){
 				return false;
-			} else {
-				return true ;
-			}	
-		}
+			}else{
+				return true;
+			}
+		}	
 	</script>
 </head>
 <body>
-	<h1>Đăng Kí Thành Viên</h1>
-	<form action="process.php" method="post" onsubmit="return validate();">
-		<div>	
-			<label>Họ tên</label>
-			<input type="text" name="txtName" id="txtName">
-			<span id="msgName"></span>
-		</div>
-		<div>
-			<label>Tên tài khoản </label>
-			<input type="text" name="txtUser" id="txtUser">
-			<span id="msgUser"></span>
-		</div>
-		<div>
-			<label>Mật khẩu</label>
-			<input type="text" name="txtPass" id="txtPass">
-			<span id="msgPass"></span>
-		</div>
-		<div>
-			<label>Nhập lại mật khẩu</label>
-			<input type="text" name="txtRepass" id="txtRepass">
-			<span id="msgRepass"></span>
-		</div>
-		<div>	
-			<label>Email</label>
-			<input type="text" name="txtEmail" id="txtEmail">
-			<span id="msgEmail"></span>
-		</div>
-		<div>	
-			<label>Số điện thoại </label>
-			<input type="text" name="txtPhone" id="txtPhone">
-			<span id="msgPhone"></span>
-		</div>
-		<div>	
-			<label>Địa chỉ</label>
-			<input type="text" name="txtAddress" id="txtAddress">
-			<span id="msgAddress"></span>
-		</div>	
-		<div>
-			<input type="submit" name="rbSubimt" value="Đăng kí">
-		</div>
+	<h1>Đăng kí tài khoản</h1>
+	<form action="process.php" method="POST" onsubmit="return validate();">
+		<table>
+			<tr>
+				<td>Họ và tên</td>
+				<td>
+					<input type="text" name="txtName" id="txtName">
+					<span id="msgName"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Tên tài khoản</td>
+				<td>
+					<input type="text" name="txtUser" id="txtUser">
+					<span id="msgUser"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Mật khẩu</td>
+				<td>
+					<input type="text" name="txtPass" id="txtPass">
+					<span id="msgPass"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Nhập lại mật khẩu</td>
+				<td>
+					<input type="text" name="txtRepass" id="txtRepass">
+					<span id="msgRepass"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td>
+					<input type="text" name="txtEmail" id="txtEmail">
+					<span id="msgEmail"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Số điện thoại </td>
+				<td>
+					<input type="text" name="txtPhone" id="txtPhone">
+					<span id="msgPhone"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Địa chỉ</td>
+				<td>
+					<input type="text" name="txtAddress" id="txtAddress">
+					<span id="msgAddress"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="btnReg" value="Đăng kí" onclick="validate()"></td>
+			</tr>
+		</table>
+
 	</form>
 </body>
 </html>
