@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+    <script>
+        function getInfo() {
+            var name = document.getElementById("txtFullname").value;
+            var age = document.getElementById("txtAge").value;
+            alert(`Ho va ten: ${name} \nTuoi: ${age}`);
+        }
+
+        function increaseSize(_height, _width) {
+            var h = document.getElementById("logo").height;
+            var w = document.getElementById("logo").width;
+            h += _height;
+            w += _width;
+            document.getElementById("logo").height = h;
+            document.getElementById("logo").width = w;
+        }
+
+        function decreaseSize(_height, _width) {
+            var h = document.getElementById("logo").height;
+            var w = document.getElementById("logo").width;
+            h -= _height;
+            w -= _width;
+            document.getElementById("logo").height = h;
+            document.getElementById("logo").width = w;
+        }
+
+
+    </script>
+</head>
+<body>
+<fieldset>
+    <legend>Information Form</legend>
+    Fullname <input type="text" id="txtFullname"><br>
+    Age <input type="text" id="txtAge"><br>
+    <input type="button" id="" value="Get Info" onclick="getInfo();">
+</fieldset>
+<img id="logo" src="logo.png" alt="logo">
+<input type="button" value="Tang kich thuoc" onclick="increaseSize(30, 30);">
+<input type="button" value="Giam kich thuoc" onclick="decreaseSize(30, 30);">
+</body>
+</html>

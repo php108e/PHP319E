@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // // Tao doi tuong trong JS co kieu object
+        // var doctor = new Object();
+        // // Gan gia tri cho thuoc tinh
+        // doctor.name = "Peter";
+        // doctor.age = 40;
+        // alert(`Ten cua bac sy: ${doctor.name}\nTuoi: ${doctor.age}`);
+
+        // Tao doi tuong kieu template la doi tuong kieu nguoi dung
+
+        // Ham khoi tao giup tao doi tuong va gan gia tri cho cac thuoc tinh cua no (init)
+        function Student(_n, _a, _l) {
+            this.name = _n;
+            this.age = _a;
+            this.location = _l;
+
+            this.showInfo = function () {
+                document.write(`Ten sinh vien ${this.name} `);
+                document.write(`Tuoi sinh vien ${this.age} `);
+                document.write(`Dia chi sinh vien ${this.location} `);
+            };
+
+        }
+
+        // Khai bao doi tuong co kieu template Student
+        var ten = prompt("Moi ban nhap ten: ");
+        var tuoi = prompt("Moi ban nhap tuoi: ");
+        var diachi = prompt("Moi ban nhap dia chi: ");
+
+
+        var objStu = new Student(ten, tuoi, diachi);
+        objStu.showInfo();
+        // document.writeln(`Ten cua ban ${objStu.name}`);
+        // document.writeln(`Nam nay ban ${objStu.age} tuoi`);
+        // document.writeln((`Noi ban o la ${objStu.location}`));
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
