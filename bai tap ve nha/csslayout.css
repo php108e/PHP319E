@@ -1,6 +1,8 @@
 .phan1
 {
   padding: auto;
+  margin: auto;
+  width: 80%;
   border: 1px solid white;
 }
 
@@ -10,6 +12,7 @@
 			color: blue;
 			text-align: center;
 			float: left;
+			
 		}
 		#modau2
 		{
