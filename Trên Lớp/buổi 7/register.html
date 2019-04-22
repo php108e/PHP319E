@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		function validate(){
+			//lấy dữ liệu của các đối tượng trong form
+			var username = document.getElementById("txtUserName").value;
+			var user = document.getElementById("txtUser").value;
+			var pass = document.getElementById("txtPass").value;
+			var repass = document.getElementById("txtRePass").value;
+			var email = document.getElementById("txtEmail").value;
+			var phone = document.getElementById("txtPhone").value;
+
+			if(username==""){
+				document.getElementById("msgUserName").innerHTML = "Please input full name";
+				document.getElementById("txtUserName").style.border= "1px solid red";
+				status = false;
+				status2 = false;
+			}else{
+				document.getElementById("txtUser").style.border="";
+				document.getElementById("msgUser").innerHTML="";
+				status=  true;
+			}
+			//Kiểm tra user
+			var userPattern = /^(\S{8,64})$/;
+			if(user == ""){
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgUser").innerHTML="Please input Username";
+				document.getElementById("txtUser").style.border="1px solid red";
+
+				status = false;
+				status2 = false;
+			} else{
+				if(userPattern.test(user)==false){
+					document.getElementById("msgUser").innerHTML="User 8-64 characters long and have no spaces";
+					document.getElementById("txtUser").style.border="1px solid red";
+
+					status = false;
+					status2 = false;
+				}else{
+					document.getElementById("txtUser").style.border="";
+					document.getElementById("msgUser").innerHTML="";
+					status=  true;
+				}
+				//document.getElementById("msgUser").style.display = "none";		
+			}
+
+			// 8 ký tự, hoa + thường + số + kty dặc biệt
+			var passPattern =/(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]){8,}/;
+			// . trùng khớp với 1 ký tự đơn bất kỳ ngoại trừ ký tự ngắt dòng (line-break) và cũng không lấy được ký tự có dấu (unicode).
+			// ? Trùng khớp với 0 hoặc 1 lần ký tự đứng trước nó
+			// * số lần lặp bất kì
+			// ?= tìm trong chuỗi những đoạn cần đã có chưa
+			if(pass == ""){
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgPass").innerHTML="Please input Pass";
+				document.getElementById("txtPass").style.border="1px solid red";
+				status2 = false;
+				status = false;
+			} else{
+				if(passPattern.test(pass)==false){
+					document.getElementById("msgPass").innerHTML="Password must contain 8 characters and have lowercase letters, capital letters, count and special characters";
+					document.getElementById("txtPass").style.border="1px solid red";
+					status2 = false;
+					status = false;
+				}else{
+					//document.getElementById("msgUser").style.display = "none";
+					document.getElementById("txtPass").style.border="";
+					document.getElementById("msgPass").innerHTML="";
+					status=  true;
+				}
+			}
+
+			if(repass == ""){
+				document.getElementById("msgRePass").innerHTML="Please reinput Pass";
+				document.getElementById("txtRePass").style.border="1px solid red";
+				status2 = false;
+				status = false;
+			} else{
+				if(pass != repass){
+					document.getElementById("msgRePass").innerHTML="password incorrect";
+					document.getElementById("txtRePass").style.border="1px solid red";
+					status2 = false;
+					status = false;
+				}else{
+					document.getElementById("txtRePass").style.border="";
+					document.getElementById("msgRePass").innerHTML="";
+					status=  true;
+				}
+			}
+
+			//Tạo biểu mẫu kiểm tra email
+			//var emailPattern = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z]{2,4}) $/;
+			var emailPattern = /^([A-Za-z0-9_\-.+])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,})$/;
+			//var emailPattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			if(email == ""){
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgEmail").innerHTML="Please input Email";
+				document.getElementById("txtEmail").style.border="1px solid red";
+				status2 = false;
+				status = false;
+			} else{
+				if(emailPattern.test(email)==false){
+					document.getElementById("msgEmail").innerHTML="Wrong email format";
+					document.getElementById("txtEmail").style.border="1px solid red";
+					status2 = false;
+					status = false;
+				}else{
+					document.getElementById("txtEmail").style.border="";
+					document.getElementById("msgEmail").innerHTML="";
+					status=  true;
+				}
+			}
+
+			//Tạo biểu mẫu kiểm tra sđt
+			var moPattern = /^([0-9]{10})$/;
+
+			if(phone == ""){
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgPhone").innerHTML="Please input Phone number";
+				document.getElementById("txtPhone").style.border="1px solid red";
+				status2 = false;
+				status = false;
+			} else{
+				//Kiem tra dinh dang cua sdt
+				if(moPattern.test(phone) == false){
+					document.getElementById("msgPhone").innerHTML="Please invalid";
+					document.getElementById("txtPhone").style.border="1px solid red";
+					status2 = false;
+					status = false;
+				}else{
+					document.getElementById("txtPhone").style.border="";
+					document.getElementById("msgPhone").innerHTML="";
+					status=  true;	
+				}
+				//document.getElementById("msgUser").style.display = "none";
+				// document.getElementById("txtPhone").style.border="";
+				// document.getElementById("msgPhone").innerHTML="";
+				// status=  true;
+			}
+			if(status2==false){
+				if(status ==true){
+					return true;
+				}else{
+					return false;
+				}
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="proccess.php" method="POST" onsubmit="return validate();">
+		<h2>Đăng ký thành viên:</h2>
+		<table>
+				<tr>
+						<td>Full name *:</td>
+						<td>
+							<input type="txt" name="txtUserName" id="txtUserName" placeholder="">
+							<span id="msgUserName"></span>
+						</td>
+					</tr>
+				<tr>
+				<td>Username *:</td>
+				<td>
+					<input type="txt" name="txtUser" id="txtUser" placeholder="">
+					<span id="msgUser"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Password *:</td>
+				<td>
+					<input type="password" name="txtPass" id="txtPass" placeholder="">
+					<span id="msgPass"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>RePassword *:</td>
+				<td>
+					<input type="txt" name="txtRePass" id="txtRePass" placeholder="">
+					<span id="msgRePass"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Email *:</td>
+				<td>
+					<input type="txt" name="txtEmail" id="txtEmail" placeholder="">
+					<span id="msgEmail"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>Phone *:</td>
+				<td>
+					<input type="txt" name="txtPhone" id="txtPhone">
+					<span id="msgPhone"></span>
+				</td>
+			</tr>
+
+			<tr>
+				<td></td>
+				<td>
+					<input type="submit" name="btnSubmit" value="Register">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

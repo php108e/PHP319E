@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page Title</title>
+	<script>
+		//Tạo đối tượng trong javascript có kiểu object
+		//var doctor = new Object();
+		//Gán giá trị cho thuộc tính
+		//doctor.name = "Peter Pan";
+		//doctor.age = 140;
+		//alert("Tên của bác sĩ: "+ doctor.name + "\nTuổi: "+ doctor.age);
+		/* Tạo đối tượng kiểu "Template" là đối tuowjv được người dùng định nghĩa */
+		//Hàm khởi tạo giúp tại đối tượng và gán gia trị cho các thuộc tính của nó
+		function Student(_n,_a,_l){
+			this.name    =_n;
+			this.age     =_a;
+			this.location=_l;
+
+			//Tạo phương thức  cho đối tượng kiểu "Student"
+			this.showInfo = function(_n,_a,_l){
+				document.write("Tên SV: "+this.name);
+				document.write("<br>Tuổi SV: "+this.age);
+				document.write("<br>Địa chỉ SV: "+this.location);
+			}
+		}
+		// Khai báo đối tượng có kiểu template "Student"
+		var ten = prompt("Mời bạn nhập tên: ");
+		var tuoi = prompt("Mời bạn nhập tuổi: ");
+		var diachi = prompt("Mời bạn nhập địa chỉ: ");
+
+		var objStu = new Student(ten, tuoi, diachi);
+		objStu.showInfo();
+		//document.write("Tên của bạn: "+ objStu.name);
+		//document.write("<br>Tuổi của bạn: "+ objStu.age);
+		//document.write("<br>Địa chỉ của bạn: "+ objStu.location);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

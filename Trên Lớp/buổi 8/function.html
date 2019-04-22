@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Page Title</title>
+	<meta name="viewport" content="width=device-width, initital-scale=1">
+	<script type="text/javascript">
+		function getInfo() {
+			var name=document.getElementById("txtFullname").value;
+			var age=document.getElementById("txtAge").value;
+			alert("Ho va ten: " + name + "\nTuoi: "+ age);
+		}
+
+		function incrementSize(_height, _width){
+			var h = document.getElementById("Anh").height;
+			var w = document.getElementById("Anh").width;
+			h = h + _height;
+			w = w + _width;
+			document.getElementById("Anh").height=h;
+			document.getElementById("Anh").width=w;
+		}
+
+		function decrementSize(_height, _width){
+			var h = document.getElementById("Anh").height;
+			var w = document.getElementById("Anh").width;
+			h = h - _height;
+			w = w - _width;
+			document.getElementById("Anh").height=h;
+			document.getElementById("Anh").width=w;
+		}
+	</script>
+</head>
+<body>
+	<fieldset>
+		<legend>Information Form</legend>
+		Fullname 
+		<input type="text" id="txtFullname"><br> 
+		Age 
+		<input type="text" id="txtAge"><br>
+		<input type="button" value="Get Info" onclick="getInfo();">
+	</fieldset>
+	<input type="button" value="Tăng" onclick="incrementSize(30, 30)">
+	<input type="button" value="Giảm" onclick="decrementSize(30, 30)">
+	<img src="anh.jpg" alt="Anh" id="Anh">
+</body>
+</html>
