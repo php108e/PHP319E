@@ -2,80 +2,144 @@
 <head>
 <meta charset="utf-8">
 <title>Đăng kí</title>
-<link rel="stylesheet" type="text/css" href="">
+<link rel="stylesheet" type="text/css" href="style.css">
 <script type="text/javascript">
 	function validate(){
+		 var status = true;
+		 var name = document.getElementById("txtname").value;
 		 var user = document.getElementById("txtUser").value;
-		 var username = document.getElementById("txtUsername").value;
 		 var pass = document.getElementById("txtPass").value;
-		 var repass = document.getElementById("rePass").value;
+		 var pass2 = document.getElementById("txtPass2").value;
 		 var email = document.getElementById("txtEmail").value;
 		 var phone = document.getElementById("txtPhone").value;
-
-		 if(user==""){
+		if(name == ""){
 				//alert("Ten dang nhap khong duoc de trong");
-				document.getElementById("msgUsername").innerHTML="TVui lòng điền họ Tên";
-				document.getElementById("msgUsername").style.bordercolor = "red";
+				document.getElementById("msgname").innerHTML="Bạn chưa nhập tên";
+				document.getElementById("txtname").style.borderColor = "red";
 				status = false;
 			}else{
-				document.getElementById("msgUser").innerHTML="";
+				document.getElementById("msgname").style.display = "none";
 				status = true;
 			}
-
-
-
-
-
-
-			if (status==true){
+		 if(user == ""){
+		 		//alert("Ten dang nhap khong duoc de trong");
+		 		document.getElementById("msgUser").innerHTML="Mời nhập tên đăng nhập";
+		 		document.getElementById("txtUser").style.borderColor = "red";
+		 		status = false;
+		 	}else{
+		 		document.getElementById("msgUser").style.display = "none";
+		 		status = true;
+		 	}
+		 if(pass == ""){
+		 		document.getElementById("msgPass").innerHTML="Mời nhập mật khẩu";
+		 		document.getElementById("txtPass").style.borderColor = "red";
+				status = false;
+		 	}else{
+		 		document.getElementById("msgPass").style.display = "none";
+		 		status = true;
+		 	}
+		 if(pass2 == ""){
+		 		document.getElementById("msgPass2").innerHTML="Mời nhập lại mật khẩu";
+		 		document.getElementById("txtPass2").style.borderColor = "red";
+		 		status = false;
+		 	}else{
+		 		document.getElementById("msgPass2").style.display = "none";
+		 		status = true;
+		 	}
+		 	//kiem tra mat khau
+		  if(pass2 != pass){
+		  	    document.getElementById("msgPass2").innerHTML="Mật khẩu không khớp";
+		  		document.getElementById("txtPass2").style.borderColor = "red";
+		 		status = false;
+		  	}else{
+		  		document.getElementById("msgPass2").style.display = "none";
+		  		status = true;
+		  	}
+		 	//Check email
+		 	var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		 	if(email == ""){
+		 		document.getElementById("msgEmail").innerHTML="Mời nhập email";
+		 		document.getElementById("txtEmail").style.borderColor = "red";
+		 		status = false;
+		 	}else{
+		 		if (re.test(email) == false){
+		 		document.getElementById("msgEmail").innerHTML="Email chưa đúng!";
+				document.getElementById("txtEmail").style.borderColor = "red";
+		 		status = false;
+		 		}else{
+		 		document.getElementById("msgEmail").style.display = "none";
+		 		status = true;
+		 		}
+		 	}
+		 	//Check phone
+		 	var moPattern = /^([0-9]{10})/;
+             if (phone == "") {
+                 document.getElementById("msgPhone").innerHTML = "Mời nhập SĐT";
+                 document.getElementById("txtPhone").style.borderColor = "red";
+                 status = false;
+             } else {
+                 //Kiem tra dinh dangj cua SDT
+                 if (moPattern.test(phone) == false) {
+                     document.getElementById("msgPhone").innerHTML = "Phone invalid!";
+                     document.getElementById("txtPhone").style.borderColor = "red";
+                     status = false;
+                 } else {
+                     //document.getElementById("msgUser").innerHTML = "";
+                     document.getElementById("msgPhone").style.display = "none";
+                    status = true;
+                 }
+            }
+		if (status==true){
 				return true;
 			}else{
 				return false;
 			}
-
 	}
-
-
-
 </script>
 </head>
 <body>
 	<h1>Đăng kí thành viên</h1>
 
 	<form class="myForm" method="post" action="dangki.php" onsubmit="return validate();">
-		<tr>
-			<td>Họ Tên *
-					<input type="text" name="txtUsername" id="txtUsername">
-					<span id="msgUsername"></span>
-			</td> 
-		</tr>
+		<p>
+			<label> Họ Tên *
+					<input type="text" name="txtname" id="txtname">
+					<br>
+					<span id="msgname"></span> 
+			</label>
+		</p>
 		<p>
 			<label>Tên đăng nhập*
 				<input type="text" name="txtUser" id="txtUser">
+				<br>
 				<span id="msgUser"></span>
 			</label>
 		</p>
 		<p>
 			<label>Mật  khẩu *
 				<input type="text" name="txtPass" id="txtPass">
+				<br>
 				<span id="msgPass"></span>
 			</label>
 		</p>
 		<p>
 			<label>Nhập lại mật khẩu
-				<input type="text" name="rePass" id="rePass">
-				<span id="msgrePass"></span>
+				<input type="text" name="txtPass2" id="txtPass2">
+				<br>
+				<span id="msgPass2"></span>
 			</label>
 		</p>
 		<p>
 			<label>Email *
 				<input type="email" name="txtEmail" id="txtEmail">
+				<br>
 				<span id="msgEmail"></span>
 			</label>
 		</p>
 		<p>
 			<label>Số điện thoại *
 				<input type="text" name="txtPhone" id="txtPhone">
+				<br>
 				<span id="msgPhone"></span>
 			</label>
 		</p>

@@ -12,14 +12,13 @@ box-sizing: border-box;
 .myForm label {
 padding: 0;
 font-weight: bold;
-text-align: right;
 display: block;
+text-align: right;
 }
 
 .myForm input,
 .myForm textarea {
 margin-left: 2em;
-float: right;
 width: 20em;
 border: 1px solid #ccc;
 font-family: "Arial", "Arial", sans-serif;
