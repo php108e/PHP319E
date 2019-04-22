@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function validate(){
+			var re = /^([a-zA-Z0-9_\.\-])+@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+			var status=true;
+			var Username=document.getElementById("txtUser").value;
+			var Password=document.getElementById("txtPassword").value;
+			var Email=document.getElementById("txtEmail").value;
+			var Phone=document.getElementById("txtPhone").value;
+
+
+			if(Username==""){
+				//alert("Tên đăng nhập không được để trống.");
+				document.getElementById("msgUser").innerHTML="Please input Username";
+				document.getElementById("txtUser").style.borderColor="red";
+				status=false;
+			}
+			else{
+				//document.getElementById("msgUser").innerHTML="";
+				document.getElementById("msgUser").style.display="none";
+				document.getElementById("txtUser").style.borderColor="";
+				status=true;
+			}
+		
+
+			if(Password==""){
+				document.getElementById("msgPassword").innerHTML="Please input Password";
+				document.getElementById("txtPassword").style.borderColor="red";
+				status=false;
+			}
+			else{
+				document.getElementById("msgPassword").style.display="none";
+				document.getElementById("txtPassword").style.borderColor="";
+				status=true;
+			}
+			
+
+			if(Email==""){
+				document.getElementById("msgEmail").innerHTML="Please input Email";
+				document.getElementById("txtEmail").style.borderColor="red";
+				status=false;
+			}
+			else{
+				document.getElementById("msgEmail").style.display="none";
+				document.getElementById("txtEmail").style.borderColor="";
+				status=true;
+			}
+			
+
+			var moPattern=/^([0-9]{10,11})$/
+			if(Phone==""){
+				document.getElementById("msgPhone").innerHTML="Please input Phone number";
+				document.getElementById("txtPhone").style.borderColor="red";
+				status=false;
+			}
+			else{
+				if (moPattern.test(Phone)==false) {
+					document.getElementById("msgPhone").innerHTML="Phone invalid!";
+					document.getElementById("txtPhone").style.borderColor="red";
+				}
+				else {
+					document.getElementById("msgPhone").style.display="none";
+					document.getElementById("txtPhone").style.borderColor="";
+					status=true;
+				}
+			}
+			
+
+			if (status==true) {
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+		<form action=“register_proccess.php” method="post" onsubmit="return validate();">
+			<table>
+				<tr>
+					<td>Username*</td>
+					<td>
+						<input type="text" name="txtUser" id="txtUser">
+						<span id="msgUser"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Password*</td>
+					<td>
+						<input type="text" name="txtPassword" id="txtPassword">
+						<span id="msgPassword"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Email*</td>
+					<td>
+						<input type="text" name="txtEmail" id="txtEmail">
+						<span id="msgEmail"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>Phone*</td>
+					<td>
+						<input type="text" name="txtPhone" id="txtPhone">
+						<span id="msgPhone"></span>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" name="btnSubmit" value="Register"></td>
+				</tr>
+			</table>
+		</form>
+</body>
+</html>
