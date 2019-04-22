@@ -5,9 +5,46 @@
 </head>
 <body>
 <script type="text/javascript">
-	function calculateTriangSquare(a,h){
-		return a * h / 2;
+	// function calculateTriangSquare(a,h){
+	// 	return a * h / 2;
+	// }
+
+	function getInfor(){
+		var name = document.getElementById("txtFullName").Value;
+		var age = document.getElementById("txtAge").value;
+		alert("Họ và tên: "+name+"\n Tuôi: "+age)
 	}
+
+	function incrementSize(_height,_width){
+		var h = document.getElementById("image").height;
+		var w = document.getElementById("image").width;
+		h = h + _height;
+		w = w + _width;
+
+		document.getElementById("image").height = h;
+		document.getElementById("image").width = w;
+	}
+
+	function DecrementSize(_height,_width){
+		var h = document.getElementById("image").height;
+		var w = document.getElementById("image").width;
+		h = h - _height;
+		w = w - _width;
+
+		document.getElementById("image").height = h;
+		document.getElementById("image").width = w;
+	}
+
 </script>
+
+<fieldset>
+	<legend>Imformation</legend>
+	Fullname <input type="text" id="txtFullName"><br>
+	Age<input type="text" id="txtAge"><br>
+	<input type="button" value="Get Info" onclick="getInfor();">
+</fieldset>
+	<img src="../image/a50.png" height="250px" width="300" id="image">
+	<input type="button" value="Tăng" onclick="incrementSize(10,10)">
+	<input type="button" value="Giảm" onclick="DecrementSize(10,10)">
 </body>
 </html>
