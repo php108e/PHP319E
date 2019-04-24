@@ -82,7 +82,7 @@
 				status =true;
 			}
 
-
+			var emalPattern = =/^[A-Za-z0-9]+([_\.\-]?[A-Za-z0-9])*@[A-Za-z0-9]+([\.\-]?[A-Za-z0-9]+)*(\.[A-Za-z]+)+$/;
 			if (email=="") {
 				//alert("Tên đăng nhập không được để trống")
 				document.getElementById("msgEmail").innerHTML="Email không được để trống";
@@ -90,8 +90,16 @@
 				//return false;
 				status = false;
 			}
+
 			else
 			{
+				if (emalPattern.test(email)==false) {
+					document.getElementById("msgEmail").innerHTML="Email không đúng định dạng";
+					document.getElementById("txtEmail").style.borderColor= "red";
+				//return false;
+				status = false;
+			}
+			else{
 				//document.getElementById("msgUser").innerHTML=""; 
 				document.getElementById("msgEmail").style.display="none";
 				//return true;
