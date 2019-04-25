@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var doctor = new Object();
+        // // gán giá trị cho thuộc tính
+        // doctor.name = "Peter";
+        // doctor.age = "200";
+        // alert("Tên của bác sỹ: " + doctor.name + "\n Tuổi: "+doctor.age);
+
+        /*Tạo đối tượng kiểu TEMPLATE, là đối tượng kiểu người dùng*/ 
+        //Hàm khởi tạo giúp tạo đối tượng và gán giá trị cho các thuộc tính
+        function Student(_n,_a,_l){
+            this.name = _n;
+            this.age = _a;
+            this.location = _l;
+
+            //Tạo phương thức cho đối tượng có kiểu student
+            this.showInfo = function(){
+                document.write("Tên SV: "+this.name);
+                document.write("<br>Tuổi: "+this.age);
+                document.write("<br>ĐC: "+this.location);
+            }
+
+        }
+
+        //Khai báo đuối tượng có kiểu template
+        var ten = prompt("Mời bạn nhập tên: ");
+        var tuoi = prompt("Mời bạn nhập tuổi: ");
+        var diachi = prompt("Nhập địa chỉ: ");
+
+        var objStu = new Student(ten,tuoi,diachi);
+        objStu.showInfo();
+        
+        // document.writeln("Tên của bạn: " + objStu.name);
+        // document.writeln("<br>Tuổi của bạn: " + objStu.age);
+        // document.writeln("<br>Địa chỉ: " + objStu.location);
+
+    </script>
+</body>
+</html>
