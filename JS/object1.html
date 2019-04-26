@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        /*// tao doi tuong trong JS co kieu Object;
+        var doctor = new Object();
+        // Gan gia tri cho thuoc tinh;
+        doctor.name = "Peter";
+        doctor.age = 21;
+        alert("Ten cua bac si: " + doctor.name + "\n" + "Tuoi cua bac si: "+doctor.age);*/
+
+
+        /*Tạo đối tượng kiểu template là kiểu đối tượng người dùng định nghĩa*/
+        // Hàm khởi tạo giúp tạo đối tượng và gán giá trị cho các thuộc tính của nó
+
+        function Student(_name, _age,_location){
+            this._name = _name;
+            this._age = _age;
+            this._location = _location;
+
+            // Tạo phương thức cho đối tượng có kiểu Student
+            this.showInfo = function(){
+                document.write("Tên sinh viên: "+this._name);
+                document.write("<br>Tuổi sinh viên: "+this._age);
+                document.write("<br>Địa chỉ sinh viên: "+this._location);
+            }
+        };
+        // Khai báo đối tượng có kiểu template Student;
+        var _name = prompt("Mời bạn nhập tên: ");
+        var _age = prompt("Mời bạn nhập tuổi: ");
+        var _location = prompt("Mời bạn nhập địa chỉ: ");
+        var objStu = new Student(_name,_age,_location);
+        
+        // document.write("tên của bạn: "+ objStu._name);
+        // document.write("<br>năm nay bạn: "+ objStu._age + " tuổi");
+        // document.write("<br>nơi bạn ở: "+ objStu._location);
+
+        objStu.showInfo();
+    </script>
+</body>
+</html>

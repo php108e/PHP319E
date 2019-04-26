@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+       function getInfo(){
+        var name = document.getElementById("txtFullname").value;
+        var age = document.getElementById("txtAge").value;
+        alert("Ho va ten: "+name+"\n"+"Tuoi: "+age);
+       }
+       
+       function incrementSize(_height, _width){
+            var h = document.getElementById("image-slide").height;
+            var w = document.getElementById("image-slide").width;
+            h = h + _height;
+            w = w + _width;
+            document.getElementById("image-slide").height = h;
+            w = document.getElementById("image-slide").width = w;
+       }
+
+       function decrementSize(_height, _width){
+        var h = document.getElementById("image-slide").height;
+            var w = document.getElementById("image-slide").width;
+            h = h - _height;
+            w = w - _width;
+            document.getElementById("image-slide").height = h;
+            w = document.getElementById("image-slide").width = w;
+       }
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend>Information Form</legend>
+        Full name <input type="txt" id="txtFullname"><br>
+        Age <input type="txt" id="txtAge"><br>
+        <input type="button" value="Get Info" onclick="getInfo();">
+    </fieldset>
+
+    <div>
+        <img id="image-slide" src="slide.jpg" width="300px" height="200px">
+        <input type="button" value="Tang" onclick="incrementSize(20,20)">
+        <input type="button" value="Giam" onclick="decrementSize(20,20)">
+    </div>
+</body>
+</html>
