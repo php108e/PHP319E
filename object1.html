@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<script type="text/javascript">
+		//tạo đối tượng trong JS có kiểu Object
+		// var doctor = new Object();
+		// // Gán giá trị cho thuộc tính
+		// doctor.name = "peter";
+		// doctor.age = 23;
+		// alert("Tên của bác sĩ: " + doctor.name + "\nTuổi: " + doctor.age);
+
+		// Tạo đối tượng kiểu template là đối tượng được người dùng định nghĩa
+		// hàm khởi tạo giúp tạo đối tượng và gán giá trị cho các thuộc tính của nó
+		function Student(_n, _a, _l){
+			this.name = _n;
+			this.age = _a;
+			this.location = _l;
+			// tạo phương thức cho đối tượng có kiểu Student
+			this.showInfo = function(_n, _a, _l){
+				document.write("Tên SV: " + this.name);
+				document.write("<br>Tuổi SV: " + this.age);
+				document.write("<br>Location: " + this.location);
+			}
+		}
+
+		// Khai báo đối tượng kiểu template 'Student'
+		var ten = prompt("Mời bạn nhập tên: ");
+		var tuoi = prompt("Mời bạn nhập tuổi: ");
+		var diachi = prompt("Nhập địa chỉ: ");
+
+		var objStu = new Student(ten, tuoi, diachi);
+		objStu.showInfo();
+		// document.write("Bạn tên là " + objStu.name);
+		// document.write("<br>Bạn " + objStu.age + " tuổi");
+		// document.write("<br>Bạn ở " + objStu.location);
+	</script>
+</head>
+<body>
+
+</body>
+</html>

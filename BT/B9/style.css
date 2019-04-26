@@ -1,0 +1,57 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    margin: 0 auto;
+    height: 55px;
+    width: 80%;
+    background-color: #303030;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    background-color: #303030;
+    width: 150px;
+    height: 40px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    font-size: 18px;
+    position: relative;
+}
+
+.navbar ul ul {
+    display: none;
+    margin-left: 0px;
+}
+
+.navbar ul li:hover {
+    background-color: rgb(31, 31, 31);
+}
+
+.navbar ul li:hover > ul {
+    display: block;
+    z-index: 1;
+} 
+
+.navbar ul li:hover > a {
+    font-weight: bolder;
+}
+
+.navbar ul ul ul {
+    margin-left: 150px;
+    top: 0px;
+    position: absolute;
+}

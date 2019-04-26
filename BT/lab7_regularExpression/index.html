@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script type="text/javascript">
+		function validate(){
+			var name = document.getElementById("txtName").value;
+			var user = document.getElementById("txtUser").value;
+			var pass = document.getElementById("txtPass").value;
+			var repass = document.getElementById("txtRePass").value;
+			var email = document.getElementById("txtEmail").value;
+			var phone = document.getElementById("txtPhone").value;
+			var str = "";
+
+			// kiểm tra họ tên
+			var namePattern = /^[a-zA-Z\s]{1,40}$/;
+			if(name == str){
+				document.getElementById("msgName").innerHTML = "<img src='images/uncheck.png'  width = '15px' /> Nhập họ tên";
+				document.getElementById("msgName").style.color = "red";
+				document.getElementById("txtName").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else if(namePattern.test(name) == false){
+				document.getElementById("msgName").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Định dạng không hợp lệ";
+				document.getElementById("msgName").style.color = "red";
+				document.getElementById("txtName").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else{
+				status = true;
+				document.getElementById("msgName").innerHTML = str;
+				document.getElementById("msgName").style.color = "red";
+				document.getElementById("txtName").style.borderColor = str;
+			}
+			
+			// kiểm tra tên tài khoản
+			var userPattern = /^[a-z0-9_\.\S]{4,}$/i;
+			if(user==str){
+				document.getElementById("msgUser").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Nhập tên tài khoản";
+				document.getElementById("msgUser").style.color = "red";
+				document.getElementById("txtUser").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else if(user.length <= 3){
+				document.getElementById("msgUser").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Tên tài khoản quá ngắn";
+				document.getElementById("msgUser").style.color = "red";
+				document.getElementById("txtUser").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else if(userPattern.test(user) == false){
+				document.getElementById("msgUser").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Tên tài khoản chứa kí tự không hợp lệ";
+				document.getElementById("msgUser").style.color = "red";
+				document.getElementById("txtUser").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}
+			else{
+				document.getElementById("msgUser").innerHTML=str;
+				document.getElementById("txtUser").style.borderColor = "";
+				status = true;
+			}
+
+			// kiểm tra mật khẩu
+			var passPattern = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16}/;
+			// * lap lai so lan bat ki
+			// . trùng khớp với 1 ký tự bất kỳ ngoại trừ ký tự ngắt dòng
+			// ? ít nhất 1 lần xuất hiện
+			if(pass==str){
+				document.getElementById("msgPass").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Nhập mật khẩu";
+				document.getElementById("msgPass").style.color = "red";
+				document.getElementById("txtPass").style.borderColor = "red";
+				status = false;
+				status1 = false;				
+			}else if(pass.length < 8 || pass.length >16){
+				document.getElementById("msgPass").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Mật khẩu phải dài từ 8-16 kí tự, bao gồm chữ viết hoa, chữ viết thường và chữ số";
+				document.getElementById("msgPass").style.color = "red";
+				document.getElementById("txtPass").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else if(passPattern.test(pass) == false){
+				document.getElementById("msgPass").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Mật khẩu phải dài từ 8-16 kí tự, bao gồm chữ viết hoa, chữ viết thường và chữ số";
+				document.getElementById("msgPass").style.color = "red";
+				document.getElementById("txtPass").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}
+			else{
+				document.getElementById("msgPass").innerHTML=str;
+				document.getElementById("txtPass").style.borderColor = "";
+				status = true;
+			}
+
+			// kiểm tra lại mật khâu
+			if(repass==str){
+				document.getElementById("msgRePass").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Nhập mật khẩu";
+				document.getElementById("msgRePass").style.color = "red";
+				document.getElementById("txtRePass").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else if(repass != pass){
+				document.getElementById("msgRePass").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Mật khẩu không khớp. Hãy thử lại";
+				document.getElementById("msgRePass").style.color = "red";
+				document.getElementById("txtRePass").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}
+			else{
+				document.getElementById("msgRePass").innerHTML=str;
+				document.getElementById("txtRePass").style.borderColor = "";
+				status = true;
+			}
+
+			// kiểm tra email
+			var emailPattern = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
+			if(email==str){
+				document.getElementById("msgEmail").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Nhập Email";
+				document.getElementById("msgEmail").style.color = "red";
+				document.getElementById("txtEmail").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else if (emailPattern.test(email) == false) {
+				document.getElementById("msgEmail").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Email không hợp lệ";
+				document.getElementById("msgEmail").style.color = "red";
+				document.getElementById("txtEmail").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}
+			else{
+				document.getElementById("msgEmail").innerHTML=str;
+				document.getElementById("txtEmail").style.borderColor = "";
+				status = true;
+			}
+
+			// kiểm tra sdt
+			var phonePattern = /^([0-9]{10,11})$/;
+			if(phone==str){
+				document.getElementById("msgPhone").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Nhập mật SDT";
+				document.getElementById("msgPhone").style.color = "red";
+				document.getElementById("txtPhone").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}else if (phonePattern.test(phone) == false) {
+				document.getElementById("msgPhone").innerHTML="<img src='images/uncheck.png'  width = '15px' /> Số điện thoại không hợp lệ";
+				document.getElementById("msgPhone").style.color = "red";
+				document.getElementById("txtPhone").style.borderColor = "red";
+				status = false;
+				status1 = false;
+			}
+			else{
+				document.getElementById("msgPhone").innerHTML=str;
+				document.getElementById("txtPhone").style.borderColor = "";
+				status = true;
+			}
+			if (status1 == false) {
+				if(status == true){
+					return true;
+				}else{
+					return false;
+				}
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form class="form-horizontal" action="process.php" method="POST" onsubmit="return validate()">
+			<!-- Họ tên -->
+			<div class="form-group">
+				<label for="txtName" class="col-sm-2 control-label">Họ tên *</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="txtName" />
+					<span id="msgName"></span>
+				</div>
+			</div>
+
+			<!-- Tên tài khoản -->
+			<div class="form-group">
+				<label for="txtUser" class="col-sm-2 control-label">Tên tài khoản *</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="txtUser" />
+					<span id="msgUser">Bạn có thể sử dụng chữ cái, số và dấu chấm</span>
+				</div>
+			</div>
+
+			<!-- Mật khẩu -->
+			<div class="form-group">
+				<label for="txtPass" class="col-sm-2 control-label">Mật khẩu *</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="txtPass" />
+					<span id="msgPass"></span>
+				</div>
+			</div>
+			
+			<!-- Nhập lại mật khẩu -->
+			<div class="form-group">
+				<label for="txtRePass" class="col-sm-2 control-label">Nhập lại mật khẩu *</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="txtRePass" />
+					<span id="msgRePass"></span>
+				</div>
+			</div>
+
+			<!-- Email -->
+			<div class="form-group">
+				<label for="txtEmail" class="col-sm-2 control-label">Email *</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="txtEmail" />
+					<span id="msgEmail"></span>
+				</div>
+			</div>
+
+			<!-- SDT -->
+			<div  class="form-group">
+				<label for="txtPhone" class="col-sm-2 control-label">SDT *</label>
+				<div class="col-sm-6">
+					<input type="text" class="form-control" id="txtPhone" />
+					<span id="msgPhone"></span>
+				</div>
+			</div>
+
+			<!-- Địa chỉ -->
+			<div  class="form-group">
+				<label for="txtPhone" class="col-sm-2 control-label">Địa chỉ</label>
+				<div class="col-sm-6">
+					<textarea class="col-sm-10 form-control" rows="3"></textarea>
+				</div>
+			</div>
+
+			<!-- Đăng kí -->
+			<div class="form-group">
+				<div class="col-sm-offset-4 col-sm-2">
+					<input type="submit" class="form-control btn btn-success" id="btnReg" />
+				</div>
+				
+			</div>
+		</form>
+	</div>
+</body>
+</html>

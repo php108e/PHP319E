@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo js</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script type="text/javascript">
+		// bài1
+		// alert("Hello NguyenDung");
+
+		// bài2
+		// var c = prompt();
+		// document.write("Hello " + c);
+
+		// bài3
+		// var a = parseInt(prompt("Nhập vào số thứ nhất: "));
+		// var b = parseInt(prompt("Nhập vào số thứ hai: "));
+		// alert("Tổng 2 số là: " + (a+b));
+		function validate(){
+			var status = true;
+			// Lấy dữ liệu của các đối tượng trong form
+			var user = document.getElementById("txtUser").value;
+			var pass = document.getElementById("txtPass").value;
+			var email = document.getElementById("txtEmail").value;
+			var phone = document.getElementById("txtSdt").value;
+			if (user=="") {
+				// alert("Ten dang nhap khong duoc de trong");
+				document.getElementById("msgUser").innerHTML="Vui lòng nhập tên đăng nhập";
+				document.getElementById("txtUser").style.borderColor="red";
+				status = false;
+			}else{
+				document.getElementById("msgUser").innerHTML="";
+				status = true;
+			}
+
+			if (pass=="") {
+				// alert("Ten dang nhap khong duoc de trong");
+				document.getElementById("msgPass").innerHTML="Vui lòng nhập mật khẩu";
+				document.getElementById("txtPass").style.borderColor="red";
+				status = false;
+			}else{
+				document.getElementById("msgPass").innerHTML="";
+				status = true;
+			}
+
+			var ePattern = /^[a-z]/;
+			if (email=="") {
+				// alert("Ten dang nhap khong duoc de trong");
+				document.getElementById("msgEmail").innerHTML="Vui lòng nhập email";
+				document.getElementById("txtEmail").style.borderColor="red";
+				status = false;
+			}else{
+				document.getElementById("msgEmail").innerHTML="";
+				status = true;
+			}
+
+			var moPattern = /^([0-9]{10})$/;
+			if (phone=="") {
+				// alert("Ten dang nhap khong duoc de trong");
+				document.getElementById("msgSdt").innerHTML="Vui lòng nhập số điện thoại";
+				document.getElementById("txtSdt").style.borderColor="red";
+				status = false;
+			}else{
+				if (moPattern.test(phone) == false) {
+					document.getElementById("msgSdt").innerHTML="Định dạng không hợp lệ";
+					document.getElementById("txtSdt").style.borderColor="red";
+					status = false;
+				}else{
+					document.getElementById("msgSdt").innerHTML="";
+				status = true;
+				}
+				document.getElementById("msgSdt").innerHTML="";
+				status = true;
+			}
+
+			if (status == true) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form action="proccess.php" method="POST" onsubmit="return validate();">
+			<div class="row">
+				<lable class="col-sm-2">Tên đăng nhập*</lable>
+				<input type="text" name="txtUer" id="txtUser">
+				<span id="msgUser"></span>
+			</div>
+			<div class="row">
+				<lable class="col-sm-2">Mật khẩu*</lable>
+				<input type="password" name="txtPass" id="txtPass">
+				<span id="msgPass"></span>
+			</div>
+			<div class="row">
+				<lable class="col-sm-2">Email*</lable>
+				<input type="email" name="txtEmail" id="txtEmail">
+				<span id="msgEmail"></span>
+			</div>
+			<div class="row">
+				<lable class="col-sm-2">SDT:</lable>
+				<input type="text" name="txtSdt" id="txtSdt">
+				<span id="msgSdt"></span>
+			</div>
+			<div class="row">
+				<input type="submit" name="btnReg" value="Đăng ký">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
