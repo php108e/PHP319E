@@ -1,0 +1,93 @@
+*{
+	padding: 0px;
+	margin: 0px;
+}
+.container{
+	background-color: white;
+}
+body{
+	background-color: blue;
+}
+#header{
+	height: 150px;
+	text-align: center;
+	padding-top: 30px;
+}
+#header-title{
+	font-size: 50px;
+	color: red;
+	font-family: time;
+	font-weight: bold;
+}
+
+
+#menu{
+	height: 50px;
+	background-color: green;
+}
+
+#menu a{
+	padding: 10px 10px;
+	text-decoration: none;
+	color: white;
+	display: block;
+	line-height: 30px;
+}
+#menu ul{
+	text-align: center;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+#menu ul li{
+	display: inline-block;
+	position: relative;
+	width: 130px;
+	border-right: 1px solid white;
+}
+#menu ul li ul{
+	position: absolute;
+	display: none;
+}
+#menu a:focus{
+	background-color: red;
+	color: green;
+}
+#content{
+	border: 1px solid black;
+}
+
+.content-img{
+	margin-top: 20px;
+}
+.content-text{
+	height: 180px;
+	width: 250px;
+}
+h5{
+	font-family: time;
+	color: green;
+}
+p{
+	font-family: time;
+}
+
+
+/*register*/
+#content-register{
+	height: 700px;
+}
+h2{
+	color: red;
+	font-family: time;
+	font-weight: bold;
+}
+.txtNote{
+	color: red;
+	font-family: time;
+	font-size: 14px;
+	font-style: italic;
+}
+.lb{
+	text-align: center;
+}

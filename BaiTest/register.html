@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Đăng ký tư vấn</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function validate() {
+			var name = document.getElementById("txtName").value;
+			var phone = document.getElementById("txtPhone").value;
+			var email = document.getElementById("txtEmail").value;
+			var address = document.getElementById("txtAddress").value;
+			var content = document.getElementById("txtContent").value;
+
+			var status = true;
+
+			var reEmail = /^([a-zA-z0-9])+\@+([a-zA-z])+\.+([a-z]{2,3})$/;
+			var rePhone = /^([0-9]{10,11})$/;
+			if (name == "") {
+				document.getElementById("msgName").innerHTML ="yêu cầu không được để trống!";
+				document.getElementById("txtName").style.borderColor = "red";
+				status = false;
+			} else {
+				document.getElementById("msgName").innerHTML ="";
+				document.getElementById("txtName").style.borderColor = "#ced4da";
+			}
+
+			if (phone == "") {
+				document.getElementById("msgPhone").innerHTML ="yêu cầu không được để trống!";
+				document.getElementById("txtPhone").style.borderColor = "red";
+				status = false;
+			} else {
+				if (rePhone.test(phone) == false) {
+					document.getElementById("msgPhone").innerHTML ="không đúng định dạnh số điện thoại!";
+					document.getElementById("txtPhone").style.borderColor = "red";
+				} else {
+					document.getElementById("msgPhone").innerHTML ="";
+					document.getElementById("txtPhone").style.borderColor = "#ced4da";
+				}
+			}
+
+			if (email == "") {
+				document.getElementById("msgEmail").innerHTML ="yêu cầu không được để trống!";
+				document.getElementById("txtEmail").style.borderColor = "red";
+				status = false;
+			} else {
+				if (reEmail.test(email) == false) {
+					document.getElementById("msgEmail").innerHTML ="Email không đúng định dạng!";
+					document.getElementById("txtEmail").style.borderColor = "red";
+				} else {
+					document.getElementById("msgEmail").innerHTML ="";
+					document.getElementById("txtEmail").style.borderColor = "#ced4da";
+				}	
+			}
+
+			if (address == "") {
+				document.getElementById("msgAddress").innerHTML ="yêu cầu không được để trống!";
+				document.getElementById("txtAddress").style.borderColor = "red";
+				status = false;
+			} else {
+				document.getElementById("msgAddress").innerHTML ="";
+				document.getElementById("txtAddress").style.borderColor = "#ced4da";
+			}
+			if (content == "") {
+				document.getElementById("msgContent").innerHTML ="yêu cầu không được để trống!";
+				document.getElementById("txtContent").style.borderColor = "red";
+				status = false;
+			} else {
+				document.getElementById("msgContent").innerHTML ="";
+				document.getElementById("txtContent").style.borderColor = "#ced4da";
+			}
+
+			if (status == false) {
+				return false;
+			} else {
+				return true;
+			}
+		}
+
+		function clearForm()
+		{
+			document.getElementById("msgName").innerHTML ="";
+			document.getElementById("txtName").value = "";
+			document.getElementById("txtName").style.borderColor = "#ced4da";
+
+			document.getElementById("msgPhone").innerHTML ="";
+			document.getElementById("txtPhone").value = "";
+			document.getElementById("txtPhone").style.borderColor = "#ced4da";
+
+			document.getElementById("msgEmail").innerHTML ="";
+			document.getElementById("txtEmail").value = "";
+			document.getElementById("txtEmail").style.borderColor = "#ced4da";
+
+			document.getElementById("msgAddress").innerHTML ="";
+			document.getElementById("txtAddress").value = "";
+			document.getElementById("txtAddress").style.borderColor = "#ced4da";
+
+			document.getElementById("msgContent").innerHTML ="";
+			document.getElementById("txtContent").value = "";
+			document.getElementById("txtContent").style.borderColor = "#ced4da";
+		}
+	</script>
+</head>
+<body>
+	<div class="container" >
+		<div id="header" class="row">
+			<div id="header-title" class="col-md-12">ITPLUS COMPANY</div>
+		</div>
+		<div id="menu" class="row justify-content-md-center">
+			<div class="col-md-10 col-md-offset-1" >
+				<ul >
+					<li style="border-left: 1px solid white;"><a href="index.html">Trang chủ</a></li>
+					<li><a href="about.html">Giơi thiệu</a></li>
+					<li><a href="#">Mở bán</a></li>
+					<li><a href="news.html">Tin tức</a></li>
+					<li><a href="register.html">Đăng ký tư vấn</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content" class="row">
+			<div id="content-register" class="col-md-12">
+				<div class="row justify-content-md-center">
+					<div class="col-md-10 col-md-offset-1" style="text-align: center; margin-top: 20px; margin-bottom: 10px">
+						<h2>NHẬN ĐĂNG KÝ TƯ VẤN</h2>
+					</div>
+				</div>
+				<div class="row justify-content-md-center">
+					<div class="col-md-8 col-md-offset-2">
+						<form action="proccess.php" method="post" onsubmit=" return validate();">
+							<table border="0px" class="table table-borderless">
+								<tr>
+									<td width="150px"><label>Họ và tên(*):</label></td>
+									<td>
+										<input type="text" name="txtName" id="txtName" class="form-control">
+										<span class="txtNote" id="msgName"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td ><label>Số điện thoại(*):</label></td>
+									<td>
+										<input type="text" name="txtPhone" id="txtPhone" class="form-control">
+										<span class="txtNote" id="msgPhone"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td><label>Email(*):</label></td>
+									<td>
+										<input type="text" name="txtEmail" id="txtEmail" class="form-control">
+										<span class="txtNote" id="msgEmail"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td><label>Địa chỉ(*):</label></td>
+									<td>
+										<input type="text" name="txtAddress" id="txtAddress" class="form-control">
+										<span class="txtNote" id="msgAddress"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td><label>Nội dung(*):</label></td>
+									<td>
+										<textarea type="text" name="txtContent" id="txtContent" class="form-control"></textarea>
+										<span class="txtNote" id="msgContent"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<input type="submit" name="btnSubmit" id="btnSubmit" value="Đăng ký" class="form-control btn btn-outline-dark ">
+										<input type="button" name="btnBack" id="btnBack" value="Quay lại" class="form-control btn btn-outline-dark" onclick="clearForm();">
+									</td>
+								</tr>
+							</table>
+						</form>	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
