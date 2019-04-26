@@ -5,7 +5,6 @@
 	<meta charset="utf-8">
 	<script type="text/javascript">
 		function validate(){	
-			
 			var status =true;
 			var name = document.getElementById("txtName").value;
 			var user = document.getElementById("txtUser").value;
@@ -16,36 +15,66 @@
 			var add = document.getElementById("txtAddress").value;
 			if (name== "") {
 				document.getElementById("msgName").innerHTML ="Họ tên không được để trống" 	 ;
+				document.getElementById("txtName").style.border="1px solid red";
 				status = false;	
 			}else{
 				document.getElementById("msgName").style.display="none";
 			}
 			if (user== "") {
 			 	document.getElementById("msgUser").innerHTML ="Tên tài khoản không được để trống" 	 ;
+			 	document.getElementById("txtUser").style.border="1px solid red";
 				status = false;	
+			}else{
+				document.getElementById("msgUser").style.display="none";
 			}
+			var pattern_pass =/(^[A-Z])([a-z]*)([!@#$%^&*]{1})([0-9]){8,}/;
+
 			if (pass== "") {
 			 	document.getElementById("msgPass").innerHTML ="Mật khẩu không được để trống" 	 ;
-			 	status = false;	
-			 }
-			 if (repass== "") {
-			 	document.getElementById("msgRepass").innerHTML ="Vui lòng nhập lại mật khẩu" 	 ;
-			 	status = false;	
-			 }
-			 if (email== "") {
-			 	document.getElementById("msgEmail").innerHTML ="Email không được để trống" 	 ;
+			 	document.getElementById("txtPass").style.border="1px solid red";
 			 	status = false;	
 			}else{
-
+			 	if (pattern_pass.test(pass) == false){
+			 	document.getElementById("msgPass").innerHTML ="Mật khẩu không đúng định dạng" 	 ;
+			 	document.getElementById("txtPass").style.border="1px solid red";
+			 	status = false;	
+			 	}else{
+					document.getElementById("msgPass").style.display="none";
+				}
 			}
-			 if (phone== "") {
+			if (repass== "") {
+			 	document.getElementById("msgRepass").innerHTML ="Vui lòng nhập lại mật khẩu" 	 ;
+			 	document.getElementById("txtRepass").style.border="1px solid red";
+			 	status = false;	
+			}else{
+				document.getElementById("msgRepass").style.display="none";
+			}
+			var pattern_email = /([a-z]{2,})\@\.([a-z]{3,}) /i;
+			if (email== "") {
+			 	document.getElementById("msgEmail").innerHTML ="Email không được để trống" 	 ;
+			 	document.getElementById("txtEmail").style.border="1px solid red";
+			 	status = false;	
+			}else{
+					document.getElementById("msgEmail").innerHTML ="Email không hợp lệ " 	 ;
+			 	document.getElementById("txtEmail").style.border="1px solid red";
+				}else {
+					document.getElementById("msgEmail").style.display="none";
+				}
+			}
+			var pattern_phone= /(^0[0-9]{9,10})/;
+			if (phone== "") {
 			 	document.getElementById("msgPhone").innerHTML ="Số điện thoại không được để trống" ;
+			 	document.getElementById("txtPhone").style.border="1px solid red";
 			 	status = false;	
-			 }
-			 if (add== "") {
-			 	document.getElementById("msgAddress").innerHTML ="Vui lòng điền địa chỉ" 	 ;
+			}else{
+				if (pattern_phone.test(phone) == false){
+				document.getElementById("msgPhone").innerHTML ="Số điện thoại không hợp lệ" ;
+			 	document.getElementById("txtPhone").style.border="1px solid red";
 			 	status = false;	
-			 }
+				}else{
+					document.getElementById("msgPhone").style.display="none";
+				}
+			}
 			if (status == false){
 				return false;
 			}else{
