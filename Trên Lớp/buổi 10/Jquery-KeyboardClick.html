@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyboard Event</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		function numericonly(){
+			if (event.keyCode<=47 || event.keyCode>=57)
+				event.returnValue=false;
+		}
+
+		function countword(){
+			var message
+			message=document.getElementById('txtMessage').value;
+			message=message.replace(/\s+/g,' ');
+			var numberofwords=message.split('').length;
+			document.getElementById('txtMessage1').value='Word remaining:'+eval(50-numberofwords);
+			if (numberofwords>50) {
+				alert('too many words.');
+			}	
+		}
+	</script>
+</head>
+<body>
+	<div><h1>SMS Editor</h1></div>
+	<div>
+		<form>
+			<table>
+				<tr>
+					<td>Mobile Number</td>
+					<td><input id="txtMobno" onkeypress="numericonly()"></td><br>
+				</tr>
+				<tr>
+					<td>Message</td>
+					<td><input id="txtMessage" onkeydown="countword()"></td><br>
+					<td><input id="txtMessage1"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Send SMS"></td>
+					<td><input type="reset" value="Clear"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
