@@ -1,0 +1,70 @@
+.header {
+    text-align: center;
+}
+
+#menu {
+    background-color: green;
+    height: 50px;
+}
+
+#menu ul {
+    height: 100%;
+    margin: 0 auto;
+    align-content: center;
+    display: table;
+    width: 90%;
+}
+
+#menu ul li {
+    display: table-cell;
+    width: 20%;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: transparent;
+    text-align: center;
+    border-right: solid white 1px;
+    vertical-align: middle;
+}
+
+#menu ul li:first-child {
+    border-left: solid white 1px;
+}
+
+#menu ul li:hover {
+    background-color: red;
+
+    border: 2px;
+}
+
+#menu ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+
+.content {
+    height: 150px;
+    /*background-color: lightblue;*/
+}
+
+.content-text a {
+    text-decoration: none;
+    color: green;
+    font-weight: bold;
+}
+
+
+.container form label{
+    text-align: right;
+}
+
+#label {
+    margin-top: 20px;
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+}
