@@ -1,0 +1,93 @@
+body {
+    background-color: blue;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+    background-color: white;
+    padding: 0;
+}
+#header {
+    padding: 30px;
+}
+h1 {
+    text-transform: uppercase;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
+
+#nav-bar {
+    height: 50px;
+    background-color: green;
+    margin: auto 0 10px 0;
+}
+
+#nav-bar ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-bar ul li {
+    border-left: solid white 0.5px;
+    border-right: solid white 0.5px;
+}
+
+#nav-bar ul li:hover {
+    background-color: red;
+}
+
+#nav-bar ul li:hover >a {
+    color: green;
+}
+
+#nav-bar ul li a {
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    font-size: 18px;
+    color: white;
+    margin: auto 40px;
+    text-decoration: none;
+}
+
+
+.content-part {
+    height: 200px;
+    letter-spacing: 0.3px;
+    margin: 20px 20px;
+}
+
+.content-part img {
+    float: left;
+    height: 150px;
+    width: 150px;
+}
+
+.content-part a {
+    text-decoration: none;
+    font-weight: bold;
+    color: green;
+    padding-left: 10px;
+}
+
+.content-part p {
+    padding: 10px 0 0 10px;
+    margin-left: 150px;
+}
+
+/* Register.html */
+#register-form {
+    height: 600px;
+}
+
+#register-form h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: red;
+    font-size: 30px;
+    margin: 20px;
+}
+
