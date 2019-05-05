@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript">
+    function numericonly() {
+        if (event.keyCode <= 47 || event.keyCode >= 57) {
+            event.returnValue = false;
+        }
+    }
+
+    function countWord() {
+        var message;
+        message = document.getElementById('txtMessage').value;
+        message = message.replace(/\s +/g, '');
+        var numberofwords = message.split('').length;
+        document.getElementById('txtMessage1').value = `Word remaining ${eval(50 - numberofwords)}`;
+        if (numberofwords > 50) {
+            alert(`Too many words`);
+        }
+    }
+
+</script>
+<body>
+
+<h1>SMS Editor</h1>
+<label for="txtMobNo">Mobile Number</label>
+<input type="text" id="txtMobNo" onkeypress="numericonly()">
+<br>
+<label for="txtMessage">Message</label>
+<input type="text" id="txtMessage"onkeydown="countWord()" >
+<br>
+<input type="text"id="txtMessage1">
+
+
+</body>
+</html>
