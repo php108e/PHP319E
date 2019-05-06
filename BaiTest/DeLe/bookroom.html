@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Dịch vụ tiện ích</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+
+	
+</head>
+<body style="background-color: green;">
+	<div class="container">
+		<div id="header" class="row" style="padding-top: 30px;">
+			<div class="col-md-12">
+				<span id="header-title">ITPLUS HOTEL</span>
+			</div>
+		</div>
+		<div id="nav" class="row">
+			<div class="col-md-12">
+				<ul>
+					<li><a href="index.html">Trang chủ</a></li>
+					<li><a href="about.html">Giới thiệu</a></li>
+					<li><a href="service.html">Dịch vụ tiện ích</a></li>
+					<li style="background-color: red;"><a style="color: green;" href="#">Đặt phòng</a></li>
+					<li style="border-right: 1px white solid;"><a href="contact.html">Liên hệ</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content" class="row">
+			<div class="col-md-12">
+				<div class="row" style="margin-top: 30px;">
+					<div class="col-md-12"><h2>ĐẶT PHÒNG ONLINE</h2></div>
+				</div>
+				<div class="row justify-content-md-center">
+					<div class="col-md-8 col-md-offset-2">
+						<form action="process.php" method="post" onsubmit="return validate();">
+							<table border="0px" class="table table-borderless">
+								<tr>
+									<td width="150px" style="text-align: right;"><label>Ngày đến(*):</label></td>
+									<td >
+										<input type="text" name="txtDateFrom" id="txtDateFrom" class="form-control">
+										<span id="msgDateFrom" class="note"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><label>Ngày đi(*):</label></td>
+									<td>
+										<input type="text" name="txtDateTo" id="txtDateTo" class="form-control">
+										<span id="msgDateTo" class="note"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><label>Loại phòng(*):</label></td>
+									<td>
+										<input type="text" name="txtTypeRoom" id="txtTypeRoom" class="form-control">
+										<span id="msgTypeRoom" class="note"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><label>Họ tên(*):</label></td>
+									<td>
+										<input type="text" name="txtUsername" id="txtUsername" class="form-control">
+										<span id="msgUsername" class="note"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><label>Số điện thoại(*):</label></td>
+									<td>
+										<input type="text" name="txtPhone" id="txtPhone" class="form-control">
+										<span id="msgPhone" class="note"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><label>Email(*):</label></td>
+									<td>
+										<input type="text" name="txtEmail" id="txtEmail" class="form-control">
+										<span id="msgEmail" class="note"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td style="text-align: right;"><label>Nội dung(*):</label></td>
+									<td>
+										<textarea id="txtContent" class="form-control"></textarea>
+										<span id="msgContent" class="note"></span><span style="color: white">i</span>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<input type="submit" name="btnSubmit" id="btnSubmit" value="Đặt phòng" class="btn btn-success">
+										<input type="button" name="btnClearForm" id="btnClearForm" value="Nhập lại" class="btn btn-danger" onclick="clearform();">
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
