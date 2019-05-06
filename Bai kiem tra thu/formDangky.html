@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Luyen tap</title>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./kiemtra.css">
+	<script type="text/javascript">
+		function validate(){
+		var status;
+		var name = document.getElementById("Name").value;
+		var phone = document.getElementById("Phone").value;
+		var email = document.getElementById("Email").value;
+
+		if (name == "") {
+				//alert("Tên đăng nhập không được để trống");
+		document.getElementById("msgName").innerHTML="User không được để trống";
+		document.getElementById("Name").style.borderColor = "red";
+				status = false;
+		}else
+			{ 
+				document.getElementById("msgName").style.display ="none";
+				status = true;
+			}
+			var	moPattern = /^([0-9]{10})/;
+			if (phone == "") {
+				//alert("Tên đăng nhập không được để trống");
+		document.getElementById("msgPhone").innerHTML="Điện thoại không được để trống";
+		document.getElementById("Phone").style.borderColor = "red";
+				status = false;
+		}else
+			{
+			if (moPattern.test(phone)==false) {
+				document.getElementById("msgPhone").innerHTML="Điện thoại không đúng định dạng";
+					document.getElementById("Phone").style.borderColor= "red";
+					status = false;
+			} 
+				else{
+					document.getElementById("msgPhone").innerHTML="";
+					document.getElementById("Phone").style.display= "red";
+				}
+			}
+		
+
+			var maPatterm = /^[A-Za-z0-9]+([_\.\-]?[A-Za-z0-9])*@[A-Za-z0-9]+([\.\-]?[A-Za-z0-9]+)*(\.[A-Za-z]+)+$/;
+			if (email=="") {
+				
+				document.getElementById("msgEmail").innerHTML="Email không được để trống";
+				document.getElementById("Email").style.borderColor= "red";
+				status = false;
+			}
+			else
+			{
+				if (maPatterm.test(email)) {
+					document.getElementById("msgEmail").innerHTML= "Email không đúng định dạng";
+					document.getElementById("Email").style.borderColor="red";
+					status= false;
+				}
+				else{
+				document.getElementById("msgEmail").innerHTML="";
+				document.getElementById("Email").style.display="black";
+				
+				}
+			}
+
+
+
+
+
+			if (status ==true) {
+				return true;
+			} else{
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div id="header" class="row">
+			<div class="col-sm-12">
+				<h2 id="sologan">IT PLUS COMPANY</h2>
+			</div>
+			
+		</div><!--End header-->
+
+		<div class="row nav">
+			<ul type="none" style="width: 2000px;">
+				<li><a href="./ktra.html">Trang chủ</a></li>
+				<li><a href="#">Giới thiệu</a></li>
+				<li><a href="#">Mở bán</a></li>
+				<li><a href="#">Tin tức</a></li>
+				<li><a href="#">Đăng kí tư vấn</a></li>
+			</ul>
+		</div>
+		<div id="content" class="row">
+			<div id="form" class="col-sm-12">
+				<h2 style="text-align: center;">Đăng kí nhận tư vấn</h2>
+				<form action="process.php" method="POST" onsubmit="return validate();" style="width: 1300px;">
+					<table>
+						<tr>
+							<td width="120px">Họ và tên(*)  </td>
+							<td>
+								<input type="text" name="txtName" id="Name">
+								<span id="msgName"> </span>
+							</td>
+						</tr>
+						<tr>
+							<td>Số điện thoại(*)  </td>
+							<td>
+								<input type="text" name="txtPhone" id="Phone">
+								<span id="msgPhone"> </span>
+							</td>
+						</tr>
+						<tr>
+							<td>Email(*)  </td>
+							<td>
+								<input type="text" name="txtEmail" id="Email">
+								<span id="msgEmail"> </span>
+							</td>
+						</tr>
+						<tr>
+							<td>Địa chỉ(*)  </td>
+							<td>
+								<input type="text" name="txtAddress" id="Address">
+								<span id="msgAddress"> </span>
+							</td>
+						</tr>
+						<tr>
+							<td>Nội dung(*)  </td>
+							<td>
+								<input type="text" name="txtNote" id="txtNote">
+								<span id="msgNote"> </span>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td>
+								<input type="submit" name="btnSubmit" value="Đăng Kí" onclick="alert("Hello")" style="width: 80px">
+								<input type="reset" name="resetSubmit" value="Nhập Lại" onClick="window.location.reload()" style="width: 80px">
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			
+		</div>
+
+
+
+
+
+	</div>
+</body>
+</html>
