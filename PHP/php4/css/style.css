@@ -1,0 +1,47 @@
+#header{
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	border: 1px solid green;
+}
+
+#content{
+	border: 1px solid green;
+	margin-top: 10px;
+}
+
+#left-content{
+	float: left;
+	width: 80%;
+	border: 1px solid red;
+}
+
+#right-content{
+	border: 1px solid blue;
+}
+
+#footer{
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	border: 1px solid green;
+	margin-top: 10px;
+}
+
+label{
+	width: 120px;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+input[type="text"],input[type="password"]{
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20pt;
+}
+
