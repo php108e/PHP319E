@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đăng ký tư vấn</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+        function validate(){
+            // Lấy giá trị
+            var status = true;
+            var fullname = document.getElementById("txtFullName").value;
+            var phone = document.getElementById("txtPhone").value;
+            // var email = document.getElementById("txtEmail").value;
+            // var address = document.getElementById("txtAddress").value;
+            // var content = document.getElementById("txtContent").value;
+
+            // Kiểm tra họ tên
+            if (fullname == "") {
+                document.getElementById("msgFullName").innerHTML = "Vui lòng nhập họ tên";
+                document.getElementById("msgFullName").style.color = "red";
+                document.getElementById("txtFullName").style.borderColor = "red";
+                status = false;
+            }else{
+                status = true;
+                document.getElementById("txtFullName").style.borderColor = "";
+                document.getElementById("msgFullName").innerHTML = "";
+            }
+
+            // kiểm tra số điện thoại
+            if (phone == "") {
+                document.getElementById("msgPhone").innerHTML = "Vui lòng nhập số điện thoại";
+                document.getElementById("msgPhone").style.color = "red";
+                document.getElementById("txtPhone").style.borderColor = "red";
+                status = false;
+            }else{
+                status = true;
+                document.getElementById("msgPhone").innerHTML = "";
+                document.getElementById("txtPhone").style.borderColor = "";
+            }
+            // kiểm tra email
+           
+            // kiểm tra địa chỉ
+            
+            // kiểm tra nội dung
+            
+
+
+          
+            if (status == true) {
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <div id="header">
+            <h1>ITPLUS CONPANY</h1>        
+        </div>
+
+        <!-- menu -->
+        <div id="menu">
+            <ul class="menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Mở Bán</a></li>
+                <li><a href="index.html">Tin Tức</a></li>
+                <li><a class="active" href="#">Đăng Ký Nhận Tư Vấn</a></li>
+            </ul>
+        </div>
+
+        <!-- content -->
+        <div id="content" style="height: 500px;">
+            <h2>ĐĂNG KÝ NHẬN TƯ VẤN</h2>
+            <div class="col-sm-8 col-sm-offset-2">
+                <form class="form-horizontal" action="process.php" method="POST" onsubmit="return validate();">
+                    <!-- Họ và tên -->
+                    <div class="form-group">
+                        <label for="txtFullName" class="col-sm-3 control-label">Họ và tên(*):</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" id="txtFullName">
+                            <span id="msgFullName"></span>  
+                        </div>
+                    </div>
+                    
+                    <!-- Số điện thoại -->
+                    <div class="form-group">
+                        <label for="txtPhone" class="col-sm-3 control-label">Số điện thoại(*):</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" id="txtPhone">
+                            <span class="msgPhone"></span>  
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="txtEmail" class="col-sm-3 control-label">Email(*):</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" id="txtEmail">
+                            <span class="msgEmail"></span>  
+                        </div>
+                    </div>
+
+                    <!-- Địa chỉ -->
+                    <div class="form-group">
+                        <label for="txtAddress" class="col-sm-3 control-label">Địa chỉ(*):</label>
+                        <div class="col-sm-8">
+                            <input class="form-control" type="text" id="txtAddress">
+                            <span class="msgAddress"></span>  
+                        </div>
+                    </div>
+
+                    <!-- Nội dung -->
+                    <div class="form-group">
+                        <label for="txtContent" class="col-sm-3 control-label">Nội dung(*):</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" rows="4"></textarea>
+                            <span class="msgContent"></span>
+                        </div>
+                    </div>
+
+                    <!-- Đăng ký -->
+                    <div class="form-group">
+                        <div class="col-sm-offset-5 col-sm-7">
+                            <input type="submit" id="btnReg" value="Đăng ký">
+                            <input type="reset" id="btnReset" value="Nhập lại">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

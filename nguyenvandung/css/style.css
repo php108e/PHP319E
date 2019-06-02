@@ -1,0 +1,85 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background: blue;
+}
+
+/* header */
+#header{
+    background: #fff;
+    text-align: center;
+    padding: 37px 0;
+}
+#header h1{
+    font-weight: bold;
+    color: red;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+}
+
+/* menu */
+#menu{
+    background: green;
+}
+
+.menu{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu li{
+    float: left;
+    border-left: 1px solid #fff;
+}
+.menu li a{
+    display: block;
+    padding: 12px 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    
+}
+.menu li:last-child{
+    border-right: 1px solid #fff;
+}
+.menu li a:hover{
+    background: red;
+    color: green;
+}
+.menu li a.active{
+    background: red;
+    color: green;
+}
+
+
+/* content */
+#content{
+    background: #fff;
+    padding: 20px 10px;
+}
+.article{
+    margin-bottom: 30px;
+}
+.article::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.article-thumb{
+    float: left;
+    margin-right: 10px;
+}
+.article-text h3{
+    color: green;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#content h2{
+    font-weight: bold;
+    color: red;
+    text-align: center;
+    margin-bottom: 30px;
+}

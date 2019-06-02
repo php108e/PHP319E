@@ -3,46 +3,42 @@
 <head>
 	<title>Form</title>
 	<meta charset="utf-8">
-
-	<link rel="stylesheet" type="text/css" href="css/main.css">
    
 	<style type="text/css">
-		label {
-			color: white;
-		}
-		body {
-			background: green;
-		}
+
 	</style>
 
+	<script type="text/javascript">
+		function numericonly(){
+			if ((event.keyCode <= 47) || (event.keyCode >= 57)) {
+				event.returnValue = false;
+			}
+		}
+
+		function countword(){
+			var message = document.getElementById('txtMessage').value;
+			message = message.replace(/\s+/g,' ');
+			var numberofwords = message.split(' ').length;
+			document.getElementById('txtMessage1').value = 'word remaining: ' + eval(10 - numberofwords);
+			if (numberofwords >= 10) {
+				alert("too many")
+			}
+		}
+	</script>
 	
 </head>
 <body>
 	<form action="proccess.php" method="post">
-		<label style="color: red; font-weight: bold;">Họ và tên</label>
-		<input type="text" name="txtFulpx;me" placeholder="hello"><br>
-		
-		<label>Giới tính</label>
-		<input type="radio" name="rbGender" checked="true" value="1">Nam
-		<input type="radio" name="rbGender" value="0">Nữ<br>
+		<label>Số điện thoại:</label>
+		<input id="txtPhone" onkeypress="numericonly()"><br>
 
-		<label>Sở thích</label><br>
-		<input type="checkbox" name="chkFav[]" value="1">Ngắm trời mưa
-		<input type="checkbox" name="chkFav[]" checked="true" value="2">Ăn thịt chó
-		<input type="checkbox" name="chkFav[]" value="3">Du lịch<br>
+		<label>Message</label><br>
+		<textarea id="txtMessage" cols="50" rows="5" onkeydown="countword();"></textarea><br>
+		<input type="text" id="txtMessage1" ><br><br>
 
-		<label>HKTT</label><br>
-		<textarea name="hktt" cols="50" rows="5"></textarea><br>
 
-		<label>Thanh phố</label>
-		<select name="cbCity">
-			<option value="hanoi">Hà Nội</option>
-			<option value="haiphong">Hải Phòng</option>
-			<option value="hochiminh" selected="true">Hồ Chí Minh</option>
-		</select><br>
-
-		<input type="submit" name="btnReg" value="Đăng ký">
-		<input type="reset" name="btnRes" value="Nhập lại">
+		<input type="submit" name="btnReg" value="Send">
+		<input type="reset" name="btnRes" value="Reset">
 
 	</form>
 
