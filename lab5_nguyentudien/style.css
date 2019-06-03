@@ -1,0 +1,49 @@
+#header{
+	height: 100px;
+	padding: 20px 20px;
+}
+#header-title{
+	font-family: tomaho;
+	color: #FF895F;
+	font-size: 48px;
+	font-weight: bold;	
+}
+.content-background{
+	background-image: url(sua5.jpg);
+	background-repeat: no-repeat;
+}
+
+.note{
+	color: red;
+	font-style: italic;
+}
+
+td #txtUsername{
+	width: 400px;
+}
+td #txtAddress{
+	width: 550px;
+}
+td #txtEmail{
+	width: 400px;
+}
+td #txtPhone{
+	width: 250px;
+}
+td #txtDay{
+	width: 90px;
+}
+td #txtMonth{
+	width: 90px;
+}
+td #txtYear{
+	width: 90px;
+}
+
+td #txtSendImg{
+	width: 400px;
+}
+.right{
+	text-align: right;
+	padding-right: 10px;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewprot" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tham gia CLB</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />	
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<img src="sanho.jpg" width="200px" height="670px">
+			</div>
+			<div class="col-md-8">
+				<div id="header" class="row">
+					<div class="col-md-12">
+						<span id="header-title">THAM GIA CLB</span>
+					</div>
+				</div>
+				<div class="row" style="margin-left: 40px; margin-bottom: 20px;">
+					<div class="col-md-12">
+						<span>Quý độc giả hãy điền đầy đủ thông tin để tham gia phát triển Câu lạc bộ ngày càng vững mạnh hơn.	</span>
+					</div>
+				</div>
+				<div id="content" class="row " style="margin-left: 60px;" >
+					<div class="col-md-12">
+						<form action="itplus@itplus-academy.edu.vn" method="post" onsubmit="return validate();">
+							<table>
+								<tr>
+									<td  class="right"><label>Họ và tên:</label></td>
+									<td>
+										<input type="text" name="txtUsername" id="txtUsername">*
+										<span id="msgUsername" class="note"></span>
+									</td>
+								</tr>
+								<tr>
+									<td  class="right"><label>Địa chỉ:</label></td>
+									<td>
+										<input type="text" name="txtAddress" id="txtAddress">
+										<span id="msgAddress" class="note"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="right"><label >Email:</label></td>
+									<td>
+										<input type="text" name="txtEmail" id="txtEmail">*
+										<span id="msgEmail" class="note"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="right"><label >Điện thoại:</label></td>
+									<td>
+										<input type="text" name="txtPhone" id="txtPhone">*
+										<span id="msgPhone" class="note"></span>
+									</td>
+								</tr>
+								<tr>
+									<td><label class="right">Ngày sinh:</label></td>
+									<td>
+										<input type="text" name="txtDay" id="txtDay"> / 
+										<input type="text" name="txtMonth" id="txtMonth"> /
+										<input type="text" name="txtYear" id="txtYear">*
+										<span id="msgBirth" class="note"></span>
+									</td>
+								</tr>
+								<tr>
+									<td class="right"><label>Đề tài:</label></td>
+									<td>
+										<select>
+											<option value="suabien">Tìm hiểu Sứa biển</option>
+											<option value="ca">Tìm hiểu cá biến</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="right"><label>Nhóm:</label></td>
+									<td>
+										<input type="radio" name="nhom1" value="nghiencuu"> Nghiên cứu<br>
+										<input type="radio" name="nhom2" value="haingu"> Hải ngư<br>
+										<input type="radio" name="nhom3" value="vienduong"> Viễn dương<br>
+										<input type="radio" name="nhom4" value="mythuat"> Mỹ thuật<br>
+										<input type="radio" name="nhom5" value="thucpham"> Thực phẩm<br>
+										<input type="radio" name="nhom6" value="sinhvien"> Sinh viên
+									</td>
+								</tr>
+								<tr>
+									<td class="right"><label>Gởi hình: </label></td>
+									<td>
+										<input type="text" name="txtSendImg" id="txtSendImg"> 
+										<input type="button" name="btnSendImg" id="btnSendImg" value="Browse...">
+									</td>
+								</tr>
+								<tr>
+									<td class="right"><label>Tài liệu: </label></td>
+									<td>
+										<input type="checkbox" name="file1" value="sinhvatbien"> Sinh vật Biển<br>
+										<input type="checkbox" name="file2" value="suabien"> Các loài Sứa biển<br>
+										<input type="checkbox" name="file3" value="sanho"> San hô<br>
+										<input type="checkbox" name="file4" value="mtbien"> Môi trường Biển<br>
+										<input type="checkbox" name="file5" value="khihau"> Khí hậu
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<input type="submit" name="btnSubmit" id="btnSubmit" value="Tham gia">
+										<input type="button" name="btnDelete" id="btnDelete" value="Xóa thông tin" onclick="clearform();">
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<div class="row" style="margin-top: 40px">
+					<div class="col-md-12">
+						<img src="sua1.jpg" height="150px" width="170px">
+					</div>
+				</div>
+				<div class="row" style="margin-top: 15px">
+					<div class="col-md-12" >
+						<img src="sua2.jpg" height="150px" width="170px">
+					</div>
+				</div>
+				<div class="row"  style="margin-top: 15px">
+					<div class="col-md-12">
+						<img src="sua3.jpg" height="150px" width="170px">
+					</div>
+				</div>
+				<div class="row"  style="margin-top: 15px">
+					<div class="col-md-12">
+						<img src="sua4.jpg" height="150px" width="170px">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
