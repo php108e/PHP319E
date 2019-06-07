@@ -22,7 +22,7 @@ background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, F
 }
 
 #header-left{
-	left:120px; 
+	left:120px;
 }
 
 #register-login{
@@ -56,7 +56,7 @@ input[type="text"]{
     outline:none;
     padding: 10px 14px;
     border-radius: 3px 0px 0px 3px;
-    margin-top:10px; 
+    margin-top:10px;
 
 }
 
@@ -70,7 +70,7 @@ button{
     border-radius: 3px 3px 3px 3px;
     background-color:  #444;
     background-repeat: repeat-x;
-    margin-top:10px; 
+    margin-top:10px;
 }
 
 select{
@@ -92,7 +92,7 @@ select{
 }
 .menu p{
 	margin-top: 0;
-	margin-bottom:0; 
+	margin-bottom:0;
 }
 
 .menu h2{
@@ -319,7 +319,7 @@ a:hover{
 	display: inline-block;
 	width: 120px;
 	height: 40px;
-	line-height: 40px;	
+	line-height: 40px;
 }
 
 .content-block .col-title li a{
@@ -344,7 +344,7 @@ a:hover{
     background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-weight: bold;
     cursor: pointer;
-    border-radius: 0px 0px 0px 0px;  
+    border-radius: 0px 0px 0px 0px;
 }
 .btn{
 	margin-left: 15px;
@@ -388,7 +388,7 @@ a:hover{
 .bd-example .carousel-caption{
 	left: -5px;
 	/*background-color: #999;*/
-	
+
 }
 /*footer*/
 
@@ -396,7 +396,7 @@ a:hover{
 	line-height: 1;
 	padding: 10px;
 	height: 400px;
-	margin-top: 20px; 
+	margin-top: 20px;
 }
 
 .footer-line{
