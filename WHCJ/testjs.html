@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <script>
+        // var xacnhan = confirm("Ban co muon xoa ban ghi du lieu nay khong?");
+        // if (xacnhan == true) {
+        //     document.write("Du lieu da bi xoa");
+        // } else {
+        //     document.write("Khong lam gi ca");
+        // }
+
+        var x = parseInt(prompt("Moi ban nhap gia tri cho X:"));
+        var y = parseInt(prompt("Moi ban nhap gia tri cho Y:"));
+        var o = prompt("Moi ban nhap phep tinh:");
+        switch (o) {
+            case "+":
+                alert("KQ phep cong:" + (x + y));
+                break;
+            case "-":
+                alert("KQ phep tru:" + (x - y));
+                break;
+            case "*":
+                alert("KQ phep nhan:" + (x * y));
+                break;
+            case "/":
+                alert("KQ phep chia:" + (x / y));
+                break;
+
+            default:
+                alert("Ban chua nhap dung phep tinh");
+                break;
+        }
+        // if (o == "+") {
+        //     alert("Ket qua cua phep cong: " + (x + y));
+        // }
+        // if (o == "-") {
+        //     alert("Ket qua cua phep tru: " + (x - y));
+        // }
+
+        // if (o == "*") {
+        //     alert("Ket qua cua phep nhan: " + (x * y));
+        // }
+
+        // if (o == "/") {
+        //     alert("Ket qua cua phep chia: " + (x / y));
+        // }
+
+
+
+        // var mobile = prompt("Moi ban nhap so dien thoai");
+        // if (isNaN(mobile) == true) {
+        //     alert("So dien thoai phai la chu so!");
+        // } else {
+        //     alert("Du lieu hop le");
+        // }
+    </script>
+</body>
+
+</html>
