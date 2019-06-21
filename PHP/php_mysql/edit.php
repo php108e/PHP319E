@@ -19,7 +19,12 @@
 
 
 	<?php
-	if(isset($_POST['add'])){
+	$masp = $_GET['masp'];
+	include("dienthoai.php");
+	$dt = new Dienthoai();
+	$row = $dt->getByMaSP($masp);
+
+	if(isset($_POST['edit'])){
 		$t = $_POST['tensp'];
 		$g = $_POST['giasp'];
 		$s = $_POST['soluong'];
@@ -29,45 +34,47 @@
 
 		include("dienthoai.php");
 		$dt = new Dienthoai();
-		if($dt->add($t,$g,$s,$n,$h,$tt)==true){
+		if($dt->edit($masp,$t,$g,$s,$n,$h,$tt)==true){
 			echo "<div style='color:green;'>Thêm mới điện thoại thành công.</div>";
 		}else{
 			echo "<div style='color:red;'>Quá trình thêm mới thất bại.</div>";
 		}
 	}
+
+	
+
 	?>
 
-	<form action="add.php" method="post" onsubmit="return formValid();">
+	<form action="edit.php" method="post" onsubmit="return formValid();">
 		<table>
 			<tr>
 				<td>Tên sản phẩm</td>
-				<td><input type="text" name="tensp"></td>
+				<td><input type="text" name="tensp" value="<?php echo $row['tensp'];?>"></td>
 			</tr>
 			<tr>
 				<td>Giá</td>
-				<td><input type="text" name="giasp"></td>
+				<td><input type="text" name="giasp" value="<?php echo $row['giasp'];?>"></td>
 			</tr>
 			<tr>
 				<td>Số lượng</td>
-				<td><input type="text" name="soluong"></td>
+				<td><input type="text" name="soluong" value="<?php echo $row['soluong'];?>"></td>
 			</tr>
 			<tr>
 				<td>Năm sản xuất</td>
-				<td><input type="text" name="namsx"></td>
+				<td><input type="text" name="namsx" value="<?php echo $row['namsx'];?>"></td>
 			</tr>
 			<tr>
 				<td>Hãng</td>
-				<td><input type="text" name="hang"></td>
+				<td><input type="text" name="hang" value="<?php echo $row['hang'];?>"></td>
 			</tr>
 			<tr>
 				<td>Tóm tắt</td>
-				<td><textarea name="tomtat" cols="20" rows=""5></textarea></td>
+				<td><textarea name="tomtat" cols="20" rows="5"><?php echo $row['tomtat'];?></textarea></td>
 			</tr>
 			<tr>
 				<td></td>
 				<td>
-					<input type="submit" name="add" value="Thêm điện thoại">
-					<input type="reset" name="remove" value="Nhập lại">
+					<input type="submit" name="edit" value="Cập nhật">
 				</td>
 			</tr>
 		</table>
