@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Chức năng thêm mới điện thoại</title>
+	<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
 	<style type="text/css">
 		table{
 			width:70%;
@@ -32,12 +33,10 @@
 		$h = $_POST['hang'];
 		$tt = $_POST['tomtat'];
 
-		include("dienthoai.php");
-		$dt = new Dienthoai();
 		if($dt->edit($masp,$t,$g,$s,$n,$h,$tt)==true){
-			echo "<div style='color:green;'>Thêm mới điện thoại thành công.</div>";
+			echo "<div style='color:green;'>Cập nhật điện thoại thành công.</div>";
 		}else{
-			echo "<div style='color:red;'>Quá trình thêm mới thất bại.</div>";
+			echo "<div style='color:red;'>Quá trình cập nhật thất bại.</div>";
 		}
 	}
 
@@ -45,7 +44,7 @@
 
 	?>
 
-	<form action="edit.php" method="post" onsubmit="return formValid();">
+	<form action="edit.php?masp=<?php echo $masp;?>" method="post" onsubmit="return formValid();">
 		<table>
 			<tr>
 				<td>Tên sản phẩm</td>
@@ -69,7 +68,14 @@
 			</tr>
 			<tr>
 				<td>Tóm tắt</td>
-				<td><textarea name="tomtat" cols="20" rows="5"><?php echo $row['tomtat'];?></textarea></td>
+				<td>
+					<textarea name="tomtat" id="tomtat" cols="20" rows="5">
+					<?php echo $row['tomtat'];?>
+					</textarea>
+					<script type="text/javascript">
+						CKEDITOR.replace("tomtat");
+					</script>
+				</td>
 			</tr>
 			<tr>
 				<td></td>

@@ -32,8 +32,15 @@ class Dienthoai extends Database
 	}
 
 
-	public function edit($m,$t, $g, $s, $n, $h, $tt){
+	public function edit($masp,$t,$g,$s,$n,$h,$tt){
+		$sql = "UPDATE dienthoai SET tensp='".$t."', giasp=$g, soluong=$s, namsx=$n, hang='".$h."', tomtat='".$tt."' WHERE masp= $masp";
 
+		$stmt = $this->db->prepare($sql);
+		if($stmt->execute()==true){
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 	public function remove($m){
