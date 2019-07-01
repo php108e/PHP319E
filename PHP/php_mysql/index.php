@@ -20,34 +20,37 @@ session_start();
 </head>
 <body>
 	<div id="header" class="container">Header</div>
+	
+	<div id="search" class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<form action="index.php" method="post">
+					<input type="text" name="txtSearch" class="form-control">
+					<input type="submit" name="btnSearch" value="Tìm kiếm" class="btn btn-info form-control">
+				</form>
+			</div>
+		</div>	
+	</div>
+	<p></p>
 
 	<?php
 		include("dienthoai.php");
 		$dt = new Dienthoai();
-		$item = $dt->getAll();
+
+		if(isset($_POST['btnSearch'])){
+			//Lay du lieu trong form search
+			$searchVal = $_POST['txtSearch'];
+			if($searchVal!=""){
+				$item = $dt->getAllByName($searchVal);
+			}else{
+				$item = $dt->getAll();
+			}
+		}else{
+			$item = $dt->getAll();
+		}
 
 	?>
 	<div id="content" class="container">
-		<!-- <div class="row">
-			<div class="col-md-9">
-				<div id="item" class="row">
-					<?php
-					// foreach ($item as $k=>$v){
-					?>
-					<div class="col-md-4">
-						<img src="#" width="100%" height="150px">
-						<div class="item-name"><?php //echo $v['tensp'];?></div>
-						<div class="item-price"><?php //echo $v['giasp'];?></div>
-						<div class="item-brand"><?php //echo $v['hang'];?></div>
-					</div>
-					<?php
-					// }
-					?>
-				</div>
-			</div>
-			<div class="col-md-3">Right content</div>
-		</div> -->
-
 		<?php
 
 		if(isset($_SESSION['status'])){

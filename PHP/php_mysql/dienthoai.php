@@ -88,6 +88,23 @@ class Dienthoai extends Database
 		return $row;
 	}
 
+	public function getAllByName($ten){
+		$sql = "SELECT * FROM dienthoai WHERE tensp LIKE '".$ten."%'";
+
+		//B3: Prepare cau truy van
+		$stmt = $this->db->prepare($sql);
+
+		//Buoc 4: Thuc thi truy van
+		$stmt->execute();
+
+		//B5: Lay du lieu tu 'Object' va chuyen doi sang kieu mang 'Array'
+		$arrDT = array();
+		while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+			$arrDT[] = $row;
+		}
+
+		return $arrDT;
+	}
 
 }
 ?>
