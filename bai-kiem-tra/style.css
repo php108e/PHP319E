@@ -78,7 +78,10 @@ body{
 	height: 120px;
 	margin-right: 20px;
 }
-
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
 input[type="text"]{
 	
 	width: 320px;
@@ -100,3 +103,4 @@ textarea{
 
 #form-register .title-form{
 	padding: 10px;
+}
