@@ -1,3 +1,6 @@
+<?php
+	session_Start();
+?>
 	<!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +24,7 @@
 			var nam = document.getElementById("namsx").value;
 			var hang = document.getElementById("hang").value;
 			var tt = document.getElementById("tomtat").value;
-
+			var status = true;
 			if(ten==""){
 				document.getElementById("msgten").innerHTML = "Vui lòng nhập tên sản phẩm";
 				document.getElementById("tensp").style.border= "1px solid red";
@@ -111,6 +114,7 @@
 		
 		}
 	</script>
+	<script src="ckeditor/ckeditor.js"></script>
 </head>
 <body>
 	<h1 style=""text-align:center>CHỨC NĂNG CẬP NHẬT SẢN PHẨM</h1>
@@ -189,8 +193,12 @@
 			<tr>
 				<td>Tóm tắt</td>
 				<td>
+					
 					<textarea name="tomtat" cols="20" rows=""5 id="tomtat"><?php echo $row['tomtat']?></textarea>
 					<span id="msgtomtat"></span>
+					<script>
+						CKEDITOR.replace("tomtat")
+					</script>
 				</td>
 			</tr>
 			<tr>

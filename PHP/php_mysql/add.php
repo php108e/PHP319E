@@ -1,3 +1,6 @@
+<?php
+	session_Start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +16,18 @@
 			font-size:20pt;
 		}
 	</style>
+	<script src="ckeditor/ckeditor.js"></script>
+	<script src="ckeditor/ckfinder/ckfinder.js"></script>
 	<script>
+		CKEDITOR.replace( 'tomtat',
+		{
+			filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
+			filebrowserImageBrowseUrl : 'ckfinder/ckfinder.html?type=Images',
+			filebrowserFlashBrowseUrl : 'ckfinder/ckfinder.html?type=Flash',
+			filebrowserUploadUrl : 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+			filebrowserImageUploadUrl : 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+			filebrowserFlashUploadUrl : 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+		});
 		function validate(){
 			var ten = document.getElementById("tensp").value;
 			var gia = document.getElementById("giasp").value;
@@ -21,7 +35,7 @@
 			var nam = document.getElementById("namsx").value;
 			var hang = document.getElementById("hang").value;
 			var tt = document.getElementById("tomtat").value;
-
+			var status = true;
 			if(ten==""){
 				document.getElementById("msgten").innerHTML = "Vui lòng nhập tên sản phẩm";
 				document.getElementById("tensp").style.border= "1px solid red";
@@ -111,6 +125,8 @@
 		
 		}
 	</script>
+	
+		
 </head>
 <body>
 	<h1 style=""text-align:center>CHỨC NĂNG THÊM MỚI ĐIỆN THOẠI</h1>
@@ -177,6 +193,9 @@
 				<td>
 					<textarea name="tomtat" cols="20" rows=""5 id="tomtat"></textarea>
 					<span id="msgtomtat"></span>
+					<script>
+						CKEDITOR.replace("tomtat");
+					</script>
 				</td>
 			</tr>
 			<tr>

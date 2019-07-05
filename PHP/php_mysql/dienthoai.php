@@ -64,11 +64,46 @@ class Dienthoai extends Database
 			return false;
 		}
 	}
+	public function getAllByName($s){
 
-	public function getAll(){
+		//Tạo truy vấn theo chức năng
+		$sql = "SELECT * FROM dienthoai WHERE tensp LIKE '%".$s."%'";
+		
+		//Prepare cau truy van
+		$stmt = $this->db->prepare($sql);
+
+		//Thực thi truy vấn
+		$stmt->execute();
+		//B5: lấy dữ liệu từ Object và chuyển đổi 
+		$arrDT = array();
+		while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+			$arrDT[] = $row;
+		}
+		return $arrDT;
+	}
+	
+	public function getALL(){
 
 		//Tạo truy vấn theo chức năng
 		$sql = "SELECT * FROM dienthoai";
+		
+		//Prepare cau truy van
+		$stmt = $this->db->prepare($sql);
+
+		//Thực thi truy vấn
+		$stmt->execute();
+		//B5: lấy dữ liệu từ Object và chuyển đổi 
+		$arrDT = array();
+		while($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+			$arrDT[] = $row;
+		}
+		return $arrDT;
+	}
+
+	public function getPage($current_page){
+		$s = ($current_page-1)*10;
+		//Tạo truy vấn theo chức năng
+		$sql = "SELECT * FROM dienthoai LIMIT $s, 10";
 		
 		//Prepare cau truy van
 		$stmt = $this->db->prepare($sql);
