@@ -1,0 +1,14 @@
+#header{
+	height: 150px;
+	border: 1px solid black;
+	margin-bottom: 15px;
+}
+#content{
+	border: 1px solid red;
+	margin-bottom: 15px;	
+}
+#footer{
+	height: 150px;
+	border: 1px solid green;
+	margin-bottom: 15px;
+}
