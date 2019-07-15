@@ -1,7 +1,7 @@
 <?php
 	//Khai báo các Controller và Action tương ứng sẽ có trên hệ thống
 	$controllers = array(
-		'pages'	=> ['home','error'],
+		'pages'	=> ['home','error','detail'],
 		'users'	=> ['login','logout','change','register','login_process']
 	);
 
