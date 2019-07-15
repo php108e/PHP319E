@@ -17,5 +17,14 @@ class Posts{
 		return $items;
 	}
 
+	public static function getPostById($_id){
+		$objDb = DB::getConnection();
+		$sql = "SELECT * FROM Posts WHERE id = $_id";
+		$stmt = $objDb->prepare($sql);
+		$stmt->execute();
+		$row = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $row;
+	}
+
 }
 ?>
