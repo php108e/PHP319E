@@ -1,0 +1,36 @@
+div{
+	margin-bottom: 20px;
+}
+#p1{
+	color: green;
+	text-transform: uppercase;
+}
+#p1 a:hover{
+	text-decoration: underline;
+	color: yellow;
+}
+#p2{
+	color: red;
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+#p3{
+	background-color:     #eaeae1;
+	color: blue;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.p46{
+	text-decoration: underline;
+	color:   #ff751a
+
+}
+#p5{
+	color: green;
+	font-weight: bold;
+	font-size: 20px;
+	font-family: tahoma;
+}

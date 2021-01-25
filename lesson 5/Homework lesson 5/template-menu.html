@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.nav{
+			width: 200px;
+		}
+
+		.nav ul{
+			list-style-type: none;
+			width: 200px;
+			padding:0px;
+			margin: 0px;
+			
+		}
+		.nav ul li{
+			width: auto;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 1em;
+			position: relative;
+			border:  2px solid red;
+		}
+
+		.nav ul li a{
+			text-decoration: none;
+			color: blue;
+			display: block;
+		}
+
+		.nav ul li:hover{
+			background-color: black;
+			color: white;
+		}
+
+		.nav ul li .sub-nav{
+			display: none;
+			position: absolute;
+		}
+
+		.nav ul li:hover .sub-nav{
+			display: block;
+		}
+
+		.nav .sub-nav{
+			position: absolute;
+			left: 200px;
+			top: 0px;
+		}
+
+		.nav ul li >.sub-nav2{
+			display: none;
+			position: absolute;
+		}
+
+		.nav ul li:hover .sub-nav2{
+			display: block;
+			width: auto;
+		}
+
+		.nav .sub-nav2 {
+			left: 200px;
+			position: absolute;
+			top: 0px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="">Trang chủ</a></li>
+			<li><a href="">Giới thiệu</a></li>
+			<li>
+				<a href="">Sản phẩm Nam</a>
+				<ul class="sub-nav">
+					<li>
+						<a href="">Áo Nam</a>
+						<ul class="sub-nav2">
+							<li><a href="">Áo Việt Nam</a></li>
+							<li><a href="">Áo Trung Quốc</a></li>
+						</ul>
+							<li><a href="">Áo Mỹ</a></li>
+					</li>
+					<li><a href="">Quần Nam</a></li>
+					<li><a href="">Ví Nam</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="">S
+				ản phẩm nữ</a>
+				<ul class="sub-nav">
+					<li><a href="">Áo Nữ</a></li>
+					<li><a href="">Quần Nữ</a></li>
+					<li><a href="">Ví Nữ</a></li>
+				</ul>
+			</li>
+			<li><a href="">Liên hệ</a></li>
+		</ul>
+		
+	</div>
+</body>
+</html>

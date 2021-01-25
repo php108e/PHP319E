@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta  http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href="image/images/favicon_01.png"/>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function validate(){
+			var username = document.getElementById("txtFullName").value;
+			var email = document.getElementById("txtEmail").value;
+			var phone = document.getElementById("txtPhone").value;
+			var adress = document.getElementById("txtAdress").value;
+			var content = document.getElementById("txtContent").value;
+
+			if(username==""){
+				document.getElementById("msgFullName").innerHTML = "<br>Vui lòng nhập tên";
+				document.getElementById("txtFullName").style.border= "1px solid red";
+				status = false;
+				status2 = false;
+			}else{
+				document.getElementById("txtFullName").style.border="";
+				document.getElementById("msgFullName").innerHTML="";
+				status=  true;
+			}
+
+			if(email==""){
+				document.getElementById("msgEmail").innerHTML = "<br>Vui lòng nhập email";
+				document.getElementById("txtEmail").style.border= "1px solid red";
+				status = false;
+				status2 = false;
+			}else{
+				document.getElementById("txtEmail").style.border="";
+				document.getElementById("msgEmail").innerHTML="";
+				status=  true;
+			}
+
+			if(phone==""){
+				document.getElementById("msgPhone").innerHTML = "<br>Vui lòng nhập số điện thoại";
+				document.getElementById("txtPhone").style.border= "1px solid red";
+				status = false;
+				status2 = false;
+			}else{
+				document.getElementById("txtPhone").style.border="";
+				document.getElementById("msgPhone").innerHTML="";
+				status=  true;
+			}
+
+			if(adress==""){
+				document.getElementById("msgAdress").innerHTML = "<br>Vui lòng nhập địa chỉ";
+				document.getElementById("txtAdress").style.border= "1px solid red";
+				status = false;
+				status2 = false;
+			}else{
+				document.getElementById("txtAdress").style.border="";
+				document.getElementById("msgAdress").innerHTML="";
+				status=  true;
+			}
+
+			if(content==""){
+				document.getElementById("msgContent").innerHTML = "<br>Vui lòng nhập nội dung";
+				document.getElementById("txtContent").style.border= "1px solid red";
+				status = false;
+				status2 = false;
+			}else{
+				document.getElementById("txtContent").style.border="";
+				document.getElementById("msgContent").innerHTML="";
+				status=  true;
+			}
+
+			if(status2==false){
+				if(status ==true){
+					return true;
+				}else{
+					return false;
+				}
+				return false;
+			}
+		}
+
+		function clearForm(){
+			document.getElementById("txtFullName").style.border="";
+			document.getElementById("msgFullName").innerHTML="";
+			document.getElementById("txtFullName").value="";
+
+
+			document.getElementById("txtEmail").style.border="";
+			document.getElementById("msgEmail").innerHTML="";
+			document.getElementById("txtEmail").value="";
+
+			document.getElementById("txtPhone").style.border="";
+			document.getElementById("msgPhone").innerHTML="";
+			document.getElementById("txtPhone").value="";
+
+			document.getElementById("txtAdress").style.border="";
+			document.getElementById("msgAdress").innerHTML="";
+			document.getElementById("txtAdress").value="";
+
+			document.getElementById("txtContent").style.border="";
+			document.getElementById("msgContent").innerHTML="";
+			document.getElementById("txtContent").value="";
+
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div id="header">
+			<div class="title" style="text-align: center;">ITPLUS COMPANY</div>
+		</div>
+		<div id="nav">
+			<div class="menu">
+				<ul>
+					<li><a href="index.html">Trang chủ</a></li>
+					<li><a href="">Giới thiệu</a></li>
+					<li><a href="">Mở bán</a></li>
+					<li><a href="">Tin tức</a></li>
+					<li><a href="register.html" style="border-right: 1px solid #fff;padding-right: 10px;">Đăng ký tư vấn</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="form-register">
+				<div style="font-size: 30px;color: red;padding: 20px;font-weight: bold;">ĐĂNG KÝ NHẬN TƯ VẤN</div>
+				<form action="proccess.php" method="POST" onsubmit="return validate();">
+					<div class="title-form">
+						<label class="form-title">Họ và tên (*):</label>
+						<input type="text" name="txtFullName" id="txtFullName">
+						<span id="msgFullName"></span>
+					</div>
+					<div class="title-form">
+						<label class="form-title">Số điện thoại (*):</label>
+						<input type="text" name="txtPhone" id="txtPhone">
+						<span id="msgPhone"></span>	
+					</div>
+					<div class="title-form">
+						<label class="form-title">Email (*):</label>
+						<input type="text" name="txtEmail" id="txtEmail">
+						<span id="msgEmail"></span>	
+					</div>
+					<div class="title-form">
+						<label class="form-title">Địa chỉ (*):</label>
+						<input type="text" name="txtAdress" id="txtAdress">
+						<span id="msgAdress"></span>	
+					</div>
+					<div class="title-form">
+							<label class="form-title">Nội dung (*): </label>
+							<textarea type="txt" name="txtContent" id="txtContent" placeholder="" rows="5" cols="23"></textarea>
+							<span id="msgContent"></span>	
+					</div>
+					<div class="form-sub">
+							<input type="submit" name="btnSubmit" value="Đăng ký">
+							<input type="button" name="btnRe" value="Nhập lại" onclick="clearForm()">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

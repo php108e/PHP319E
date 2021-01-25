@@ -1,0 +1,117 @@
+.form-register{
+	margin-top: 20px;
+	width: 100%;
+	height: 700px;
+}
+
+.form-register .big2-title{
+	margin-top: 25px;
+	margin-bottom: 20px;
+	padding-left:25px; 
+	padding-top:10px;
+	width: 100%;
+	height: 50px;
+	/*background: #c2e59c; 
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);
+    background: linear-gradient(to right, #64b3f4, #c2e59c);*/
+    background: #444;
+    color: #fff;
+
+}
+
+.form-register .big-title{
+	margin-top: 10px;
+	margin-bottom: 20px;
+	width: 95%;
+	padding:10px;
+	height: 50px;
+	/*background: #c2e59c;
+    background: -webkit-linear-gradient(to right, #64b3f4, #c2e59c);
+    background: linear-gradient(to right, #64b3f4, #c2e59c);*/
+    background: #2ecc71;
+	color: #fff;
+	text-transform: uppercase;
+}
+.form-register .form-title{
+	width: 150px;
+}
+.form-register .title-form{
+	padding-top: 30px;
+	padding-left: 20px; 
+}
+.form-register label{
+	float: left;
+}
+.form-register .form{
+	width: 100%;
+}
+
+.form-register .form-sub{
+	margin-top: 30px;
+}
+input[type="submit"]{
+	border: 1px solid white;
+	margin-left: 170px;
+	color: #fff;
+	width: 150px;
+	height: 40px;
+	background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	
+}
+input[type="text"]:focus{
+    border: 1px solid #33c4fa; 
+}
+
+input:hover[type="submit"]{
+	background: pink;
+	color: black;
+}
+
+input,textarea{
+	padding-left: 7px;
+	height: 30px;
+	width: 300px;
+    margin-top: 6px
+    margin-bottom: 10px;
+    outline-style: none;
+    border-radius: 3px;
+    border: 1px solid #999;
+}
+
+textarea{
+	height: 60px;
+	width: 300px;
+    margin-top: 6px
+    margin-bottom: 10px;
+    outline-style: none;
+    border-radius: 3px;
+}
+
+.login{
+	margin-left: 15px;
+	width: 260px;
+	margin-top: 20px;
+	/*background: blue;*/
+	padding: 10px;
+	background: #FC5C7D;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 3px 3px 3px 3px;
+
+}
+.login:hover a{
+	color: black;
+	background: pink;
+}
+
+.login:hover{
+	background: pink;
+}
+
+.login a{
+	text-align: center;
+	text-decoration: none;
+	color: white;
+}
